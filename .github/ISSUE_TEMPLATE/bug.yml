@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible LibreReplace problem
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+    validations: {required: true}
+  - type: input
+    attributes:
+      label: macOS version
+    validations: {required: true}
+  - type: input
+    attributes:
+      label: LibreReplace version/commit
+    validations: {required: true}
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Do not include passwords, tokens, private documents, or sensitive filesystem contents.

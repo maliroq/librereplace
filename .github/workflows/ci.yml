@@ -1,0 +1,38 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog-and-safety:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Swift version
+        run: swift --version
+      - name: Python catalog validation
+        run: python3 Scripts/validate_catalog.py
+      - name: Repository safety validation
+        run: python3 Scripts/check_repo_safety.py
+      - name: XcodeGen packaging configuration validation
+        run: python3 Scripts/validate_xcodegen_config.py
+      - name: Portable Swift tests
+        run: swift test
+      - name: Swift catalog validation
+        run: swift run libreplace validate Catalog/catalog.json
+
+  macos-build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate
+      - name: Test core
+        run: xcodebuild -project LibreReplace.xcodeproj -scheme LibreReplace -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO test
+      - name: Build application
+        run: xcodebuild -project LibreReplace.xcodeproj -scheme LibreReplace -configuration Debug CODE_SIGNING_ALLOWED=NO build

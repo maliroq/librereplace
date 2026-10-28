@@ -1,0 +1,29 @@
+name: Catalog correction
+description: Correct a claim, bundle identifier, evidence link, installation path, license, or limitation in an existing preview entry
+title: "[Catalog] "
+labels: [catalog]
+body:
+  - type: input
+    attributes:
+      label: Existing source app
+      description: The commercial app already present in LibreReplace's preview catalog.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Existing alternative
+  - type: textarea
+    attributes:
+      label: What is incorrect or stale?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidence URLs
+      description: Prefer official docs, source repositories, license text, release notes, pricing pages, or other primary evidence.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Workflow impact
+      description: Explain whether the correction changes full/partial/none support, a critical capability, or a limitation.

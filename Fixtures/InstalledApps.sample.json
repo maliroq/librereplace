@@ -1,0 +1,20 @@
+[
+  {
+    "name": "CleanShot X",
+    "bundleIdentifier": "pl.maketheweb.cleanshotx",
+    "version": "fixture",
+    "path": "file:///Applications/CleanShot%20X.app"
+  },
+  {
+    "name": "Sublime Text",
+    "bundleIdentifier": "com.sublimetext.4",
+    "version": "fixture",
+    "path": "file:///Applications/Sublime%20Text.app"
+  },
+  {
+    "name": "Unrelated App",
+    "bundleIdentifier": "org.example.unrelated",
+    "version": "1.0",
+    "path": "file:///Applications/Unrelated%20App.app"
+  }
+]

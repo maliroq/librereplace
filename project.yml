@@ -1,0 +1,63 @@
+name: LibreReplace
+options:
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  LibreReplaceCore:
+    type: framework
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sources/LibreReplaceCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.librereplace.core
+        DEFINES_MODULE: YES
+        GENERATE_INFOPLIST_FILE: YES
+        SKIP_INSTALL: YES
+        CODE_SIGNING_ALLOWED: NO
+  LibreReplace:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: App/LibreReplaceApp
+      - path: Catalog/catalog.json
+        buildPhase: resources
+    dependencies:
+      - target: LibreReplaceCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.librereplace.LibreReplace
+        PRODUCT_NAME: LibreReplace
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: LibreReplace
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  LibreReplaceCoreTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Tests/LibreReplaceCoreTests
+      - path: Catalog/catalog.json
+        buildPhase: resources
+    dependencies:
+      - target: LibreReplaceCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.librereplace.coretests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  LibreReplace:
+    build:
+      targets:
+        LibreReplace: all
+        LibreReplaceCore: all
+    test:
+      targets:
+        - LibreReplaceCoreTests

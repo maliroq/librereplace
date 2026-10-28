@@ -1,0 +1,41 @@
+name: Prepare source prerelease
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-draft:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Validate portable gates
+        run: make check
+      - name: Generate and compile Release configuration unsigned
+        run: |
+          xcodegen generate
+          xcodebuild -project LibreReplace.xcodeproj -scheme LibreReplace -configuration Release CODE_SIGNING_ALLOWED=NO build
+      - name: Package source and catalog
+        run: |
+          VERSION="${GITHUB_REF_NAME}"
+          git archive --format=zip --prefix="LibreReplace-${VERSION}/" --output="LibreReplace-${VERSION}-source.zip" HEAD
+          cp Catalog/catalog.json "LibreReplace-${VERSION}-catalog.json"
+          shasum -a 256 "LibreReplace-${VERSION}-source.zip" "LibreReplace-${VERSION}-catalog.json" > SHA256SUMS.txt
+      - name: Create source prerelease draft
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
+        with:
+          draft: true
+          prerelease: true
+          body_path: RELEASE_NOTES.md
+          files: |
+            LibreReplace-*-source.zip
+            LibreReplace-*-catalog.json
+            SHA256SUMS.txt
+
+# Source publication does not require an app binary. If a macOS binary is
+# attached later, it must be Developer ID-signed, notarized, stapled, and
+# independently smoke-tested; do not attach an unsigned Debug build.

@@ -1,0 +1,2772 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-10-27",
+  "apps": [
+    {
+      "id": "cleanshot-x",
+      "name": "CleanShot X",
+      "vendor": "MakeTheWeb",
+      "bundleIdentifiers": [
+        "pl.maketheweb.cleanshotx"
+      ],
+      "nameAliases": [
+        "CleanShot X",
+        "CleanShot"
+      ],
+      "pricing": {
+        "model": "paidUpgrade",
+        "oneTimeUSD": 35,
+        "note": "Basic is a one-time purchase with one year of updates; optional paid update renewal is not counted as recurring savings.",
+        "sourceURL": "https://cleanshot.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "capture",
+          "label": "Screenshots",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "annotation",
+          "label": "Annotation",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "recording",
+          "label": "Screen recording",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "ocr",
+          "label": "OCR text capture",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "scrolling",
+          "label": "Scrolling capture",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sharing",
+          "label": "Hosted sharing",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "snapzy",
+          "name": "Snapzy",
+          "license": "BSD-3-Clause",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/duongductrong/Snapzy",
+          "homepageURL": "https://snapzy.app/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "snapzy"
+          },
+          "support": {
+            "capture": "full",
+            "annotation": "full",
+            "recording": "full",
+            "ocr": "full",
+            "scrolling": "full",
+            "sharing": "partial"
+          },
+          "limitations": [
+            "Cloud sharing is not a drop-in replacement for CleanShot Cloud; verify your preferred sharing workflow."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Snapzy repository and feature list",
+              "url": "https://github.com/duongductrong/Snapzy",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Snapzy BSD-3-Clause license",
+              "url": "https://github.com/duongductrong/Snapzy",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/snapzy",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "13.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "CleanShot X pricing",
+          "url": "https://cleanshot.com/pricing",
+          "lastVerified": "2026-10-27"
+        },
+        {
+          "kind": "feature",
+          "title": "CleanShot X product features",
+          "url": "https://cleanshot.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "bartender",
+      "name": "Bartender",
+      "vendor": "Surtees Studios",
+      "bundleIdentifiers": [
+        "com.surteesstudios.Bartender",
+        "com.surteesstudios.Bartender-setapp"
+      ],
+      "nameAliases": [
+        "Bartender"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Bartender offers multiple paid options, including recurring and non-recurring licenses; LibreReplace does not infer which one you use.",
+        "sourceURL": "https://www.macbartender.com/"
+      },
+      "capabilities": [
+        {
+          "id": "hide",
+          "label": "Hide/reveal menu-bar items",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "secondary",
+          "label": "Secondary hidden bar",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "search",
+          "label": "Search menu-bar items",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "triggers",
+          "label": "Conditional triggers",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "styling",
+          "label": "Menu-bar styling",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "ice",
+          "name": "Ice",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/jordanbaird/Ice",
+          "homepageURL": "https://icemenubar.app/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "jordanbaird-ice"
+          },
+          "support": {
+            "hide": "partial",
+            "secondary": "partial",
+            "search": "full",
+            "triggers": "partial",
+            "styling": "full"
+          },
+          "limitations": [
+            "Advanced trigger behavior may differ from Bartender.",
+            "As of 2026-10-27, the upstream tracker has unresolved macOS 27 compatibility reports; verify current macOS 27 status before switching."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Ice features and installation",
+              "url": "https://github.com/jordanbaird/Ice",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Ice license",
+              "url": "https://github.com/jordanbaird/Ice/blob/main/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "limitation",
+              "title": "Ice macOS 27 compatibility issue tracker",
+              "url": "https://github.com/jordanbaird/Ice/issues/992",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/jordanbaird-ice",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "14.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Bartender product site",
+          "url": "https://www.macbartender.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "daisydisk",
+      "name": "DaisyDisk",
+      "vendor": "Software Ambience Corp",
+      "bundleIdentifiers": [
+        "com.daisydiskapp.DaisyDiskStandAlone",
+        "com.daisydiskapp.DaisyDisk"
+      ],
+      "nameAliases": [
+        "DaisyDisk"
+      ],
+      "pricing": {
+        "model": "oneTime",
+        "note": "Paid app; one-time purchases are not counted as recurring savings.",
+        "sourceURL": "https://daisydiskapp.com/"
+      },
+      "capabilities": [
+        {
+          "id": "visual",
+          "label": "Visual disk map",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "scan",
+          "label": "Fast volume scan",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "delete",
+          "label": "Interactive cleanup/deletion",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "volumes",
+          "label": "Multiple volumes",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "largefiles",
+          "label": "Large-file discovery",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "opendisk",
+          "name": "OpenDisk",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/137137137/OpenDisk",
+          "homepageURL": "https://opendisk.app/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://opendisk.app/"
+          },
+          "support": {
+            "visual": "full",
+            "scan": "full",
+            "delete": "full",
+            "volumes": "full",
+            "largefiles": "full"
+          },
+          "limitations": [
+            "Requires macOS 14 or later; review the project permissions explanation before granting disk access."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "OpenDisk project",
+              "url": "https://github.com/137137137/OpenDisk",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "OpenDisk license",
+              "url": "https://github.com/137137137/OpenDisk/blob/main/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "OpenDisk changelog and macOS compatibility",
+              "url": "https://opendisk.app/changelog",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "14.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "DaisyDisk product site",
+          "url": "https://daisydiskapp.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "cleanmymac",
+      "name": "CleanMyMac",
+      "vendor": "MacPaw",
+      "bundleIdentifiers": [
+        "com.macpaw.CleanMyMac4",
+        "com.macpaw.CleanMyMac5"
+      ],
+      "nameAliases": [
+        "CleanMyMac",
+        "CleanMyMac X"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "CleanMyMac is sold under multiple license/offer types; no automatic savings amount is assumed.",
+        "sourceURL": "https://macpaw.com/cleanmymac"
+      },
+      "capabilities": [
+        {
+          "id": "cleanup",
+          "label": "Storage cleanup",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "uninstall",
+          "label": "Application uninstall cleanup",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "startup",
+          "label": "Startup/background item visibility",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "malware",
+          "label": "Malware scanning",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "duplicates",
+          "label": "Duplicate/large-file discovery",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "undo",
+          "label": "Reversible cleanup",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "dusty",
+          "name": "Dusty",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/yagcioglutoprak/dusty",
+          "homepageURL": "https://github.com/yagcioglutoprak/dusty",
+          "install": {
+            "kind": "githubRelease",
+            "value": "https://github.com/yagcioglutoprak/dusty/releases"
+          },
+          "support": {
+            "cleanup": "full",
+            "uninstall": "partial",
+            "startup": "none",
+            "malware": "none",
+            "duplicates": "partial",
+            "undo": "full"
+          },
+          "limitations": [
+            "Not an antivirus or malware scanner.",
+            "Does not replace every CleanMyMac maintenance module."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Dusty feature and safety model",
+              "url": "https://github.com/yagcioglutoprak/dusty",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Dusty license",
+              "url": "https://github.com/yagcioglutoprak/dusty/blob/main/LICENSE",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.82,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "CleanMyMac product site",
+          "url": "https://macpaw.com/cleanmymac",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "paste",
+      "name": "Paste",
+      "vendor": "Paste Team",
+      "bundleIdentifiers": [
+        "com.wiheads.paste",
+        "com.pasteapp.Paste"
+      ],
+      "nameAliases": [
+        "Paste"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Current personal annual plan is $29.99, but Paste also offers lifetime and Setapp access; savings are not auto-counted without knowing the user plan.",
+        "sourceURL": "https://pasteapp.io/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "history",
+          "label": "Clipboard history",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "search",
+          "label": "Clipboard search",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "pins",
+          "label": "Pinned collections",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "rich",
+          "label": "Images and rich clipboard items",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "iPhone/iPad sync",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "maccy",
+          "name": "Maccy",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/p0deje/Maccy",
+          "homepageURL": "https://maccy.app/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "maccy"
+          },
+          "support": {
+            "history": "full",
+            "search": "full",
+            "pins": "partial",
+            "rich": "full",
+            "sync": "none"
+          },
+          "limitations": [
+            "No iPhone/iPad synchronization.",
+            "Pinboard/collection workflows are simpler than Paste."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Maccy project",
+              "url": "https://github.com/p0deje/Maccy",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Maccy license",
+              "url": "https://github.com/p0deje/Maccy/blob/master/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/maccy",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "14.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.82,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Paste pricing",
+          "url": "https://pasteapp.io/pricing",
+          "lastVerified": "2026-10-27"
+        },
+        {
+          "kind": "feature",
+          "title": "Paste features",
+          "url": "https://pasteapp.io/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "magnet",
+      "name": "Magnet",
+      "vendor": "CrowdCafé",
+      "bundleIdentifiers": [
+        "com.crowdcafe.windowmagnet"
+      ],
+      "nameAliases": [
+        "Magnet"
+      ],
+      "pricing": {
+        "model": "oneTime",
+        "note": "One-time paid utility; not counted as recurring savings.",
+        "sourceURL": "https://magnet.crowdcafe.com/"
+      },
+      "capabilities": [
+        {
+          "id": "snap",
+          "label": "Keyboard window snapping",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "zones",
+          "label": "Halves/thirds/quarters",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "display",
+          "label": "Multi-display movement",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "maximize",
+          "label": "Maximize/center actions",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "rectangle",
+          "name": "Rectangle",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/rxhanson/Rectangle",
+          "homepageURL": "https://rectangleapp.com/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "rectangle"
+          },
+          "support": {
+            "snap": "full",
+            "zones": "full",
+            "display": "full",
+            "maximize": "full"
+          },
+          "limitations": [
+            "Shortcut defaults differ; review Rectangle shortcuts after installation."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Rectangle features",
+              "url": "https://github.com/rxhanson/Rectangle",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Rectangle license",
+              "url": "https://github.com/rxhanson/Rectangle/blob/main/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/rectangle",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "14.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Magnet product site",
+          "url": "https://magnet.crowdcafe.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "moom",
+      "name": "Moom",
+      "vendor": "Many Tricks",
+      "bundleIdentifiers": [
+        "com.manytricks.Moom",
+        "com.manytricks.Moom5"
+      ],
+      "nameAliases": [
+        "Moom"
+      ],
+      "pricing": {
+        "model": "oneTime",
+        "note": "One-time paid utility; not counted as recurring savings.",
+        "sourceURL": "https://manytricks.com/moom/"
+      },
+      "capabilities": [
+        {
+          "id": "window",
+          "label": "Keyboard/mouse window management",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "layouts",
+          "label": "Saved layouts",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "grid",
+          "label": "Custom grids",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "display",
+          "label": "Multi-display movement",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "mouse",
+          "label": "Mouse-driven controls",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "rectangle",
+          "name": "Rectangle",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/rxhanson/Rectangle",
+          "homepageURL": "https://rectangleapp.com/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "rectangle"
+          },
+          "support": {
+            "window": "full",
+            "layouts": "partial",
+            "grid": "partial",
+            "display": "full",
+            "mouse": "partial"
+          },
+          "limitations": [
+            "Moom custom layouts and mouse UI are richer than Rectangle’s free feature set."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Rectangle features",
+              "url": "https://github.com/rxhanson/Rectangle",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/rectangle",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "14.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.85,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Moom product site",
+          "url": "https://manytricks.com/moom/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "little-snitch",
+      "name": "Little Snitch",
+      "vendor": "Objective Development",
+      "bundleIdentifiers": [
+        "at.obdev.LittleSnitch"
+      ],
+      "nameAliases": [
+        "Little Snitch"
+      ],
+      "pricing": {
+        "model": "oneTime",
+        "note": "Commercial license; no recurring savings assumption.",
+        "sourceURL": "https://obdev.at/products/littlesnitch/"
+      },
+      "capabilities": [
+        {
+          "id": "firewall",
+          "label": "Outbound connection control",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "prompt",
+          "label": "Per-connection prompts",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "rules",
+          "label": "Persistent rules",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "monitor",
+          "label": "Network activity monitor",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "profiles",
+          "label": "Profiles/context rules",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "lulu",
+          "name": "LuLu",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/objective-see/LuLu",
+          "homepageURL": "https://objective-see.org/products/lulu.html",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "lulu"
+          },
+          "support": {
+            "firewall": "full",
+            "prompt": "full",
+            "rules": "full",
+            "monitor": "partial",
+            "profiles": "none"
+          },
+          "limitations": [
+            "Little Snitch has a richer network monitor and profile system."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "LuLu product page",
+              "url": "https://objective-see.org/products/lulu.html",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "LuLu source and license",
+              "url": "https://github.com/objective-see/LuLu",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/lulu",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "10.15"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.85,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Little Snitch product site",
+          "url": "https://obdev.at/products/littlesnitch/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "istat-menus",
+      "name": "iStat Menus",
+      "vendor": "Bjango",
+      "bundleIdentifiers": [
+        "com.bjango.istatmenus",
+        "com.bjango.istatmenus6"
+      ],
+      "nameAliases": [
+        "iStat Menus"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Paid utility; exact license model/version varies.",
+        "sourceURL": "https://bjango.com/mac/istatmenus/"
+      },
+      "capabilities": [
+        {
+          "id": "cpu",
+          "label": "CPU monitoring",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "memory",
+          "label": "Memory monitoring",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "network",
+          "label": "Network monitoring",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sensors",
+          "label": "Temperature/sensor monitoring",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "disk",
+          "label": "Disk monitoring",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "menubar",
+          "label": "Menu-bar presentation",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "stats",
+          "name": "Stats",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/exelban/stats",
+          "homepageURL": "https://github.com/exelban/stats",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "stats"
+          },
+          "support": {
+            "cpu": "full",
+            "memory": "full",
+            "network": "full",
+            "sensors": "full",
+            "disk": "full",
+            "menubar": "full"
+          },
+          "limitations": [
+            "Sensor availability depends on Mac hardware and macOS permissions."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Stats repository",
+              "url": "https://github.com/exelban/stats",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Stats license",
+              "url": "https://github.com/exelban/stats/blob/master/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/stats",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "12.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "iStat Menus product site",
+          "url": "https://bjango.com/mac/istatmenus/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "bettertouchtool",
+      "name": "BetterTouchTool",
+      "vendor": "folivora.AI",
+      "bundleIdentifiers": [
+        "com.hegenberg.BetterTouchTool"
+      ],
+      "nameAliases": [
+        "BetterTouchTool"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Paid license with multiple purchase options; no automatic savings assumption.",
+        "sourceURL": "https://folivora.ai/"
+      },
+      "capabilities": [
+        {
+          "id": "gestures",
+          "label": "Trackpad/mouse gesture automation",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "hotkeys",
+          "label": "Keyboard shortcuts",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "window",
+          "label": "Window management",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "scripting",
+          "label": "Scriptable automation",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "touchbar",
+          "label": "Custom Touch Bar workflows",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "hammerspoon",
+          "name": "Hammerspoon",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/Hammerspoon/hammerspoon",
+          "homepageURL": "https://www.hammerspoon.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "hammerspoon"
+          },
+          "support": {
+            "gestures": "partial",
+            "hotkeys": "full",
+            "window": "full",
+            "scripting": "full",
+            "touchbar": "partial"
+          },
+          "limitations": [
+            "Requires writing/configuring Lua for many workflows.",
+            "Gesture coverage and polished configuration UI do not match BetterTouchTool."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Hammerspoon repository",
+              "url": "https://github.com/Hammerspoon/hammerspoon",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Hammerspoon MIT license",
+              "url": "https://github.com/Hammerspoon/hammerspoon/blob/master/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/hammerspoon",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "13.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.88,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "BetterTouchTool product site",
+          "url": "https://folivora.ai/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "keyboard-maestro",
+      "name": "Keyboard Maestro",
+      "vendor": "Stairways Software",
+      "bundleIdentifiers": [
+        "com.stairways.keyboardmaestro.editor",
+        "com.stairways.keyboardmaestro.engine"
+      ],
+      "nameAliases": [
+        "Keyboard Maestro"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Paid license; major upgrades may be paid.",
+        "sourceURL": "https://www.keyboardmaestro.com/"
+      },
+      "capabilities": [
+        {
+          "id": "macros",
+          "label": "General macro automation",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "triggers",
+          "label": "Rich trigger types",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "ui",
+          "label": "UI automation",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "scripting",
+          "label": "Shell/AppleScript/Lua-style scripting",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "clipboard",
+          "label": "Clipboard/history actions",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "hammerspoon",
+          "name": "Hammerspoon",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/Hammerspoon/hammerspoon",
+          "homepageURL": "https://www.hammerspoon.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "hammerspoon"
+          },
+          "support": {
+            "macros": "partial",
+            "triggers": "partial",
+            "ui": "partial",
+            "scripting": "full",
+            "clipboard": "partial"
+          },
+          "limitations": [
+            "Hammerspoon is code/configuration driven rather than a visual macro editor.",
+            "Some Keyboard Maestro trigger/action types require custom Lua or have no direct equivalent."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Hammerspoon repository",
+              "url": "https://github.com/Hammerspoon/hammerspoon",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/hammerspoon",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "13.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.88,
+        "partialThreshold": 0.48,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Keyboard Maestro product site",
+          "url": "https://www.keyboardmaestro.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "parallels-desktop",
+      "name": "Parallels Desktop",
+      "vendor": "Alludo",
+      "bundleIdentifiers": [
+        "com.parallels.desktop.console"
+      ],
+      "nameAliases": [
+        "Parallels Desktop",
+        "Parallels"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Standard annual pricing is publicly listed, but perpetual and edition differences mean the app cannot infer the user’s recurring cost safely.",
+        "sourceURL": "https://www.parallels.com/products/desktop/"
+      },
+      "capabilities": [
+        {
+          "id": "vm",
+          "label": "Run Windows/Linux virtual machines",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "accel",
+          "label": "Hardware-accelerated virtualization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "snapshots",
+          "label": "Snapshots",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "usb",
+          "label": "USB/device sharing",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "integration",
+          "label": "Coherence/deep macOS integration",
+          "weight": 2,
+          "critical": true
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "utm",
+          "name": "UTM",
+          "license": "Apache-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/utmapp/UTM",
+          "homepageURL": "https://mac.getutm.app/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "utm"
+          },
+          "support": {
+            "vm": "full",
+            "accel": "full",
+            "snapshots": "full",
+            "usb": "partial",
+            "integration": "none"
+          },
+          "limitations": [
+            "No Parallels-style Coherence mode or equivalent deep Windows/macOS integration.",
+            "3D/game performance and device integration can differ substantially."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "UTM features",
+              "url": "https://mac.getutm.app/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "UTM source and license",
+              "url": "https://github.com/utmapp/UTM",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/utm",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.85,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Parallels Desktop product site",
+          "url": "https://www.parallels.com/products/desktop/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "transmit",
+      "name": "Transmit",
+      "vendor": "Panic",
+      "bundleIdentifiers": [
+        "com.panic.Transmit"
+      ],
+      "nameAliases": [
+        "Transmit"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Paid app; licensing is not treated as recurring unless the user confirms a recurring plan.",
+        "sourceURL": "https://panic.com/transmit/"
+      },
+      "capabilities": [
+        {
+          "id": "sftp",
+          "label": "SFTP transfers",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "ftp",
+          "label": "FTP/FTPS",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "cloud",
+          "label": "Cloud/object-storage providers",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Folder synchronization",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "mount",
+          "label": "Remote-disk mounting",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "cyberduck",
+          "name": "Cyberduck",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/iterate-ch/cyberduck",
+          "homepageURL": "https://cyberduck.io/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "cyberduck"
+          },
+          "support": {
+            "sftp": "full",
+            "ftp": "full",
+            "cloud": "full",
+            "sync": "partial",
+            "mount": "none"
+          },
+          "limitations": [
+            "Drive mounting is provided by the separate Mountain Duck product, not Cyberduck itself.",
+            "Sync workflow differs from Transmit."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Cyberduck features",
+              "url": "https://cyberduck.io/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Cyberduck source",
+              "url": "https://github.com/iterate-ch/cyberduck",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/cyberduck",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.84,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Transmit product site",
+          "url": "https://panic.com/transmit/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "tower",
+      "name": "Tower",
+      "vendor": "fournova",
+      "bundleIdentifiers": [
+        "com.fournova.Tower3",
+        "com.fournova.Tower"
+      ],
+      "nameAliases": [
+        "Tower",
+        "Tower 3",
+        "Tower 4"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Tower is currently sold on annual subscription plans; LibreReplace does not assume a plan or amount from installation alone.",
+        "sourceURL": "https://www.git-tower.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "git",
+          "label": "Visual Git client",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "stage",
+          "label": "Commit/stage workflows",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "conflicts",
+          "label": "Merge conflict assistance",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "pr",
+          "label": "Pull request integration",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "undo",
+          "label": "Undo/recovery workflows",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "github-desktop",
+          "name": "GitHub Desktop",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/desktop/desktop",
+          "homepageURL": "https://desktop.github.com/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "github"
+          },
+          "support": {
+            "git": "full",
+            "stage": "full",
+            "conflicts": "partial",
+            "pr": "partial",
+            "undo": "partial"
+          },
+          "limitations": [
+            "Less advanced Git tooling than Tower, especially for complex history, reflog, and repository-management workflows."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "GitHub Desktop repository",
+              "url": "https://github.com/desktop/desktop",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "GitHub Desktop license",
+              "url": "https://github.com/desktop/desktop/blob/development/LICENSE",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/github",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "13.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.85,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Tower pricing",
+          "url": "https://www.git-tower.com/pricing",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "sublime-text",
+      "name": "Sublime Text",
+      "vendor": "Sublime HQ",
+      "bundleIdentifiers": [
+        "com.sublimetext.4",
+        "com.sublimetext.3",
+        "com.sublimetext.2"
+      ],
+      "nameAliases": [
+        "Sublime Text"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Paid license with paid upgrade policy; no recurring savings assumed.",
+        "sourceURL": "https://www.sublimetext.com/"
+      },
+      "capabilities": [
+        {
+          "id": "editing",
+          "label": "Fast code/text editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "multicursor",
+          "label": "Multiple cursors/selections",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "extensions",
+          "label": "Extension ecosystem",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "projects",
+          "label": "Projects/workspaces",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "performance",
+          "label": "Large-file/responsive editing",
+          "weight": 1.5,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "zed",
+          "name": "Zed",
+          "license": "GPL-3.0-or-later / Apache-2.0 components",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/zed-industries/zed",
+          "homepageURL": "https://zed.dev/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "zed"
+          },
+          "support": {
+            "editing": "full",
+            "multicursor": "full",
+            "extensions": "partial",
+            "projects": "full",
+            "performance": "full"
+          },
+          "limitations": [
+            "Extension ecosystem differs from Sublime Package Control and some packages have no direct equivalent."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Zed repository",
+              "url": "https://github.com/zed-industries/zed",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Zed licensing",
+              "url": "https://github.com/zed-industries/zed/blob/main/LICENSE-GPL",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/zed",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "migrationAdapter": "sublime-to-zed-settings-v1"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.82,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Sublime Text product site",
+          "url": "https://www.sublimetext.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "tableplus",
+      "name": "TablePlus",
+      "vendor": "TablePlus Inc.",
+      "bundleIdentifiers": [
+        "com.tinyapp.TablePlus"
+      ],
+      "nameAliases": [
+        "TablePlus"
+      ],
+      "pricing": {
+        "model": "oneTime",
+        "oneTimeUSD": 99,
+        "note": "Basic is a perpetual one-time license with one year of updates; renewal for later updates is optional and is not treated as a recurring cost.",
+        "sourceURL": "https://tableplus.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "sql",
+          "label": "SQL editor",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "dbs",
+          "label": "Multiple database engines",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "edit",
+          "label": "Table/data editing",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "ssh",
+          "label": "SSH tunneling",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "history",
+          "label": "Query history",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "beekeeper",
+          "name": "Beekeeper Studio Community Edition",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/beekeeper-studio/beekeeper-studio",
+          "homepageURL": "https://www.beekeeperstudio.io/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "beekeeper-studio"
+          },
+          "support": {
+            "sql": "full",
+            "dbs": "full",
+            "edit": "full",
+            "ssh": "full",
+            "history": "full"
+          },
+          "limitations": [
+            "Some Beekeeper features are premium; this recommendation is for the open-source Community Edition feature set."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Beekeeper Studio repository",
+              "url": "https://github.com/beekeeper-studio/beekeeper-studio",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Beekeeper licensing",
+              "url": "https://github.com/beekeeper-studio/beekeeper-studio#license",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/beekeeper-studio",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "12.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "TablePlus pricing and perpetual-license terms",
+          "url": "https://tableplus.com/pricing",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "paw-rapidapi",
+      "name": "Paw / RapidAPI for Mac",
+      "vendor": "RapidAPI",
+      "bundleIdentifiers": [
+        "com.luckymarmot.Paw",
+        "com.rapidapi.Paw"
+      ],
+      "nameAliases": [
+        "Paw",
+        "RapidAPI for Mac"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "Commercial API client; pricing/history varies by product generation.",
+        "sourceURL": "https://paw.cloud/"
+      },
+      "capabilities": [
+        {
+          "id": "http",
+          "label": "HTTP/API request client",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "env",
+          "label": "Environments/variables",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "collections",
+          "label": "Request collections",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "scripts",
+          "label": "Pre/post request scripting",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "offline",
+          "label": "Local/offline workflow",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "bruno",
+          "name": "Bruno",
+          "license": "MIT (core; premium features also exist)",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/usebruno/bruno",
+          "homepageURL": "https://www.usebruno.com/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "bruno"
+          },
+          "support": {
+            "http": "full",
+            "env": "full",
+            "collections": "full",
+            "scripts": "full",
+            "offline": "full"
+          },
+          "limitations": [
+            "Bruno deliberately uses a file/Git-oriented workflow rather than Paw’s document model.",
+            "Some Bruno features are offered in paid editions; core API client functionality remains open source."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Bruno repository",
+              "url": "https://github.com/usebruno/bruno",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "feature",
+              "title": "Bruno local-first model",
+              "url": "https://docs.usebruno.com/introduction/what-is-bruno",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/bruno",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Paw product site",
+          "url": "https://paw.cloud/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "ulysses",
+      "name": "Ulysses",
+      "vendor": "Ulysses GmbH & Co. KG",
+      "bundleIdentifiers": [
+        "com.soulmen.ulysses3",
+        "com.ulyssesapp.mac"
+      ],
+      "nameAliases": [
+        "Ulysses"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "US regular annual subscription is currently $39.99, but perpetual, student, Setapp, and other licensing options exist; no automatic recurring savings is assumed.",
+        "sourceURL": "https://ulysses.app/en/pricing/"
+      },
+      "capabilities": [
+        {
+          "id": "writing",
+          "label": "Focused Markdown-style writing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "library",
+          "label": "Document library/organization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "export",
+          "label": "Rich export/publishing formats",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Cross-device sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "publishing",
+          "label": "Direct publishing workflows",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "zettlr",
+          "name": "Zettlr",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/Zettlr/Zettlr",
+          "homepageURL": "https://www.zettlr.com/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "zettlr"
+          },
+          "support": {
+            "writing": "full",
+            "library": "partial",
+            "export": "full",
+            "sync": "partial",
+            "publishing": "partial"
+          },
+          "limitations": [
+            "No identical iCloud-first library model across Apple devices.",
+            "Publishing workflows and mobile availability differ."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Zettlr repository",
+              "url": "https://github.com/Zettlr/Zettlr",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Zettlr GPLv3 license",
+              "url": "https://github.com/Zettlr/Zettlr#license",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/zettlr",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "12.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.84,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Ulysses pricing",
+          "url": "https://ulysses.app/en/pricing/",
+          "lastVerified": "2026-10-27"
+        },
+        {
+          "kind": "feature",
+          "title": "Ulysses overview",
+          "url": "https://ulysses.app/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "bear",
+      "name": "Bear",
+      "vendor": "Shiny Frog",
+      "bundleIdentifiers": [
+        "net.shinyfrog.bear",
+        "net.shinyfrog.bear2"
+      ],
+      "nameAliases": [
+        "Bear"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Bear has free and paid tiers; installation alone does not prove the user pays for Bear Pro.",
+        "sourceURL": "https://bear.app/"
+      },
+      "capabilities": [
+        {
+          "id": "notes",
+          "label": "Markdown-style notes",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "tags",
+          "label": "Nested/tag organization",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Cross-device sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "attachments",
+          "label": "Attachments",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "search",
+          "label": "Full-text search",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "joplin",
+          "name": "Joplin",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/laurent22/joplin",
+          "homepageURL": "https://joplinapp.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "joplin"
+          },
+          "support": {
+            "notes": "full",
+            "tags": "full",
+            "sync": "full",
+            "attachments": "full",
+            "search": "full"
+          },
+          "limitations": [
+            "User experience and Apple-native integration differ from Bear.",
+            "Sync setup/provider choice differs."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Joplin project",
+              "url": "https://joplinapp.org/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Joplin source and license",
+              "url": "https://github.com/laurent22/joplin",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/joplin",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "12.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.8,
+        "partialThreshold": 0.5,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Bear product site",
+          "url": "https://bear.app/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "mindnode",
+      "name": "MindNode",
+      "vendor": "IdeasOnCanvas",
+      "bundleIdentifiers": [
+        "com.ideasoncanvas.mindnode.macos",
+        "com.ideasoncanvas.mindnode"
+      ],
+      "nameAliases": [
+        "MindNode",
+        "MindNode Next"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "MindNode offers free and paid features; paid status cannot be inferred safely.",
+        "sourceURL": "https://www.mindnode.com/"
+      },
+      "capabilities": [
+        {
+          "id": "maps",
+          "label": "Mind-map creation",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "outline",
+          "label": "Outline view",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "styling",
+          "label": "Map styling",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "tasks",
+          "label": "Task/progress features",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Cloud/device sync or collaboration",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "freeplane",
+          "name": "Freeplane",
+          "license": "GPL-2.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/freeplane/freeplane",
+          "homepageURL": "https://www.freeplane.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "freeplane"
+          },
+          "support": {
+            "maps": "full",
+            "outline": "full",
+            "styling": "full",
+            "tasks": "partial",
+            "sync": "none"
+          },
+          "limitations": [
+            "No built-in Apple-device cloud sync/collaboration equivalent.",
+            "Interface and workflow are less native to macOS."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Freeplane project",
+              "url": "https://github.com/freeplane/freeplane",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Freeplane license",
+              "url": "https://github.com/freeplane/freeplane/blob/1.13.x/license.txt",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/freeplane",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.85,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "MindNode product site",
+          "url": "https://www.mindnode.com/",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "pdf-expert",
+      "name": "PDF Expert",
+      "vendor": "Readdle",
+      "bundleIdentifiers": [
+        "com.readdle.PDFExpert-Mac",
+        "com.readdle.PDFExpert"
+      ],
+      "nameAliases": [
+        "PDF Expert"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "PDF Expert offers yearly and lifetime purchase options; LibreReplace does not infer which one you use.",
+        "sourceURL": "https://pdfexpert.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "view",
+          "label": "PDF viewing and annotation",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "edit",
+          "label": "Edit existing PDF text/images",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "ocr",
+          "label": "OCR",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "forms",
+          "label": "Form editing/filling",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sign",
+          "label": "Signatures",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "skim",
+          "name": "Skim",
+          "license": "BSD-style",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/skim-app/skim",
+          "homepageURL": "https://skim-app.sourceforge.io/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "skim"
+          },
+          "support": {
+            "view": "full",
+            "edit": "none",
+            "ocr": "none",
+            "forms": "partial",
+            "sign": "none"
+          },
+          "limitations": [
+            "Skim is excellent for reading/annotation but is not a full PDF content editor.",
+            "No OCR or comparable signing workflow."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Skim project",
+              "url": "https://skim-app.sourceforge.io/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "maintenance",
+              "title": "Skim source project and releases",
+              "url": "https://sourceforge.net/projects/skim-app/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/skim",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "10.13"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.9,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "PDF Expert pricing and product capabilities",
+          "url": "https://pdfexpert.com/pricing",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "photoshop",
+      "name": "Adobe Photoshop",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.Photoshop"
+      ],
+      "nameAliases": [
+        "Adobe Photoshop",
+        "Photoshop"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Photoshop is subscription software, but users may have standalone, Photography, Creative Cloud, education, or business plans; per-app savings are not auto-counted to avoid double counting.",
+        "sourceURL": "https://www.adobe.com/products/photoshop/plans.html"
+      },
+      "capabilities": [
+        {
+          "id": "raster",
+          "label": "Professional raster editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "layers",
+          "label": "Layer/mask workflow",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "raw",
+          "label": "RAW/photo workflow",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "smart",
+          "label": "Smart objects/non-destructive workflows",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "cmyk",
+          "label": "CMYK/print workflows",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "plugins",
+          "label": "Plugin/ecosystem compatibility",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "gimp",
+          "name": "GIMP",
+          "license": "GPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://gitlab.gnome.org/GNOME/gimp",
+          "homepageURL": "https://www.gimp.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "gimp"
+          },
+          "support": {
+            "raster": "full",
+            "layers": "full",
+            "raw": "partial",
+            "smart": "none",
+            "cmyk": "partial",
+            "plugins": "partial"
+          },
+          "limitations": [
+            "No direct equivalent to Photoshop Smart Objects and many Adobe-specific workflows.",
+            "Plugin/file compatibility and professional CMYK workflows differ."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "GIMP current project",
+              "url": "https://www.gimp.org/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "GIMP licensing FAQ",
+              "url": "https://www.gimp.org/docs/userfaq.html",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/gimp",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "11.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.86,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Photoshop plans",
+          "url": "https://www.adobe.com/products/photoshop/plans.html",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "illustrator",
+      "name": "Adobe Illustrator",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.illustrator"
+      ],
+      "nameAliases": [
+        "Adobe Illustrator",
+        "Illustrator"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Illustrator may be licensed standalone or in Creative Cloud; no per-app savings is auto-counted.",
+        "sourceURL": "https://www.adobe.com/products/illustrator.html"
+      },
+      "capabilities": [
+        {
+          "id": "vector",
+          "label": "Professional vector editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "svg",
+          "label": "SVG workflow",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "pdf",
+          "label": "PDF import/export",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "ai",
+          "label": "Adobe Illustrator file compatibility",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "print",
+          "label": "Professional print/prepress workflow",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "inkscape",
+          "name": "Inkscape",
+          "license": "GPL-2.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://gitlab.com/inkscape/inkscape",
+          "homepageURL": "https://inkscape.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "inkscape"
+          },
+          "support": {
+            "vector": "full",
+            "svg": "full",
+            "pdf": "full",
+            "ai": "partial",
+            "print": "partial"
+          },
+          "limitations": [
+            "Adobe Illustrator file compatibility is incomplete and may require PDF-compatible saves or conversion.",
+            "Some advanced Adobe print/creative-cloud workflows have no direct equivalent."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Inkscape project",
+              "url": "https://inkscape.org/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Inkscape licensing",
+              "url": "https://inkscape.org/about/license/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/inkscape",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.86,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Illustrator product site",
+          "url": "https://www.adobe.com/products/illustrator.html",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "premiere-pro",
+      "name": "Adobe Premiere Pro",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.PremierePro"
+      ],
+      "nameAliases": [
+        "Adobe Premiere Pro",
+        "Premiere Pro"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Premiere Pro may be licensed standalone or through Creative Cloud; no per-app recurring savings is auto-counted.",
+        "sourceURL": "https://www.adobe.com/products/premiere.html"
+      },
+      "capabilities": [
+        {
+          "id": "timeline",
+          "label": "Professional timeline editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "effects",
+          "label": "Effects/transitions",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "multicam",
+          "label": "Multicam editing",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "proxy",
+          "label": "Proxy workflows",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "integration",
+          "label": "Adobe After Effects/Creative Cloud integration",
+          "weight": 2,
+          "critical": true
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "kdenlive",
+          "name": "Kdenlive",
+          "license": "GPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://invent.kde.org/multimedia/kdenlive",
+          "homepageURL": "https://kdenlive.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "kdenlive"
+          },
+          "support": {
+            "timeline": "full",
+            "effects": "full",
+            "multicam": "partial",
+            "proxy": "full",
+            "integration": "none"
+          },
+          "limitations": [
+            "No Adobe After Effects/Dynamic Link/Creative Cloud integration.",
+            "High-end collaborative and third-party Adobe workflows may not translate directly."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Kdenlive project",
+              "url": "https://kdenlive.org/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "Kdenlive source",
+              "url": "https://invent.kde.org/multimedia/kdenlive",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/kdenlive",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27",
+          "minimumMacOS": "13.0"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.86,
+        "partialThreshold": 0.55,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "feature",
+          "title": "Premiere Pro product site",
+          "url": "https://www.adobe.com/products/premiere.html",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "acrobat-pro",
+      "name": "Adobe Acrobat Pro",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.Acrobat.Pro",
+        "com.adobe.Acrobat"
+      ],
+      "nameAliases": [
+        "Adobe Acrobat Pro",
+        "Adobe Acrobat"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Acrobat may be standalone or bundled; no recurring savings is auto-counted without plan confirmation.",
+        "sourceURL": "https://www.adobe.com/acrobat/pricing.html"
+      },
+      "capabilities": [
+        {
+          "id": "edit",
+          "label": "Edit PDF text/images",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "ocr",
+          "label": "OCR scanned documents",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "forms",
+          "label": "Create/edit forms",
+          "weight": 1.5,
+          "critical": false
+        },
+        {
+          "id": "sign",
+          "label": "Signature/e-sign workflows",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "redact",
+          "label": "Redaction",
+          "weight": 1.5,
+          "critical": true
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "libreoffice-draw",
+          "name": "LibreOffice Draw",
+          "license": "MPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://git.libreoffice.org/core",
+          "homepageURL": "https://www.libreoffice.org/",
+          "install": {
+            "kind": "homebrewCask",
+            "value": "libreoffice"
+          },
+          "support": {
+            "edit": "partial",
+            "ocr": "none",
+            "forms": "partial",
+            "sign": "partial",
+            "redact": "none"
+          },
+          "limitations": [
+            "Not a full Acrobat Pro replacement.",
+            "No built-in OCR or equivalent redaction workflow.",
+            "Complex PDFs can lose fidelity when edited."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "LibreOffice Draw/project",
+              "url": "https://www.libreoffice.org/discover/draw/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "license",
+              "title": "LibreOffice licensing",
+              "url": "https://www.libreoffice.org/about-us/licenses/",
+              "lastVerified": "2026-10-27"
+            },
+            {
+              "kind": "installation",
+              "title": "Homebrew cask",
+              "url": "https://formulae.brew.sh/cask/libreoffice",
+              "lastVerified": "2026-10-27"
+            }
+          ],
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.92,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Adobe Acrobat pricing",
+          "url": "https://www.adobe.com/acrobat/pricing.html",
+          "lastVerified": "2026-10-27"
+        }
+      ],
+      "lastVerified": "2026-10-27"
+    }
+  ]
+}

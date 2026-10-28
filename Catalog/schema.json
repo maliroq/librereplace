@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LibreReplace Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "apps"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "generatedAt": {"type": "string", "format": "date"},
+    "apps": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 40,
+      "items": {"$ref": "#/$defs/app"}
+    }
+  },
+  "$defs": {
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model"],
+      "properties": {
+        "model": {"enum": ["subscription", "paidUpgrade", "oneTime", "freemium", "commercial", "unknown"]},
+        "recurringAnnualUSD": {"type": "number", "minimum": 0},
+        "oneTimeUSD": {"type": "number", "minimum": 0},
+        "note": {"type": "string"},
+        "sourceURL": {"type": "string", "format": "uri"}
+      }
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "weight", "critical"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "weight": {"type": "number", "exclusiveMinimum": 0},
+        "critical": {"type": "boolean"}
+      }
+    },
+    "install": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": {"enum": ["homebrewCask", "homebrewFormula", "githubRelease", "officialDownload", "macAppStore"]},
+        "value": {"type": "string", "minLength": 1},
+        "warning": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "title", "url", "lastVerified"],
+      "properties": {
+        "kind": {"enum": ["demand", "feature", "license", "pricing", "installation", "limitation", "maintenance"]},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri"},
+        "lastVerified": {"type": "string", "format": "date"}
+      }
+    },
+    "alternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "license", "licenseKind", "homepageURL", "install", "support", "limitations", "evidence", "lastVerified"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "license": {"type": "string", "minLength": 1},
+        "licenseKind": {"enum": ["openSource", "sourceAvailable", "freeware", "proprietaryFree"]},
+        "repositoryURL": {"type": "string", "format": "uri"},
+        "homepageURL": {"type": "string", "format": "uri"},
+        "minimumMacOS": {"type": "string", "minLength": 1},
+        "install": {"$ref": "#/$defs/install"},
+        "support": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"enum": ["full", "partial", "none", "unknown"]}
+        },
+        "limitations": {"type": "array", "items": {"type": "string"}},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "lastVerified": {"type": "string", "format": "date"},
+        "migrationAdapter": {"type": "string", "minLength": 1}
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strongThreshold", "partialThreshold", "requireCriticalCapabilities"],
+      "properties": {
+        "strongThreshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "partialThreshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "requireCriticalCapabilities": {"type": "boolean"}
+      }
+    },
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "vendor", "bundleIdentifiers", "nameAliases", "pricing", "capabilities", "alternatives", "policy", "evidence", "lastVerified"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "vendor": {"type": "string", "minLength": 1},
+        "bundleIdentifiers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "nameAliases": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "pricing": {"$ref": "#/$defs/pricing"},
+        "capabilities": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/capability"}},
+        "alternatives": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/alternative"}},
+        "policy": {"$ref": "#/$defs/policy"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "lastVerified": {"type": "string", "format": "date"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}
