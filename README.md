@@ -4,18 +4,23 @@
 
 <h1 align="center">LibreReplace</h1>
 
-<p align="center"><strong>Replace paid Mac apps without losing what matters.</strong></p>
+<p align="center"><strong>See what you gain — and what you lose — before replacing a paid Mac app.</strong></p>
 
-<p align="center">LibreReplace scans applications already installed on your Mac, matches supported commercial software with evidence-backed open-source alternatives, and shows what you gain — and what you would lose — before you switch.</p>
+<p align="center">LibreReplace scans supported apps already installed on your Mac, compares them with curated open-source alternatives, and shows explicit gains, losses, and a Strong / Partial / Keep recommendation before you switch.</p>
 
 <p align="center"><strong>Local-only · No account · No telemetry · Never removes your existing app automatically</strong></p>
 
 ![LibreReplace showing a real Sublime Text → Zed recommendation with feature coverage, limitations, and migration availability](Docs/Images/hero-sublime-zed.png)
 
-<!-- launch-foundation:source-preview-status -->
-> **No-cost preview:** The recommended install is a local source build. A downloadable DMG and Homebrew Cask are also available; both use the same ad-hoc-signed, non-Apple-notarized preview. See **Install** below for the exact options and first-launch disclosure.
+### Quick install
 
-LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, models the workflow capabilities that matter, shows explicit limitations and dated evidence, and can conclude **KEEP THIS APP** when an open-source replacement is not good enough.
+```bash
+brew install --cask maliroq/tap/librereplace
+```
+
+> **Preview distribution:** the downloadable app is ad-hoc signed and not Apple-notarized. The Homebrew Cask does not remove quarantine or disable Gatekeeper.
+
+LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, shows exactly where an open-source replacement falls short, and can conclude **KEEP THIS APP** when switching would cost too much of your workflow.
 
 ## What it does
 
@@ -37,40 +42,28 @@ For each supported app, the catalog records capabilities, critical requirements,
 
 ## Install
 
-### Recommended — build locally
-
-```bash
-git clone https://github.com/maliroq/LibreReplace.git
-cd LibreReplace
-./Scripts/install_local.sh
-```
-
-LibreReplace does not use a paid Apple Developer ID yet; building locally avoids the Gatekeeper warning applied to downloaded, non-notarized apps.
-
-Requirements: macOS 14+, full Xcode, and XcodeGen. If XcodeGen is missing, install it with `brew install xcodegen`. The installer builds Release locally, applies and verifies an ad-hoc signature, installs to `~/Applications/LibreReplace.app` by default, and launches it. It does not request Apple credentials, use `sudo`, disable Gatekeeper, or change quarantine attributes.
-
-### Download the app
-
-[Download **LibreReplace-v0.1.0-preview.1.dmg**](https://github.com/maliroq/librereplace/releases/download/v0.1.0-preview.1/LibreReplace-v0.1.0-preview.1.dmg)
-
-This preview is open source and **ad-hoc signed**, but it is **not Apple-notarized** because the project does not use a paid Apple Developer account. The exact DMG SHA-256 is published with the release.
-
-If macOS blocks the downloaded preview and you still choose to run it after reviewing the source and release checksum:
-
-1. Try opening LibreReplace once.
-2. Open **System Settings → Privacy & Security**.
-3. Use **Open Anyway** for LibreReplace.
-4. Confirm the prompt.
-
-Prefer not to override Gatekeeper? Use the recommended local build above with `./Scripts/install_local.sh`.
-
-### Homebrew
+### Homebrew Cask
 
 ```bash
 brew install --cask maliroq/tap/librereplace
 ```
 
-Homebrew installs the same ad-hoc-signed, non-Apple-notarized DMG from GitHub Releases. It does not make LibreReplace Apple-notarized and does not bypass Gatekeeper. If macOS blocks the downloaded app, use the same per-app **System Settings → Privacy & Security → Open Anyway** process described above.
+LibreReplace v0.1.0-preview.1 is distributed as an ad-hoc-signed, non-notarized Mac app. The Cask does not remove quarantine attributes or disable Gatekeeper. macOS may require you to approve LibreReplace in **System Settings → Privacy & Security → Open Anyway**.
+
+### DMG
+
+Download `LibreReplace-v0.1.0-preview.1.dmg` from the [v0.1.0-preview.1 release](https://github.com/maliroq/LibreReplace/releases/tag/v0.1.0-preview.1).
+
+### Build locally from source
+
+```bash
+git clone https://github.com/maliroq/LibreReplace.git
+cd LibreReplace
+brew install xcodegen
+./Scripts/install_local.sh
+```
+
+The local installer builds and ad-hoc signs the app without using Apple credentials or weakening Gatekeeper. See [Building from source](Docs/BUILDING.md) and [Local verification](Docs/LOCAL_VERIFICATION.md).
 
 ## Supported applications
 
