@@ -12,6 +12,11 @@
 
 ![LibreReplace showing a real Sublime Text → Zed recommendation with feature coverage, limitations, and migration availability](Docs/Images/hero-sublime-zed.png)
 
+<!-- launch-foundation:source-preview-status -->
+
+> **Source preview:** Build from source on macOS 14+ today. A signed/notarized consumer binary, DMG, and Homebrew Cask are not available yet, and LibreReplace does not ask you to bypass Gatekeeper.
+
+
 LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, models the workflow capabilities that matter, shows explicit limitations and dated evidence, and can conclude **KEEP THIS APP** when an open-source replacement is not good enough.
 
 ## What it does
