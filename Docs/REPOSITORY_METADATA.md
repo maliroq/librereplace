@@ -18,4 +18,4 @@ Use `Docs/Brand/github-social-preview-1280x640.png` as the GitHub social preview
 - 1024 px icon preview: `Docs/Brand/LibreReplaceIcon-1024.png`
 - Logo mark: `Docs/Brand/LibreReplaceMark-1024.png`
 - Current real validation capture: `Docs/Images/overview.png`
-- Final README hero: capture a real supported-app comparison using the procedure in `Docs/DEMO.md`; do not fabricate recognized apps or recommendation results.
+- Final README hero: `Docs/Images/hero-sublime-zed.png` — real Sublime Text → Zed capture from the validation Mac.

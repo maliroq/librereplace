@@ -32,18 +32,20 @@ General alternatives directories are useful for discovery. LibreReplace answers 
 
 For each supported app, the catalog records capabilities, critical requirements, explicit losses, installation provenance, source/license evidence, and verification dates. Unknown support does not count as parity. Stale evidence cannot produce a Strong recommendation.
 
-## Quick start
+## Install
 
-LibreReplace `v0.1.0-preview` is a **source preview**. Developer ID signing and Apple notarization are not configured yet, so there is no frictionless consumer binary release.
+**Consumer binary:** not available yet. LibreReplace does not currently publish a DMG or Homebrew Cask because Developer ID signing and Apple notarization are not configured. There are no Gatekeeper-bypass instructions.
 
-Requirements: macOS 14+, Python 3, full Xcode with Swift 6 support, and XcodeGen. Homebrew is required only for Homebrew-based installs and the optional wiring probe.
+**Source preview:** available now for macOS 14+. Building requires Python 3, full Xcode with Swift 6 support, and XcodeGen.
 
 ```bash
+git clone https://github.com/maliroq/LibreReplace.git
+cd LibreReplace
 brew install xcodegen
 python3 dev.py
 ```
 
-`dev.py` regenerates the Xcode project, runs portable and native XCTest gates, validates bundled resources, performs privacy-preserving scanner/install wiring checks, exercises migration against temporary fixtures, launches the Debug app, and writes a sanitized verification report.
+`dev.py` regenerates the Xcode project, runs portable and native XCTest gates, validates bundled resources, performs privacy-preserving scanner/install wiring checks, exercises migration against temporary fixtures, launches the Debug app, and writes a sanitized verification report. Homebrew is otherwise required only for Homebrew-based install actions and the optional wiring probe.
 
 See [Building from source](Docs/BUILDING.md) and [Local verification](Docs/LOCAL_VERIFICATION.md).
 
