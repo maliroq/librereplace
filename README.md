@@ -13,7 +13,7 @@
 ![LibreReplace showing a real Sublime Text → Zed recommendation with feature coverage, limitations, and migration availability](Docs/Images/hero-sublime-zed.png)
 
 <!-- launch-foundation:source-preview-status -->
-> **No-cost preview:** The recommended install is a local source build. A downloadable DMG is also available, but it is ad-hoc signed and not Apple-notarized; see **Install** below for the exact options and first-launch disclosure.
+> **No-cost preview:** The recommended install is a local source build. A downloadable DMG and Homebrew Cask are also available; both use the same ad-hoc-signed, non-Apple-notarized preview. See **Install** below for the exact options and first-launch disclosure.
 
 LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, models the workflow capabilities that matter, shows explicit limitations and dated evidence, and can conclude **KEEP THIS APP** when an open-source replacement is not good enough.
 
@@ -63,6 +63,14 @@ If macOS blocks the downloaded preview and you still choose to run it after revi
 4. Confirm the prompt.
 
 Prefer not to override Gatekeeper? Use the recommended local build above with `./Scripts/install_local.sh`.
+
+### Homebrew
+
+```bash
+brew install --cask maliroq/tap/librereplace
+```
+
+Homebrew installs the same ad-hoc-signed, non-Apple-notarized DMG from GitHub Releases. It does not make LibreReplace Apple-notarized and does not bypass Gatekeeper. If macOS blocks the downloaded app, use the same per-app **System Settings → Privacy & Security → Open Anyway** process described above.
 
 ## Supported applications
 
