@@ -6,7 +6,7 @@ Thanks for helping make LibreReplace more trustworthy.
 
 Catalog quality matters more than catalog size. The most valuable contribution is a correction or verification that makes an existing recommendation more defensible.
 
-For `v0.1.0-preview`, the 25-target product scope is frozen. Please verify or correct existing entries now; new target proposals should begin as a discussion until maintainers explicitly reopen catalog scope.
+For `v0.1.0-preview`, the 25-target product scope is frozen. Please verify or correct existing entries now; new target proposals should start with an issue for maintainer discussion until maintainers explicitly reopen catalog scope.
 
 A catalog contribution must:
 
