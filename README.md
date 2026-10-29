@@ -13,9 +13,7 @@
 ![LibreReplace showing a real Sublime Text → Zed recommendation with feature coverage, limitations, and migration availability](Docs/Images/hero-sublime-zed.png)
 
 <!-- launch-foundation:source-preview-status -->
-
-> **Source preview:** Build from source on macOS 14+ today. A signed/notarized consumer binary, DMG, and Homebrew Cask are not available yet, and LibreReplace does not ask you to bypass Gatekeeper.
-
+> **No-cost preview:** The recommended install is a local source build. A downloadable DMG is also available, but it is ad-hoc signed and not Apple-notarized; see **Install** below for the exact options and first-launch disclosure.
 
 LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, models the workflow capabilities that matter, shows explicit limitations and dated evidence, and can conclude **KEEP THIS APP** when an open-source replacement is not good enough.
 
@@ -39,20 +37,32 @@ For each supported app, the catalog records capabilities, critical requirements,
 
 ## Install
 
-**Consumer binary:** not available yet. LibreReplace does not currently publish a DMG or Homebrew Cask because Developer ID signing and Apple notarization are not configured. There are no Gatekeeper-bypass instructions.
-
-**Source preview:** available now for macOS 14+. Building requires Python 3, full Xcode with Swift 6 support, and XcodeGen.
+### Recommended — build locally
 
 ```bash
 git clone https://github.com/maliroq/LibreReplace.git
 cd LibreReplace
-brew install xcodegen
-python3 dev.py
+./Scripts/install_local.sh
 ```
 
-`dev.py` regenerates the Xcode project, runs portable and native XCTest gates, validates bundled resources, performs privacy-preserving scanner/install wiring checks, exercises migration against temporary fixtures, launches the Debug app, and writes a sanitized verification report. Homebrew is otherwise required only for Homebrew-based install actions and the optional wiring probe.
+LibreReplace does not use a paid Apple Developer ID yet; building locally avoids the Gatekeeper warning applied to downloaded, non-notarized apps.
 
-See [Building from source](Docs/BUILDING.md) and [Local verification](Docs/LOCAL_VERIFICATION.md).
+Requirements: macOS 14+, full Xcode, and XcodeGen. If XcodeGen is missing, install it with `brew install xcodegen`. The installer builds Release locally, applies and verifies an ad-hoc signature, installs to `~/Applications/LibreReplace.app` by default, and launches it. It does not request Apple credentials, use `sudo`, disable Gatekeeper, or change quarantine attributes.
+
+### Download the app
+
+[Download **LibreReplace-v0.1.0-preview.1.dmg**](https://github.com/maliroq/librereplace/releases/download/v0.1.0-preview.1/LibreReplace-v0.1.0-preview.1.dmg)
+
+This preview is open source and **ad-hoc signed**, but it is **not Apple-notarized** because the project does not use a paid Apple Developer account. The exact DMG SHA-256 is published with the release.
+
+If macOS blocks the downloaded preview and you still choose to run it after reviewing the source and release checksum:
+
+1. Try opening LibreReplace once.
+2. Open **System Settings → Privacy & Security**.
+3. Use **Open Anyway** for LibreReplace.
+4. Confirm the prompt.
+
+Prefer not to override Gatekeeper? Use the recommended local build above with `./Scripts/install_local.sh`.
 
 ## Supported applications
 

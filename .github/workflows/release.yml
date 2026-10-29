@@ -36,6 +36,6 @@ jobs:
             LibreReplace-*-catalog.json
             SHA256SUMS.txt
 
-# Source publication does not require an app binary. If a macOS binary is
-# attached later, it must be Developer ID-signed, notarized, stapled, and
-# independently smoke-tested; do not attach an unsigned Debug build.
+# This workflow prepares source artifacts only. Any attached binary must be an
+# independently validated Release artifact. No-cost previews must be labeled
+# ad-hoc signed and not notarized; future Apple-trusted builds use Developer ID.

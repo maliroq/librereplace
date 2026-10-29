@@ -16,6 +16,7 @@ project-config:
 harness-test:
 	python3 Scripts/test_dev_harness.py
 	bash -n Scripts/check_distribution_prereqs.sh
+	bash -n Scripts/install_local.sh
 
 check: test validate safety project-config harness-test
 

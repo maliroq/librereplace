@@ -1,35 +1,21 @@
-# LibreReplace v0.1.0-preview
+# LibreReplace v0.1.0-preview.1
 
 **Replace paid Mac apps without losing what matters.**
 
-This is a source prerelease for inspection and early testing, not a signed/notarized consumer binary release.
+LibreReplace starts from supported commercial apps already installed on your Mac and shows evidence-backed open-source alternatives with explicit gains, losses, and conservative Strong / Partial / Keep outcomes.
 
-LibreReplace scans standard macOS application directories, recognizes 25 curated commercial apps, and compares them with evidence-backed open-source alternatives. Recommendations are conservative: feature losses are explicit and the correct outcome can be **KEEP THIS APP**.
+## Install
 
-## Included
+Recommended no-cost route:
 
-- local metadata-only app scanning;
-- 25-target evidence catalog and 41 known bundle identifiers;
-- Strong / Partial / Keep recommendation levels;
-- dated feature, license, maintenance, pricing, and installation evidence;
-- confirmation-first install actions;
-- privacy-safe Markdown reports;
-- user-entered recurring-cost estimates only;
-- one Sublime Text → Zed preference migration with preview, verified backup, output verification, and rollback;
-- native SwiftUI app, portable Swift core/CLI, tests, CI, and local verification harness;
-- custom macOS icon and publication assets;
-- real Sublime Text → Zed hero capture from the validation Mac.
+```bash
+git clone https://github.com/maliroq/LibreReplace.git
+cd LibreReplace
+./Scripts/install_local.sh
+```
 
-## Public-readiness hardening
+A downloadable Release DMG is also provided for convenience. It is **ad-hoc signed**, **not Developer ID signed**, and **not Apple-notarized**. The release record publishes the exact source commit and DMG SHA-256.
 
-The preview tightens migration path/backup/rollback invariants, scanner symlink boundaries, catalog URL/date validation, report privacy tests, savings semantics, and public-facing accessibility/presentation without expanding product scope. A sidebar navigation-state bug found during the real demo capture was fixed by resetting only the section-local SwiftUI navigation stack when the top-level sidebar selection changes. The 25-target catalog was re-audited and questionable claims were corrected or kept conservative.
+If macOS blocks the downloaded preview, users who independently decide to trust it may use Apple's normal per-app **System Settings → Privacy & Security → Open Anyway** process after first trying to open LibreReplace. No Gatekeeper-disable or quarantine-removal command is supported.
 
-## Validation
-
-The engineering release candidate passed the complete real-Mac gate on Xcode 27.1, including native XCTest, app launch, real metadata scanning, Homebrew wiring, and temporary-fixture migration rollback. The branded candidate passed the same `python3 dev.py` gate before publication.
-
-## Distribution status
-
-Developer ID signing and Apple notarization are deferred. Source can be reviewed and built normally; an unsigned Debug `.app` should not be redistributed as a polished end-user download. No Gatekeeper bypass instructions are provided.
-
-See [Known limitations](Docs/LIMITATIONS.md), the [Support matrix](Docs/SUPPORT_MATRIX.md), and [Building from source](Docs/BUILDING.md).
+LibreReplace remains local-only, has no account or telemetry, never automatically removes an existing app, and keeps its narrow migration preview-first, backup-verified, and rollback-capable.
