@@ -107,7 +107,7 @@ The generated Xcode project is disposable; `project.yml` is the source of truth.
 
 Catalog quality matters more than catalog size. Contributions should use primary evidence where practical, record exact workflow losses, preserve critical features, and downgrade uncertain claims rather than guessing parity.
 
-The preview target set is frozen for release; verification and corrections to existing entries are immediately useful. New target proposals should start as a discussion until maintainers reopen catalog scope.
+The preview target set is frozen for release; verification and corrections to existing entries are immediately useful. New target proposals should start with an issue until maintainers reopen catalog scope.
 
 See [Contributing](CONTRIBUTING.md) and [Catalog schema](Docs/CATALOG_SCHEMA.md).
 
