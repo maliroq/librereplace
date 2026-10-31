@@ -10,7 +10,7 @@
 
 <p align="center"><strong>Local-only · No account · No telemetry · Never removes your existing app automatically</strong></p>
 
-![LibreReplace showing a real Sublime Text → Zed recommendation with feature coverage, limitations, and migration availability](Docs/Images/hero-sublime-zed.png)
+![LibreReplace comparing CleanMyMac with Dusty, showing feature coverage, partial support, missing capabilities, and known limitations](Docs/Images/comparisons/cleanmymac-dusty.png)
 
 ### Quick install
 
@@ -21,6 +21,19 @@ brew install --cask maliroq/tap/librereplace
 > **Preview distribution:** the downloadable app is ad-hoc signed and not Apple-notarized. The Homebrew Cask does not remove quarantine or disable Gatekeeper.
 
 LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, shows exactly where an open-source replacement falls short, and can conclude **KEEP THIS APP** when switching would cost too much of your workflow.
+
+## Example comparisons
+
+LibreReplace is designed to show where a replacement falls short, not just where it looks similar.
+
+<p align="center">
+  <img src="Docs/Images/comparisons/photoshop-gimp.png" width="49%" alt="LibreReplace comparing Adobe Photoshop with GIMP">
+  <img src="Docs/Images/comparisons/parallels-utm.png" width="49%" alt="LibreReplace comparing Parallels Desktop with UTM">
+</p>
+
+<p align="center">
+  <img src="Docs/Images/comparisons/magnet-rectangle.png" width="49%" alt="LibreReplace comparing Magnet with Rectangle">
+</p>
 
 ## What it does
 
