@@ -14,7 +14,7 @@
 
 ### Quick install
 
-[Download v0.2.0-preview.1 for macOS](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) or build locally from source. The Homebrew Cask may temporarily point to the prior preview until its verified update is published.
+[Download v0.2.0-preview.1 for macOS](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) or build locally from source. Homebrew: `brew install --cask maliroq/tap/librereplace`.
 
 > **Preview distribution:** the downloadable app is ad-hoc signed and not Apple-notarized. The Homebrew Cask does not remove quarantine or disable Gatekeeper.
 
@@ -55,7 +55,7 @@ For each supported app, the catalog records capabilities, critical requirements,
 
 ### Homebrew Cask
 
-The tap may still install the previous preview until the v0.2.0 Cask is independently verified. For this release, download the v0.2.0-preview.1 DMG above or build from source.
+Install the current preview with `brew install --cask maliroq/tap/librereplace`, download the release DMG, or build from source.
 
 LibreReplace v0.2.0-preview.1 is distributed as an ad-hoc-signed, non-notarized Mac app. The Cask does not remove quarantine attributes or disable Gatekeeper. macOS may require you to approve LibreReplace in **System Settings → Privacy & Security → Open Anyway**.
 
