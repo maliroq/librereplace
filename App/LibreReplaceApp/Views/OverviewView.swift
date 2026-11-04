@@ -5,20 +5,28 @@ struct OverviewView: View {
     @EnvironmentObject private var state: AppState
     @State private var includeNames = false
     @State private var exportError: String?
-
     private let columns = [GridItem(.adaptive(minimum: 170), spacing: 14)]
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 VStack(alignment: .leading, spacing: 7) {
-                    Text("Replace paid Mac apps without losing what matters.")
+                    Text("Compare paid Mac apps before you switch.")
                         .font(.largeTitle.bold())
-                    Text("LibreReplace matches supported apps already on this Mac with evidence-backed open-source alternatives, then shows the tradeoffs before you switch.")
+                    Text("Explore supported software even if you haven't installed it, or scan your Mac locally to review the apps you already use.")
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: 780, alignment: .leading)
                 }
-
+                if state.recommendations.isEmpty {
+                    GroupBox("Start without scanning") {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("No supported installed apps were detected. This doesn't prevent you from comparing alternatives.")
+                            Text("Choose Explore Alternatives in the sidebar to search the documented catalog and mark the features you need.")
+                                .foregroundStyle(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
                 LazyVGrid(columns: columns, spacing: 14) {
                     MetricCard(title: "Apps detected", value: "\(state.summary.applicationsDetected)", icon: "square.stack.3d.up")
                     MetricCard(title: "Supported apps found", value: "\(state.summary.paidApplicationsDetected)", icon: "checkmark.seal")
@@ -27,24 +35,32 @@ struct OverviewView: View {
                     MetricCard(title: "Keep", value: "\(state.summary.keepApps)", icon: "hand.thumbsup")
                     MetricCard(title: "Coverage", value: "\(state.summary.openSourceCoverageScore)%", icon: "chart.bar")
                 }
-
-                GroupBox("Savings") {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("$\(NSDecimalNumber(decimal: state.summary.annualSavingsUSD).stringValue) / year")
+                GroupBox("Your proposed switch plan") {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("$\(NSDecimalNumber(decimal: state.summary.annualSavingsUSD).stringValue) / year estimated net reduction")
                             .font(.title2.bold())
-                        Text("Only recurring costs you enter yourself are counted. LibreReplace never guesses which subscription, bundle, lifetime license, student plan, or Setapp plan you have.")
+                        Text("Potential reduction, not money already saved. Only Strong matches using confirmed recurring subscriptions and a curated no-cost open-source edition are counted. Hosted services and paid-plan options are excluded, as are one-time costs.")
                             .foregroundStyle(.secondary)
+                        ForEach(state.recommendations.filter { state.selectedSwitchIDs.contains($0.match.catalogApp.id) }, id: \.match.catalogApp.id) { item in
+                            HStack {
+                                Text(item.match.catalogApp.name)
+                                Spacer(minLength: 10)
+                                Text(item.match.catalogApp.alternatives.first(where: {
+                                    $0.id == state.selectedAlternativeIDs[item.match.catalogApp.id]
+                                })?.name ?? "No replacement selected")
+                                    .foregroundStyle(.secondary)
+                            }
+                            .font(.callout)
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical, 4)
                 }
-
                 GroupBox("Privacy-safe report") {
                     VStack(alignment: .leading, spacing: 12) {
                         Toggle("Include recognized application names", isOn: $includeNames)
                         Text(includeNames ? "The exported report will list only recognized catalog apps, not your complete inventory." : "The exported report contains aggregate counts only and does not reveal app names.")
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
+                            .font(.callout).foregroundStyle(.secondary)
                         HStack {
                             Button("Copy Markdown") {
                                 ReportExporter.copyToClipboard(state.reportMarkdown(includeNames: includeNames))
@@ -75,12 +91,10 @@ struct OverviewView: View {
         }
     }
 }
-
 private struct MetricCard: View {
     let title: String
     let value: String
     let icon: String
-
     var body: some View {
         GroupBox {
             HStack(spacing: 12) {

@@ -2,6 +2,28 @@
 
 All notable public changes are recorded here.
 
+## [0.2.0-preview.1] - 2026-11-04
+
+### Added
+- **Explore Alternatives:** browse curated replacement options without installing the paid app.
+- Expanded catalog from 25 to **45 commercial targets**, with **70 open-source comparisons** and **55 researched macOS bundle-ID mappings**.
+- Mark essential workflow features and review each alternative's Strong / Partial / Keep decision and documented losses.
+- Shared required-feature selections between Explore and installed-app comparisons.
+- Choice of alternatives for the apps you use; source links, documented limitations and verification dates.
+
+### Improved
+- Conservative recommendation ranking and protection against unrelated apps matching by name.
+- Simpler potential-savings estimate: for curated free desktop editions such as GIMP, the recurring replacement software cost defaults to **$0**. Hosted or paid-plan variants are excluded from estimates until their costs can be established.
+- Savings require a real user-entered recurring expense, a selected Strong replacement, and confirmation that the original subscription could be cancelled after switching. No savings are called realized savings.
+- Stronger install-token and catalog-schema validation; migration safety checks remain intact.
+- Updated local validation and 0.2.0 development-build versioning.
+
+### Limitations
+- Not all 55 identifiers have been confirmed against installed applications; support comparisons are evidence-based, not a guarantee of complete workflow or file-format compatibility.
+- Some options require hosting or optional paid features. No Spotify-licensed streaming catalog replacement is claimed.
+- Downloadable binaries remain ad-hoc signed, **not Apple Developer ID signed or Apple-notarized**. macOS 14+ required.
+- Existing paid apps are never uninstalled and subscriptions are never cancelled automatically.
+
 ## [0.1.0-preview] - 2026-10-27
 
 Initial source preview of LibreReplace.

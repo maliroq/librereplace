@@ -51,6 +51,10 @@ public enum InstallActionBuilder {
     }
 
     public static func isSafePackageToken(_ token: String) -> Bool {
-        !token.isEmpty && token.range(of: #"^[A-Za-z0-9@+._/-]+$"#, options: .regularExpression) != nil && !token.contains("..") && !token.hasPrefix("/")
+        // The first character must not be '-' (an option) or '/' (a path).
+        // Homebrew receives this value as a distinct argument, not shell text.
+        !token.isEmpty &&
+            token.range(of: #"^[A-Za-z0-9@+._][A-Za-z0-9@+._/-]*$"#, options: .regularExpression) != nil &&
+            !token.contains("..") && !token.contains("//") && !token.hasSuffix("/")
     }
 }

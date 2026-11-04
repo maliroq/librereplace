@@ -1,41 +1,51 @@
-# Support matrix
+# Supported paid applications and open-source comparisons
 
-Verified against the catalog evidence on **2026-10-27**. Coverage is the catalog's weighted score for the listed capabilities; it is not a claim of universal workflow parity, polish, performance, accessibility, privacy, or support quality. `Keep` means the catalog does not currently support switching for the defined critical workflow.
+45 targets / 70 comparison entries. Documentation-based feature coverage; not a guarantee of real-world parity. Users select which capabilities matter. Some integrations, paid services or hosting are not replaced.
 
-| Commercial app | Catalog alternative | Result | Weighted coverage | Verified minimum macOS for alternative | Migration |
-|---|---|---:|---:|---:|---|
-| CleanShot X | Snapzy | Strong | 95% | 13.0 | — |
-| Bartender | Ice | Partial | 62% | 14.0 | — |
-| DaisyDisk | OpenDisk | Strong | 100% | 14.0 | — |
-| CleanMyMac | Dusty | Partial | 58% | — | — |
-| Paste | Maccy | Partial | 72% | 14.0 | — |
-| Magnet | Rectangle | Strong | 100% | 14.0 | — |
-| Moom | Rectangle | Partial | 74% | 14.0 | — |
-| Little Snitch | LuLu | Partial | 82% | 10.15 | — |
-| iStat Menus | Stats | Strong | 100% | 12.0 | — |
-| BetterTouchTool | Hammerspoon | Partial | 76% | 13.0 | — |
-| Keyboard Maestro | Hammerspoon | Partial | 56% | 13.0 | — |
-| Parallels Desktop | UTM | Partial | 72% | — | — |
-| Transmit | Cyberduck | Partial | 79% | — | — |
-| Tower | GitHub Desktop | Partial | 79% | 13.0 | — |
-| Sublime Text | Zed | Strong | 89% | — | Sublime → Zed settings |
-| TablePlus | Beekeeper Studio Community Edition | Strong | 100% | 12.0 | — |
-| Paw / RapidAPI for Mac | Bruno | Strong | 100% | — | — |
-| Ulysses | Zettlr | Partial | 74% | 12.0 | — |
-| Bear | Joplin | Strong | 100% | 12.0 | — |
-| MindNode | Freeplane | Partial | 71% | — | — |
-| PDF Expert | Skim | Keep | 41% | 10.13 | — |
-| Adobe Photoshop | GIMP | Partial | 68% | 11.0 | — |
-| Adobe Illustrator | Inkscape | Partial | 82% | — | — |
-| Adobe Premiere Pro | Kdenlive | Partial | 71% | 13.0 | — |
-| Adobe Acrobat Pro | LibreOffice Draw | Keep | 31% | — | — |
-
-## Reading the result
-
-- **Strong**: weighted coverage clears the app-specific strong threshold, all required critical capabilities are present, and the supporting evidence is fresh.
-- **Partial**: the alternative is useful but the catalog records meaningful missing or partial workflow coverage.
-- **Keep**: coverage is below the partial threshold or the defined workflow has critical gaps severe enough that LibreReplace does not recommend switching.
-
-Minimum macOS is shown only where a current first-party or installation source was verified. A dash means LibreReplace does not currently make a minimum-version claim.
-
-For the actual capability states, limitations, evidence URLs, and verification dates, inspect [`Catalog/catalog.json`](../Catalog/catalog.json).
+| Commercial target | Pricing type | OSS alternatives |
+|---|---|---|
+| 1Password | subscription | KeePassXC, Bitwarden |
+| Adobe Acrobat Pro | subscription | LibreOffice Draw, ONLYOFFICE Desktop Editors |
+| Adobe Audition | subscription | Audacity |
+| Adobe Illustrator | subscription | Inkscape |
+| Adobe InDesign | subscription | Scribus |
+| Adobe Lightroom | subscription | darktable, RawTherapee |
+| Adobe Photoshop | subscription | GIMP, Krita |
+| Adobe Premiere Pro | subscription | Kdenlive, Shotcut |
+| Bartender | commercial | Ice |
+| Bear | freemium | Joplin, FSNotes |
+| BetterTouchTool | commercial | Hammerspoon |
+| Canva Pro | subscription | Inkscape, Krita |
+| CapCut Pro | freemium | Shotcut, Kdenlive |
+| CleanMyMac | commercial | Dusty |
+| CleanShot X | paidUpgrade | Snapzy |
+| DaisyDisk | oneTime | OpenDisk, GrandPerspective |
+| Dropbox | freemium | Nextcloud Desktop |
+| Evernote | freemium | Joplin, Notesnook |
+| Fantastical | freemium | Thunderbird |
+| Figma | freemium | Penpot, Quant-UX |
+| iStat Menus | commercial | Stats |
+| Keyboard Maestro | commercial | Hammerspoon |
+| Little Snitch | oneTime | LuLu |
+| Magnet | oneTime | Rectangle, Loop |
+| Microsoft 365 | subscription | LibreOffice, ONLYOFFICE Desktop Editors |
+| MindNode | freemium | Freeplane |
+| Moom | oneTime | Rectangle, Loop |
+| Notion | freemium | AppFlowy, AFFiNE Community Edition |
+| Obsidian Sync | subscription | Joplin, Self-hosted LiveSync (Obsidian plugin) |
+| Parallels Desktop | commercial | UTM |
+| Paste | subscription | Maccy |
+| Paw / RapidAPI for Mac | commercial | Bruno |
+| PDF Expert | commercial | Skim, ONLYOFFICE Desktop Editors |
+| Screen Studio | subscription | OBS Studio, OpenScreen Studio, Cap (Studio Mode), OpenScreen |
+| Spark Mail | freemium | Thunderbird |
+| Spotify Premium | subscription | Navidrome, Jellyfin |
+| Sublime Text | commercial | Zed, VSCodium |
+| TablePlus | oneTime | Beekeeper Studio Community Edition, DBeaver Community |
+| TextExpander | freemium | Espanso |
+| TickTick | freemium | Super Productivity, Vikunja |
+| Todoist | freemium | Super Productivity, Vikunja |
+| Tower | subscription | GitHub Desktop |
+| Transmit | commercial | Cyberduck |
+| Ulysses | subscription | Zettlr |
+| UpNote | commercial | Joplin |

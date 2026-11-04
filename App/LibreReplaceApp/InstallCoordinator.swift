@@ -14,7 +14,7 @@ final class InstallCoordinator: ObservableObject {
         switch action {
         case .openURL(let url):
             let opened = NSWorkspace.shared.open(url)
-            resultMessage = opened ? "Opened the official installation page." : "macOS could not open the installation page."
+            resultMessage = opened ? "Opened the catalog-listed download page. Verify its publisher and terms before installing." : "macOS could not open the installation page."
         case .homebrew(let candidates, let arguments, let displayCommand):
             let executor = HomebrewExecutor(executableCandidates: candidates)
             guard executor.resolvedExecutable() != nil else {

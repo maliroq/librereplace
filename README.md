@@ -14,13 +14,11 @@
 
 ### Quick install
 
-```bash
-brew install --cask maliroq/tap/librereplace
-```
+[Download v0.2.0-preview.1 for macOS](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) or build locally from source. The Homebrew Cask may temporarily point to the prior preview until its verified update is published.
 
 > **Preview distribution:** the downloadable app is ad-hoc signed and not Apple-notarized. The Homebrew Cask does not remove quarantine or disable Gatekeeper.
 
-LibreReplace is not another alternatives directory. It starts from a supported app you actually have installed, shows exactly where an open-source replacement falls short, and can conclude **KEEP THIS APP** when switching would cost too much of your workflow.
+LibreReplace is not another alternatives directory. It can start from a supported installed app or from Explore Alternatives, shows exactly where an open-source replacement falls short, and can conclude **KEEP THIS APP** when switching would cost too much of your workflow.
 
 ## Example comparisons
 
@@ -39,11 +37,11 @@ LibreReplace is designed to show where a replacement falls short, not just where
 
 - Scans `/Applications`, `/System/Applications`, and `~/Applications` for application bundles.
 - Reads only application metadata from `Contents/Info.plist` during the normal scan.
-- Recognizes 25 curated commercial Mac applications using 41 known bundle identifiers plus conservative name aliases.
-- Ranks one evidence-backed open-source alternative per launch target as **Strong**, **Partial**, or **Keep**.
+- Recognizes 45 curated commercial targets using 55 researched bundle-ID mappings plus conservative name aliases.
+- Compares 70 open-source alternatives and reports **Strong**, **Partial**, or **Keep** depending on what you need.
 - Shows weighted capability coverage, critical missing features, known limitations, source/license evidence, and verification dates.
 - Opens verified official download pages or, after confirmation, runs a typed Homebrew action without shell interpolation.
-- Counts savings only from recurring annual costs the user explicitly enters for the current session.
+- Shows potential annual savings from user-confirmed recurring costs when a selected Strong open-source edition is free and the old subscription can be cancelled. Hosted services with unverified costs are excluded.
 - Exports a local Markdown summary that omits application names by default.
 - Supports one narrow migration: Sublime Text preferences → Zed settings, with preview, verified backup, verification, and rollback.
 
@@ -57,15 +55,13 @@ For each supported app, the catalog records capabilities, critical requirements,
 
 ### Homebrew Cask
 
-```bash
-brew install --cask maliroq/tap/librereplace
-```
+The tap may still install the previous preview until the v0.2.0 Cask is independently verified. For this release, download the v0.2.0-preview.1 DMG above or build from source.
 
-LibreReplace v0.1.0-preview.1 is distributed as an ad-hoc-signed, non-notarized Mac app. The Cask does not remove quarantine attributes or disable Gatekeeper. macOS may require you to approve LibreReplace in **System Settings → Privacy & Security → Open Anyway**.
+LibreReplace v0.2.0-preview.1 is distributed as an ad-hoc-signed, non-notarized Mac app. The Cask does not remove quarantine attributes or disable Gatekeeper. macOS may require you to approve LibreReplace in **System Settings → Privacy & Security → Open Anyway**.
 
 ### DMG
 
-Download `LibreReplace-v0.1.0-preview.1.dmg` from the [v0.1.0-preview.1 release](https://github.com/maliroq/LibreReplace/releases/tag/v0.1.0-preview.1).
+Download `LibreReplace-v0.2.0-preview.1.dmg` from the [v0.2.0-preview.1 release](https://github.com/maliroq/LibreReplace/releases/tag/v0.2.0-preview.1).
 
 ### Build locally from source
 
@@ -80,7 +76,7 @@ The local installer builds and ad-hoc signs the app without using Apple credenti
 
 ## Supported applications
 
-The preview contains **25 curated commercial targets**. Current policy results are **8 Strong · 15 Partial · 2 Keep**. Those labels are workflow judgments, not claims of identical polish, performance, accessibility, security, privacy, support, or file-format fidelity.
+The preview covers **45 commercial targets and 70 open-source comparisons**. Decisions adapt to your chosen essential features; they are workflow estimates, not guarantees of identical performance, accessibility, security, support or file-format fidelity.
 
 See the [support matrix](Docs/SUPPORT_MATRIX.md) for every source app, alternative, recommendation level, and major limitation.
 

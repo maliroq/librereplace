@@ -5,6 +5,7 @@ import LibreReplaceCore
 struct AlternativeCard: View {
     let sourceApp: PaidApplication
     let ranked: RankedAlternative
+    @EnvironmentObject private var state: AppState
     @StateObject private var installer = InstallCoordinator()
     @State private var confirmInstall = false
     @State private var installAction: InstallAction?
@@ -21,7 +22,7 @@ struct AlternativeCard: View {
                             .foregroundStyle(.secondary)
                     }
                     Spacer(minLength: 12)
-                    Text("\(Int((ranked.coverage * 100).rounded()))% coverage")
+                    Text("\(Int((ranked.coverage * 100).rounded()))% of selected essentials")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                     if let projectURL = URL(string: ranked.alternative.homepageURL) {
@@ -29,9 +30,14 @@ struct AlternativeCard: View {
                     }
                 }
 
-                FeatureSection(title: "Keeps", symbol: "checkmark.circle", tint: .green, capabilities: ranked.kept)
-                FeatureSection(title: "Partial", symbol: "circle.lefthalf.filled", tint: .orange, capabilities: ranked.partial)
-                FeatureSection(title: "Missing", symbol: "xmark.circle", tint: .red, capabilities: ranked.missing)
+                Text("Selected-essential coverage is not overall feature parity. Review all capability losses below.")
+                    .font(.caption).foregroundStyle(.secondary)
+                FeatureSection(title: "Keeps", symbol: "checkmark.circle", tint: .green, capabilities: ranked.kept,
+                               requiredIDs: state.requiredFeatureIDs(for: sourceApp))
+                FeatureSection(title: "Partial", symbol: "circle.lefthalf.filled", tint: .orange, capabilities: ranked.partial,
+                               requiredIDs: state.requiredFeatureIDs(for: sourceApp))
+                FeatureSection(title: "Missing", symbol: "xmark.circle", tint: .red, capabilities: ranked.missing,
+                               requiredIDs: state.requiredFeatureIDs(for: sourceApp))
 
                 if !ranked.alternative.limitations.isEmpty {
                     Divider()
@@ -105,7 +111,7 @@ struct AlternativeCard: View {
         if case .homebrew(_, _, let command) = installAction {
             text = "LibreReplace will run exactly: \(command). It will not uninstall \(sourceApp.name)."
         } else {
-            text = "LibreReplace will open the verified installation page in your browser. It will not uninstall \(sourceApp.name)."
+            text = "LibreReplace will open the catalog-listed download page in your browser. Check its publisher and pricing before installing. It will not uninstall \(sourceApp.name)."
         }
         if let warning = ranked.alternative.install.warning {
             text += " Warning: \(warning)"
@@ -124,6 +130,7 @@ private struct FeatureSection: View {
     let symbol: String
     let tint: Color
     let capabilities: [Capability]
+    let requiredIDs: Set<String>
 
     var body: some View {
         if !capabilities.isEmpty {
@@ -131,7 +138,7 @@ private struct FeatureSection: View {
                 Text(title).font(.headline)
                 ForEach(capabilities, id: \.id) { cap in
                     Label {
-                        Text(cap.label + (cap.critical ? " (critical)" : ""))
+                        Text(cap.label + (requiredIDs.contains(cap.id) ? " (required)" : ""))
                     } icon: {
                         Image(systemName: symbol).foregroundStyle(tint)
                     }

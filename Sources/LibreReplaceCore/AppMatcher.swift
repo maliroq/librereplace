@@ -15,8 +15,12 @@ public struct AppMatcher: Sendable {
 
         var matches: [AppMatch] = []
         for item in installed {
-            if let bundle = item.bundleIdentifier?.lowercased(), let app = bundleIndex[bundle] {
-                matches.append(AppMatch(installed: item, catalogApp: app, confidence: .bundleIdentifier))
+            // A present but unrecognized identifier must not match a commercial
+            // app solely because its display name happens to be the same.
+            if let bundle = item.bundleIdentifier?.trimmingCharacters(in: .whitespacesAndNewlines), !bundle.isEmpty {
+                if let app = bundleIndex[bundle.lowercased()] {
+                    matches.append(AppMatch(installed: item, catalogApp: app, confidence: .bundleIdentifier))
+                }
                 continue
             }
             let normalized = normalize(item.name)

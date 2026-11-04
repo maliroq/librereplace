@@ -2,15 +2,16 @@ import SwiftUI
 
 struct MainView: View {
     enum Section: String, CaseIterable, Identifiable {
+        case explore = "Explore"
         case overview = "Overview"
-        case detected = "Detected"
-        case catalog = "Catalog"
+        case detected = "My Installed Apps"
+        case catalog = "Evidence Catalog"
         case privacy = "Privacy"
 
         var id: String { rawValue }
-
         var icon: String {
             switch self {
+            case .explore: "magnifyingglass"
             case .overview: "gauge.with.dots.needle.50percent"
             case .detected: "square.stack.3d.up"
             case .catalog: "checklist"
@@ -20,13 +21,11 @@ struct MainView: View {
     }
 
     @EnvironmentObject private var state: AppState
-    @State private var selection: Section? = .overview
-
+    @State private var selection: Section? = .explore
     var body: some View {
         NavigationSplitView {
             List(Section.allCases, selection: $selection) { item in
-                Label(item.rawValue, systemImage: item.icon)
-                    .tag(item)
+                Label(item.rawValue, systemImage: item.icon).tag(item)
             }
             .listStyle(.sidebar)
             .navigationTitle("LibreReplace")
@@ -34,7 +33,8 @@ struct MainView: View {
         } detail: {
             NavigationStack {
                 Group {
-                    switch selection ?? .overview {
+                    switch selection ?? .explore {
+                    case .explore: ExploreAlternativesView()
                     case .overview: OverviewView()
                     case .detected: DetectedAppsView()
                     case .catalog: CatalogView()
@@ -42,10 +42,7 @@ struct MainView: View {
                     }
                 }
             }
-            // A recommendation is pushed from the Detected section. Rebuild the
-            // section-local stack when the sidebar changes so a pushed detail
-            // cannot remain above a newly selected top-level section.
-            .id((selection ?? .overview).rawValue)
+            .id((selection ?? .explore).rawValue)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {

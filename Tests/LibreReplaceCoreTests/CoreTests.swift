@@ -11,6 +11,14 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(match?.confidence, .bundleIdentifier)
     }
 
+    func testUnknownBundleIdentifierNeverFallsBackToCommercialDisplayName() {
+        let target = sampleApp(id: "clean", name: "CleanShot X", bundle: "trusted.clean")
+        let catalog = Catalog(schemaVersion: "1.0", generatedAt: "2026-10-26", apps: [target])
+        let unrelated = InstalledApplication(name: "CleanShot X", bundleIdentifier: "other.publisher.app",
+                                             version: nil, path: URL(fileURLWithPath: "/Applications/Unrelated.app"))
+        XCTAssertTrue(AppMatcher().match(installed: [unrelated], catalog: catalog).isEmpty)
+    }
+
     func testNameAliasFallback() {
         let target = sampleApp(id: "clean", name: "CleanShot X", bundle: "example.clean", aliases: ["CleanShot"])
         let catalog = Catalog(schemaVersion: "1.0", generatedAt: "2026-10-26", apps: [target])
@@ -53,7 +61,8 @@ final class CoreTests: XCTestCase {
         let target = PaidApplication(id: base.id, name: base.name, vendor: base.vendor, bundleIdentifiers: base.bundleIdentifiers, nameAliases: [], pricing: base.pricing, capabilities: base.capabilities, alternatives: [staleAlt], policy: base.policy, evidence: [], lastVerified: "2026-10-26")
         let installed = InstalledApplication(name: "Stale", bundleIdentifier: "stale.bundle", version: nil, path: URL(fileURLWithPath: "/Applications/Stale.app"))
         let match = AppMatch(installed: installed, catalogApp: target, confidence: .bundleIdentifier)
-        XCTAssertEqual(ReplacementRanker().recommendation(for: match, now: CatalogDate.parse("2026-10-26")!).level, .partial)
+        XCTAssertEqual(ExploreDecision.assess(target, now: CatalogDate.parse("2026-10-26")!).first?.outcome, .unknown)
+        XCTAssertEqual(ReplacementRanker().recommendation(for: match, now: CatalogDate.parse("2026-10-26")!).level, .keep)
     }
 
     func testUserConfirmedAnnualCostOverridesCatalogPricing() {
@@ -62,7 +71,21 @@ final class CoreTests: XCTestCase {
         let installed = InstalledApplication(name: "Paid", bundleIdentifier: "paid.bundle", version: nil, path: URL(fileURLWithPath: "/Applications/Paid.app"))
         let match = AppMatcher().match(installed: [installed], catalog: catalog)[0]
         let rec = ReplacementRanker().recommendation(for: match, now: CatalogDate.parse("2026-10-26")!)
-        XCTAssertEqual(SavingsCalculator.annualSavings(for: [rec], annualCostOverrides: ["paid": 42]), Decimal(42))
+        XCTAssertEqual(SavingsCalculator.annualSavings(for: [rec], annualCostOverrides: ["paid": 42]), 0)
+        XCTAssertEqual(
+            SavingsCalculator.annualSavings(
+                for: [rec],
+                annualCostOverrides: ["paid": 42],
+                selectedSwitchIDs: ["paid"],
+                confirmedRecurringIDs: ["paid"],
+                selectedAlternativeIDs: ["paid": target.alternatives[0].id],
+                replacementAnnualCosts: ["paid": 0],
+                confirmedReplacementCostIDs: ["paid"],
+                confirmedCancellationIDs: ["paid"],
+                now: CatalogDate.parse("2026-10-26")!
+            ),
+            Decimal(42)
+        )
     }
 
 
@@ -76,7 +99,8 @@ final class CoreTests: XCTestCase {
         )
         let installed = InstalledApplication(name: target.name, bundleIdentifier: "stale.evidence", version: nil, path: URL(fileURLWithPath: "/Applications/Stale Evidence.app"))
         let match = AppMatch(installed: installed, catalogApp: target, confidence: .bundleIdentifier)
-        XCTAssertEqual(ReplacementRanker().recommendation(for: match, now: CatalogDate.parse("2026-10-26")!).level, .partial)
+        XCTAssertEqual(ExploreDecision.assess(target, now: CatalogDate.parse("2026-10-26")!).first?.outcome, .unknown)
+        XCTAssertEqual(ReplacementRanker().recommendation(for: match, now: CatalogDate.parse("2026-10-26")!).level, .keep)
     }
 
     func testCatalogPriceIsNeverAssumedAsUserSavings() {
@@ -100,6 +124,9 @@ final class CoreTests: XCTestCase {
         XCTAssertTrue(InstallActionBuilder.isSafePackageToken("jordanbaird-ice"))
         XCTAssertFalse(InstallActionBuilder.isSafePackageToken("good; rm -rf /"))
         XCTAssertFalse(InstallActionBuilder.isSafePackageToken("../evil"))
+        XCTAssertFalse(InstallActionBuilder.isSafePackageToken("--force"))
+        XCTAssertFalse(InstallActionBuilder.isSafePackageToken("-q"))
+        XCTAssertFalse(InstallActionBuilder.isSafePackageToken("tool//wrong"))
     }
 
     func testHomebrewExecutorPassesArgumentsDirectlyWithoutShellExpansion() throws {
@@ -294,7 +321,7 @@ final class CoreTests: XCTestCase {
 
     func testBundledCatalogLoadsAndProducesARecommendationForEveryTarget() throws {
         let catalog = try CatalogLoader.load(from: launchCatalogURL())
-        XCTAssertEqual(catalog.apps.count, 25)
+        XCTAssertEqual(catalog.apps.count, 45)
         for app in catalog.apps {
             let installed = InstalledApplication(name: app.name, bundleIdentifier: app.bundleIdentifiers.first, version: "fixture", path: URL(fileURLWithPath: "/Applications/\(app.name).app"))
             let match = try XCTUnwrap(AppMatcher().match(installed: [installed], catalog: catalog).first, "No match for \(app.name)")

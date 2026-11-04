@@ -19,7 +19,7 @@ NEW_INSTALLED=0
 cleanup(){ set +e; rm -rf "$STAGED" "$DERIVED"; }
 rollback(){
   set +e
-  [[ "$NEW_INSTALLED" == "1" && -d "$TARGET" ]] && rm -rf "$TARGET"
+  [[ "$NEW_INSTALLED" == "2" && -d "$TARGET" ]] && rm -rf "$TARGET"
   if [[ -n "$BACKUP" && -d "$BACKUP" ]]; then
     mv "$BACKUP" "$TARGET"
     printf 'Previous LibreReplace installation restored after failure.\n' >&2
@@ -41,15 +41,15 @@ xcodegen generate >/dev/null
 xcodebuild -quiet -project LibreReplace.xcodeproj -scheme LibreReplace -configuration Release \
   -destination "platform=macOS,arch=$ARCH" -derivedDataPath "$DERIVED" \
   CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
-  "INFOPLIST_KEY_CFBundleShortVersionString=0.1.0" \
-  "INFOPLIST_KEY_CFBundleVersion=1" build
+  "INFOPLIST_KEY_CFBundleShortVersionString=$VERSION" \
+  "INFOPLIST_KEY_CFBundleVersion=2" build
 [[ -d "$BUILT" ]] || die "Release app was not produced."
 INFO="$BUILT/Contents/Info.plist"
 [[ -f "$INFO" ]] || die "Built app Info.plist is missing."
-/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString 0.1.0" "$INFO" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string 0.1.0" "$INFO"
-/usr/libexec/PlistBuddy -c "Set :CFBundleVersion 1" "$INFO" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :CFBundleVersion string 1" "$INFO"
-[[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$INFO")" == "0.1.0" ]] || die "Local app version stamp failed."
-[[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$INFO")" == "1" ]] || die "Local app build stamp failed."
+/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "$INFO" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string $VERSION" "$INFO"
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion 2" "$INFO" 2>/dev/null || /usr/libexec/PlistBuddy -c "Add :CFBundleVersion string 2" "$INFO"
+[[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$INFO")" == "$VERSION" ]] || die "Local app version stamp failed."
+[[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$INFO")" == "2" ]] || die "Local app build stamp failed."
 FRAMEWORK="$BUILT/Contents/Frameworks/LibreReplaceCore.framework"
 [[ -d "$FRAMEWORK" ]] && codesign --force --sign - --timestamp=none "$FRAMEWORK"
 codesign --force --sign - --timestamp=none "$BUILT"

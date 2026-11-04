@@ -46,8 +46,8 @@ public enum CatalogValidator {
         } else {
             errors.append("generatedAt must be a valid YYYY-MM-DD date")
         }
-        if catalog.apps.count < 20 || catalog.apps.count > 40 {
-            errors.append("launch catalog should contain 20-40 commercial apps; found \(catalog.apps.count)")
+        if catalog.apps.count < 20 || catalog.apps.count > 80 {
+            errors.append("catalog should contain 20-80 commercial apps; found \(catalog.apps.count)")
         }
 
         var appIDs = Set<String>()

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-10-27",
+  "generatedAt": "2026-11-04",
   "apps": [
     {
       "id": "cleanshot-x",
@@ -333,6 +333,45 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "14.0"
+        },
+        {
+          "id": "grandperspective",
+          "name": "GrandPerspective",
+          "license": "GPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://sourceforge.net/projects/grandperspectiv/",
+          "homepageURL": "https://grandperspectiv.sourceforge.net/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://sourceforge.net/projects/grandperspectiv/files/"
+          },
+          "support": {
+            "visual": "full",
+            "scan": "unknown",
+            "delete": "full",
+            "volumes": "full",
+            "largefiles": "full"
+          },
+          "limitations": [
+            "Treemap, not DaisyDisk's sunburst. Scanning speed has not been benchmarked.",
+            "The SourceForge edition is free and open source. The App Store edition is paid."
+          ],
+          "minimumMacOS": "14.0",
+          "lastVerified": "2026-11-04",
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "GrandPerspective project documentation",
+              "url": "https://sourceforge.net/projects/grandperspectiv/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "GrandPerspective upstream source and license",
+              "url": "https://sourceforge.net/projects/grandperspectiv/",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -580,7 +619,7 @@
     {
       "id": "magnet",
       "name": "Magnet",
-      "vendor": "CrowdCafé",
+      "vendor": "CrowdCaf\u00e9",
       "bundleIdentifiers": [
         "com.crowdcafe.windowmagnet"
       ],
@@ -661,6 +700,44 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "14.0"
+        },
+        {
+          "id": "loop",
+          "name": "Loop",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/MrKai77/Loop",
+          "homepageURL": "https://github.com/MrKai77/Loop",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/MrKai77/Loop/releases"
+          },
+          "support": {
+            "snap": "full",
+            "zones": "partial",
+            "display": "full",
+            "maximize": "full"
+          },
+          "limitations": [
+            "Window snapping and shortcuts are supported, but Magnet presets and hotkeys are not identical.",
+            "Accessibility permission and macOS 27 behavior need hands-on testing."
+          ],
+          "minimumMacOS": "13.0",
+          "lastVerified": "2026-11-04",
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Loop project documentation",
+              "url": "https://github.com/MrKai77/Loop",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Loop upstream source and license",
+              "url": "https://github.com/MrKai77/Loop",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -746,7 +823,7 @@
             "mouse": "partial"
           },
           "limitations": [
-            "Moom custom layouts and mouse UI are richer than Rectangle’s free feature set."
+            "Moom custom layouts and mouse UI are richer than Rectangle\u2019s free feature set."
           ],
           "evidence": [
             {
@@ -764,6 +841,45 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "14.0"
+        },
+        {
+          "id": "loop",
+          "name": "Loop",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/MrKai77/Loop",
+          "homepageURL": "https://github.com/MrKai77/Loop",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/MrKai77/Loop/releases"
+          },
+          "support": {
+            "window": "full",
+            "layouts": "partial",
+            "grid": "partial",
+            "display": "full",
+            "mouse": "full"
+          },
+          "limitations": [
+            "Loop cycles and layouts are not identical to Moom saved multi-window setups.",
+            "Verify display movement and mouse controls on a real Mac."
+          ],
+          "minimumMacOS": "13.0",
+          "lastVerified": "2026-11-04",
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Loop project documentation",
+              "url": "https://github.com/MrKai77/Loop",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Loop upstream source and license",
+              "url": "https://github.com/MrKai77/Loop",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -1231,7 +1347,7 @@
       ],
       "pricing": {
         "model": "commercial",
-        "note": "Standard annual pricing is publicly listed, but perpetual and edition differences mean the app cannot infer the user’s recurring cost safely.",
+        "note": "Standard annual pricing is publicly listed, but perpetual and edition differences mean the app cannot infer the user\u2019s recurring cost safely.",
         "sourceURL": "https://www.parallels.com/products/desktop/"
       },
       "capabilities": [
@@ -1639,6 +1755,51 @@
           ],
           "lastVerified": "2026-10-27",
           "migrationAdapter": "sublime-to-zed-settings-v1"
+        },
+        {
+          "id": "vscodium",
+          "name": "VSCodium",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/VSCodium/vscodium",
+          "homepageURL": "https://vscodium.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/VSCodium/vscodium/releases"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "editing": "full",
+            "multicursor": "full",
+            "extensions": "partial",
+            "projects": "full",
+            "performance": "unknown"
+          },
+          "limitations": [
+            "Extension marketplaces differ from Sublime Package Control. Large-file performance is not benchmarked.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "VSCodium official project documentation",
+              "url": "https://vscodium.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "VSCodium source and licensing information",
+              "url": "https://github.com/VSCodium/vscodium",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "VSCodium official download",
+              "url": "https://github.com/VSCodium/vscodium/releases",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -1748,6 +1909,51 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "12.0"
+        },
+        {
+          "id": "dbeaver",
+          "name": "DBeaver Community",
+          "license": "Apache-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/dbeaver/dbeaver",
+          "homepageURL": "https://dbeaver.io",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://dbeaver.io/download/"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "sql": "full",
+            "dbs": "full",
+            "edit": "full",
+            "ssh": "partial",
+            "history": "partial"
+          },
+          "limitations": [
+            "Check Community Edition drivers, SSH tunnels and query history against your actual databases.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "DBeaver Community official project documentation",
+              "url": "https://dbeaver.io",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "DBeaver Community source and licensing information",
+              "url": "https://github.com/dbeaver/dbeaver",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "DBeaver Community official download",
+              "url": "https://dbeaver.io/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -1834,7 +2040,7 @@
             "offline": "full"
           },
           "limitations": [
-            "Bruno deliberately uses a file/Git-oriented workflow rather than Paw’s document model.",
+            "Bruno deliberately uses a file/Git-oriented workflow rather than Paw\u2019s document model.",
             "Some Bruno features are offered in paid editions; core API client functionality remains open source."
           ],
           "evidence": [
@@ -2084,6 +2290,51 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "12.0"
+        },
+        {
+          "id": "fsnotes",
+          "name": "FSNotes",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/glushchenko/fsnotes",
+          "homepageURL": "https://fsnot.es",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/glushchenko/fsnotes/releases"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "notes": "full",
+            "tags": "full",
+            "sync": "partial",
+            "attachments": "unknown",
+            "search": "full"
+          },
+          "limitations": [
+            "Native Markdown notes and file-based iCloud sync. Import fidelity is untested. App Store editions are paid.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "FSNotes official project documentation",
+              "url": "https://fsnot.es",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "FSNotes source and licensing information",
+              "url": "https://github.com/glushchenko/fsnotes",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "FSNotes official download",
+              "url": "https://github.com/glushchenko/fsnotes/releases",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -2304,6 +2555,51 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "10.13"
+        },
+        {
+          "id": "onlyoffice",
+          "name": "ONLYOFFICE Desktop Editors",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/ONLYOFFICE/DesktopEditors",
+          "homepageURL": "https://www.onlyoffice.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.onlyoffice.com/download-desktop"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "view": "full",
+            "edit": "partial",
+            "ocr": "none",
+            "forms": "partial",
+            "sign": "partial"
+          },
+          "limitations": [
+            "Check text editing, PDF signatures and form fidelity with real documents before switching.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "ONLYOFFICE Desktop Editors official project documentation",
+              "url": "https://www.onlyoffice.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "ONLYOFFICE Desktop Editors source and licensing information",
+              "url": "https://github.com/ONLYOFFICE/DesktopEditors",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "ONLYOFFICE Desktop Editors official download",
+              "url": "https://www.onlyoffice.com/download-desktop",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -2421,6 +2717,52 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "11.0"
+        },
+        {
+          "id": "krita",
+          "name": "Krita",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://invent.kde.org/graphics/krita",
+          "homepageURL": "https://krita.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://krita.org/en/download/"
+          },
+          "support": {
+            "raster": "partial",
+            "layers": "full",
+            "raw": "partial",
+            "smart": "partial",
+            "cmyk": "partial",
+            "plugins": "partial"
+          },
+          "limitations": [
+            "Designed primarily for drawing and digital painting, not identical to Photoshop photo-editing or retouching workflows.",
+            "Krita masks and filters do not provide drop-in Photoshop Smart Object compatibility.",
+            "Adobe plugins and advanced Photoshop/PSD documents may not round-trip faithfully."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Krita official features",
+              "url": "https://krita.org/en/features/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Krita documented GPL license",
+              "url": "https://krita.org/en/about/license/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Krita official macOS download",
+              "url": "https://krita.org/en/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
         }
       ],
       "policy": {
@@ -2640,6 +2982,51 @@
           ],
           "lastVerified": "2026-10-27",
           "minimumMacOS": "13.0"
+        },
+        {
+          "id": "shotcut",
+          "name": "Shotcut",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/mltframework/shotcut",
+          "homepageURL": "https://www.shotcut.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.shotcut.org/download/"
+          },
+          "support": {
+            "timeline": "full",
+            "effects": "full",
+            "multicam": "unknown",
+            "proxy": "full",
+            "integration": "none"
+          },
+          "limitations": [
+            "Does not offer Adobe Dynamic Link, After Effects, or Creative Cloud integration.",
+            "Treat professional multi-camera and team collaboration as unverified until workflow-specific testing.",
+            "Premiere project files are not directly interchangeable."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Shotcut official features",
+              "url": "https://www.shotcut.org/features/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Shotcut documented GPL license",
+              "url": "https://github.com/mltframework/shotcut/blob/master/COPYING",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Shotcut official macOS download",
+              "url": "https://www.shotcut.org/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
         }
       ],
       "policy": {
@@ -2751,6 +3138,51 @@
             }
           ],
           "lastVerified": "2026-10-27"
+        },
+        {
+          "id": "onlyoffice",
+          "name": "ONLYOFFICE Desktop Editors",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/ONLYOFFICE/DesktopEditors",
+          "homepageURL": "https://www.onlyoffice.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.onlyoffice.com/download-desktop"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "edit": "partial",
+            "ocr": "none",
+            "forms": "partial",
+            "sign": "partial",
+            "redact": "unknown"
+          },
+          "limitations": [
+            "PDF editing and forms are supported. Advanced OCR, certified redaction and complex Acrobat workflows are not verified.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "ONLYOFFICE Desktop Editors official project documentation",
+              "url": "https://www.onlyoffice.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "ONLYOFFICE Desktop Editors source and licensing information",
+              "url": "https://github.com/ONLYOFFICE/DesktopEditors",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "ONLYOFFICE Desktop Editors official download",
+              "url": "https://www.onlyoffice.com/download-desktop",
+              "lastVerified": "2026-11-04"
+            }
+          ]
         }
       ],
       "policy": {
@@ -2767,6 +3199,3021 @@
         }
       ],
       "lastVerified": "2026-10-27"
+    },
+    {
+      "id": "1password",
+      "name": "1Password",
+      "vendor": "AgileBits",
+      "bundleIdentifiers": [
+        "com.1password.1password"
+      ],
+      "nameAliases": [
+        "1Password"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Individual and family plans are recurring. KeePassXC keeps passwords locally; it is not a managed sync/sharing subscription.",
+        "sourceURL": "https://1password.com/pricing/personal"
+      },
+      "capabilities": [
+        {
+          "id": "vault",
+          "label": "Encrypted password database",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "autofill",
+          "label": "Browser password autofill",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "totp",
+          "label": "Time-based one-time passwords",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "cloud",
+          "label": "Automatic cloud sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "families",
+          "label": "Managed family vault sharing",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "alerts",
+          "label": "Breach/reused-password notifications",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "keepassxc",
+          "name": "KeePassXC",
+          "license": "GPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/keepassxreboot/keepassxc",
+          "homepageURL": "https://keepassxc.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://keepassxc.org/download/"
+          },
+          "support": {
+            "vault": "full",
+            "autofill": "partial",
+            "totp": "full",
+            "cloud": "none",
+            "families": "none",
+            "alerts": "unknown"
+          },
+          "limitations": [
+            "Sync requires your own service/file workflow rather than a bundled hosted 1Password account.",
+            "Browser integration must be configured and verified; it does not provide identical autofill everywhere.",
+            "No built-in equivalent of 1Password family-vault administration."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "KeePassXC official features",
+              "url": "https://keepassxc.org/docs/KeePassXC_UserGuide",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "KeePassXC source license",
+              "url": "https://github.com/keepassxreboot/keepassxc/blob/develop/COPYING",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "KeePassXC official downloads",
+              "url": "https://keepassxc.org/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "bitwarden",
+          "name": "Bitwarden",
+          "license": "GPL-3.0 core; mixed-license components",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/bitwarden/clients",
+          "homepageURL": "https://bitwarden.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://bitwarden.com/download/"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "vault": "full",
+            "autofill": "full",
+            "totp": "partial",
+            "cloud": "full",
+            "families": "partial",
+            "alerts": "partial"
+          },
+          "limitations": [
+            "Basic sync and autofill are available for free. Authenticator, family sharing and some reports need paid plans.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Bitwarden official project documentation",
+              "url": "https://bitwarden.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Bitwarden source and licensing information",
+              "url": "https://github.com/bitwarden/clients",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Bitwarden official download",
+              "url": "https://bitwarden.com/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "1Password official plans/pricing",
+          "url": "https://1password.com/pricing/personal",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Security-sensitive migration: verify backup, export format, device support and autofill before changing providers."
+    },
+    {
+      "id": "evernote",
+      "name": "Evernote",
+      "vendor": "Evernote",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Evernote"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Evernote offers a restricted free tier and paid recurring plans. Joplin offers a documented Evernote import; cloud sync may require configuration or a paid host.",
+        "sourceURL": "https://evernote.com/en-us/compare-plans"
+      },
+      "capabilities": [
+        {
+          "id": "notes",
+          "label": "Rich notes and attachments",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "notebooks",
+          "label": "Notebook organization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "search",
+          "label": "Full-text note search",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "webclip",
+          "label": "Web clipping",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Cross-device sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "tasks",
+          "label": "Integrated advanced tasks and calendar",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "joplin",
+          "name": "Joplin",
+          "license": "AGPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/laurent22/joplin",
+          "homepageURL": "https://joplinapp.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://joplinapp.org/help/install/"
+          },
+          "support": {
+            "notes": "partial",
+            "notebooks": "full",
+            "search": "full",
+            "webclip": "full",
+            "sync": "partial",
+            "tasks": "partial"
+          },
+          "limitations": [
+            "Evernote rich formatting is imported into a Markdown-based editor; verify complex documents after import.",
+            "Joplin sync needs a supported remote target; Joplin Cloud is a paid service.",
+            "Advanced tasks/calendar workflows are not equivalent."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Joplin official features",
+              "url": "https://joplinapp.org/help/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Joplin source license",
+              "url": "https://github.com/laurent22/joplin/blob/dev/LICENSE",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Joplin official downloads",
+              "url": "https://joplinapp.org/help/install/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "notesnook",
+          "name": "Notesnook",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/streetwriters/notesnook",
+          "homepageURL": "https://notesnook.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://notesnook.com/downloads"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "notes": "partial",
+            "notebooks": "full",
+            "search": "full",
+            "webclip": "partial",
+            "sync": "full",
+            "tasks": "none"
+          },
+          "limitations": [
+            "Supports Evernote import and encrypted sync. Verify rich formatting, attachments and free-plan restrictions.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Notesnook official project documentation",
+              "url": "https://notesnook.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Notesnook source and licensing information",
+              "url": "https://github.com/streetwriters/notesnook",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Notesnook official download",
+              "url": "https://notesnook.com/downloads",
+              "lastVerified": "2026-11-04"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Evernote official plans/pricing",
+          "url": "https://evernote.com/en-us/compare-plans",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Evernote ENEX import is documented by Joplin; test representative notebooks and attachment formats."
+    },
+    {
+      "id": "textexpander",
+      "name": "TextExpander",
+      "vendor": "TextExpander Inc.",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Text Expander"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "TextExpander now advertises a free tier and paid Pro/Business tiers. Espanso expands text on macOS but team and managed-cloud features differ.",
+        "sourceURL": "https://textexpander.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "expansion",
+          "label": "System-wide text expansion",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "dynamic",
+          "label": "Dynamic fields and date variables",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "scripts",
+          "label": "Script-powered snippets",
+          "weight": 1,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Automatic managed cloud sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "teams",
+          "label": "Team snippet libraries and access control",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "espanso",
+          "name": "Espanso",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/espanso/espanso",
+          "homepageURL": "https://espanso.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://espanso.org/docs/install/mac/"
+          },
+          "support": {
+            "expansion": "full",
+            "dynamic": "partial",
+            "scripts": "partial",
+            "sync": "partial",
+            "teams": "none"
+          },
+          "limitations": [
+            "Some TextExpander scripts and advanced fill-ins need manual rewriting.",
+            "Synchronization is user-managed rather than the same hosted collaboration service.",
+            "No parity claim for TextExpander Business permissions or team auditing."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Espanso official features",
+              "url": "https://espanso.org/docs/get-started/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Espanso source license",
+              "url": "https://github.com/espanso/espanso/blob/dev/LICENSE",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Espanso official downloads",
+              "url": "https://espanso.org/docs/install/mac/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "TextExpander official plans/pricing",
+          "url": "https://textexpander.com/pricing",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Manual discovery is supported. Bundle identifiers were deliberately omitted pending independent verification."
+    },
+    {
+      "id": "adobe-lightroom",
+      "name": "Adobe Lightroom",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Lightroom",
+        "Adobe Lightroom Classic"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Adobe sells Lightroom and Lightroom Classic on subscription plans. darktable and RawTherapee primarily address local RAW workflows, not the entire Adobe cloud ecosystem.",
+        "sourceURL": "https://www.adobe.com/products/photoshop-lightroom/plans.html"
+      },
+      "capabilities": [
+        {
+          "id": "raw",
+          "label": "RAW image processing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "nondestruct",
+          "label": "Non-destructive edits",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "color",
+          "label": "Color management",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "catalog",
+          "label": "Photo library/catalog organization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "cloud",
+          "label": "Adobe cloud/mobile editing and sync",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "presets",
+          "label": "Preset and editing compatibility",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "darktable",
+          "name": "darktable",
+          "license": "GPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/darktable-org/darktable",
+          "homepageURL": "https://www.darktable.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.darktable.org/install/"
+          },
+          "support": {
+            "raw": "full",
+            "nondestruct": "full",
+            "color": "full",
+            "catalog": "partial",
+            "cloud": "none",
+            "presets": "partial"
+          },
+          "limitations": [
+            "Adobe cloud sync, mobile editing and account integration are not replaced.",
+            "Lightroom catalogs, develop settings and presets are not automatically interchangeable."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "darktable official features",
+              "url": "https://www.darktable.org/about/features/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "darktable source license",
+              "url": "https://github.com/darktable-org/darktable/blob/master/LICENSE",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "darktable official downloads",
+              "url": "https://www.darktable.org/install/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "rawtherapee",
+          "name": "RawTherapee",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/RawTherapee/RawTherapee",
+          "homepageURL": "https://rawtherapee.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://rawtherapee.com/downloads/"
+          },
+          "support": {
+            "raw": "full",
+            "nondestruct": "full",
+            "color": "full",
+            "catalog": "partial",
+            "cloud": "none",
+            "presets": "unknown"
+          },
+          "limitations": [
+            "No Adobe cloud/mobile sync.",
+            "Workflow centers on RAW development rather than Lightroom catalog integration.",
+            "Do not assume Lightroom preset compatibility."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "RawTherapee official features",
+              "url": "https://rawpedia.rawtherapee.com/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "RawTherapee source license",
+              "url": "https://github.com/RawTherapee/RawTherapee/blob/dev/LICENSE",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "RawTherapee official downloads",
+              "url": "https://rawtherapee.com/downloads/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Adobe Lightroom official plans/pricing",
+          "url": "https://www.adobe.com/products/photoshop-lightroom/plans.html",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Photo catalog interchange is a major migration risk; copy representative originals and sidecars first."
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "vendor": "Microsoft",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Office 365",
+        "Microsoft Office 365"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Microsoft 365 is a recurring suite that includes cloud services. LibreOffice is a local office suite, not a replacement for the hosted Microsoft 365 account, storage or Teams.",
+        "sourceURL": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products"
+      },
+      "capabilities": [
+        {
+          "id": "word",
+          "label": "Word processing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "sheets",
+          "label": "Spreadsheets and formulas",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "present",
+          "label": "Presentations",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "macros",
+          "label": "Advanced Excel VBA macros",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "realtime",
+          "label": "Microsoft 365 real-time team coauthoring",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "cloud",
+          "label": "OneDrive hosted storage and collaboration",
+          "weight": 3,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "libreoffice",
+          "name": "LibreOffice",
+          "license": "MPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/LibreOffice/core",
+          "homepageURL": "https://www.libreoffice.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.libreoffice.org/download/download-libreoffice/"
+          },
+          "support": {
+            "word": "full",
+            "sheets": "partial",
+            "present": "partial",
+            "macros": "none",
+            "realtime": "none",
+            "cloud": "none"
+          },
+          "limitations": [
+            "Complex Excel macros, advanced formulas and formatting may not survive round trips.",
+            "Does not replace Microsoft 365 Teams, hosted OneDrive storage or online collaboration.",
+            "Verify `.docx`, `.xlsx` and `.pptx` compatibility using your actual documents."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "LibreOffice official features",
+              "url": "https://www.libreoffice.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "LibreOffice source license",
+              "url": "https://www.libreoffice.org/licenses/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "LibreOffice official downloads",
+              "url": "https://www.libreoffice.org/download/download-libreoffice/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "onlyoffice",
+          "name": "ONLYOFFICE Desktop Editors",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/ONLYOFFICE/DesktopEditors",
+          "homepageURL": "https://www.onlyoffice.com",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.onlyoffice.com/download-desktop"
+          },
+          "minimumMacOS": null,
+          "lastVerified": "2026-11-04",
+          "support": {
+            "word": "full",
+            "sheets": "partial",
+            "present": "full",
+            "macros": "none",
+            "realtime": "partial",
+            "cloud": "none"
+          },
+          "limitations": [
+            "Complex Excel formulas, VBA and Microsoft cloud services are not equivalent. Online collaboration needs additional setup.",
+            "Feature ratings are documentation-based. Hands-on migration and file compatibility are not verified."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "ONLYOFFICE Desktop Editors official project documentation",
+              "url": "https://www.onlyoffice.com",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "ONLYOFFICE Desktop Editors source and licensing information",
+              "url": "https://github.com/ONLYOFFICE/DesktopEditors",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "ONLYOFFICE Desktop Editors official download",
+              "url": "https://www.onlyoffice.com/download-desktop",
+              "lastVerified": "2026-11-04"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Microsoft 365 official plans/pricing",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Treat suite-level comparison as PARTIAL or KEEP for cloud/Excel-heavy organizations; no feature-parity assumption."
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "vendor": "Dropbox",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Dropbox"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Dropbox has recurring hosted storage plans. Nextcloud Desktop is an open-source sync client, but requires a Nextcloud server/provider and is not free hosted storage.",
+        "sourceURL": "https://www.dropbox.com/plans"
+      },
+      "capabilities": [
+        {
+          "id": "filesync",
+          "label": "File synchronization on macOS",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "managedhosting",
+          "label": "Included managed cloud storage account",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "sharing",
+          "label": "Share links and permissions",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "history",
+          "label": "Cloud file versions/recovery",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "transfer",
+          "label": "Hosted large file-transfer product",
+          "weight": 1,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "nextcloud-desktop",
+          "name": "Nextcloud Desktop",
+          "license": "GPL-2.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/nextcloud/desktop",
+          "homepageURL": "https://nextcloud.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://nextcloud.com/install/"
+          },
+          "support": {
+            "filesync": "partial",
+            "managedhosting": "none",
+            "sharing": "partial",
+            "history": "unknown",
+            "transfer": "none"
+          },
+          "limitations": [
+            "Requires separate Nextcloud server or hosted provider; infrastructure and storage may cost money.",
+            "Sharing, version retention and recovery depend on the server/provider configuration.",
+            "Not a like-for-like zero-cost substitute for Dropbox hosting."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Nextcloud Desktop official features",
+              "url": "https://nextcloud.com/install/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Nextcloud Desktop source license",
+              "url": "https://github.com/nextcloud/desktop",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Nextcloud Desktop official downloads",
+              "url": "https://nextcloud.com/install/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Dropbox official plans/pricing",
+          "url": "https://www.dropbox.com/plans",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Explicit KEEP for users requiring a zero-setup managed cloud service; do not misstate savings."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "vendor": "Notion Labs",
+      "bundleIdentifiers": [
+        "notion.id"
+      ],
+      "nameAliases": [
+        "Notion"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Paid Notion team and AI features require plans. AppFlowy is open source, but hosting, collaboration, AI and imports can differ.",
+        "sourceURL": "https://www.notion.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "pages",
+          "label": "Rich pages and notes",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "databases",
+          "label": "Project tables and databases",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "offline",
+          "label": "Offline desktop editing",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "teams",
+          "label": "Hosted team workspaces",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "ai",
+          "label": "Notion paid AI agents and integrations",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "import",
+          "label": "Reliable round-trip of complex Notion databases",
+          "weight": 3,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "appflowy",
+          "name": "AppFlowy",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/AppFlowy-IO/AppFlowy",
+          "homepageURL": "https://appflowy.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://appflowy.com/download"
+          },
+          "support": {
+            "pages": "full",
+            "databases": "partial",
+            "offline": "full",
+            "teams": "partial",
+            "ai": "partial",
+            "import": "unknown"
+          },
+          "limitations": [
+            "No guaranteed import fidelity for formulas, relations, views, automations or permissions.",
+            "AppFlowy cloud and advanced AI may involve extra services, fees or configuration."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "AppFlowy project and documented functionality",
+              "url": "https://appflowy.com/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "AppFlowy upstream source and license",
+              "url": "https://github.com/AppFlowy-IO/AppFlowy",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "AppFlowy official access/install guidance",
+              "url": "https://appflowy.com/download",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "affine-community",
+          "name": "AFFiNE Community Edition",
+          "license": "MIT (community edition)",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/toeverything/AFFiNE",
+          "homepageURL": "https://affine.pro/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://affine.pro/download"
+          },
+          "support": {
+            "pages": "full",
+            "databases": "partial",
+            "offline": "partial",
+            "teams": "partial",
+            "ai": "none",
+            "import": "unknown"
+          },
+          "limitations": [
+            "MIT Community Edition only; Enterprise and hosted services can require paid licenses.",
+            "No promise of identical Notion databases, permissions, formulas, imports or automation.",
+            "Use desktop Community Edition on macOS; check current limitations and sync plans."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/toeverything/AFFiNE",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/toeverything/AFFiNE",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Notion: official paid/free plan details",
+          "url": "https://www.notion.com/pricing",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://www.notion.com/help/deploy-notion-for-macos",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "vendor": "Figma",
+      "bundleIdentifiers": [
+        "com.figma.Desktop"
+      ],
+      "nameAliases": [
+        "Figma"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Figma has paid seats and collaboration plans. Penpot is browser-based on a Mac; it is not a native Figma editor.",
+        "sourceURL": "https://www.figma.com/pricing/"
+      },
+      "capabilities": [
+        {
+          "id": "vector",
+          "label": "UI/vector layout editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "components",
+          "label": "Reusable components and design systems",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "prototype",
+          "label": "Interactive prototypes",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "collab",
+          "label": "Team editing and hosted collaboration",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "fig",
+          "label": "Round-trip native Figma files and plugins",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "dev",
+          "label": "Developer handoff",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "penpot",
+          "name": "Penpot",
+          "license": "MPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/penpot/penpot",
+          "homepageURL": "https://penpot.app/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://penpot.app/"
+          },
+          "support": {
+            "vector": "full",
+            "components": "partial",
+            "prototype": "full",
+            "collab": "partial",
+            "fig": "none",
+            "dev": "partial"
+          },
+          "limitations": [
+            "Browser-based workflow; self-hosting optional and not equivalent to free hosted storage.",
+            "Native Figma file compatibility, plugins and prototyping require case-by-case verification."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Penpot project and documented functionality",
+              "url": "https://penpot.app/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Penpot upstream source and license",
+              "url": "https://github.com/penpot/penpot",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Penpot official access/install guidance",
+              "url": "https://penpot.app/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "quant-ux",
+          "name": "Quant-UX",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/KlausSchaefers/quant-ux",
+          "homepageURL": "https://quant-ux.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://quant-ux.com/"
+          },
+          "support": {
+            "vector": "partial",
+            "components": "partial",
+            "prototype": "partial",
+            "collab": "partial",
+            "fig": "none",
+            "dev": "none"
+          },
+          "limitations": [
+            "Browser-based prototype and usability test tool; not a full Figma design/editor replacement.",
+            "Self-hosting requires a separate backend/database; Figma import fidelity not established.",
+            "Interactive prototypes are documented, but advanced Figma prototyping and plugin parity are not established."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://quant-ux.com/pricing/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/KlausSchaefers/quant-ux",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Figma: official paid/free plan details",
+          "url": "https://www.figma.com/pricing/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://github.com/theskumar/dotfiles/blob/master/docs/OMNIWM.md",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "canva-pro",
+      "name": "Canva Pro",
+      "vendor": "Canva",
+      "bundleIdentifiers": [
+        "com.canva.CanvaDesktop"
+      ],
+      "nameAliases": [
+        "Canva Pro"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Canva Pro buys hosted templates, stock assets and AI tools. A vector editor does not grant access to those licensed libraries. Identifying the Mac app does not establish ownership of the paid plan; costs and cancellations must be confirmed by the user.",
+        "sourceURL": "https://www.canva.com/pricing/"
+      },
+      "capabilities": [
+        {
+          "id": "vector",
+          "label": "Vector drawings and graphics",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "export",
+          "label": "Export graphics for print and web",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "templates",
+          "label": "Canva premium template library",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "stock",
+          "label": "Canva premium licensed stock library",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "ai",
+          "label": "Canva Pro AI design tools",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "collab",
+          "label": "Canva hosted team collaboration",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "inkscape",
+          "name": "Inkscape",
+          "license": "GPL-2.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://gitlab.com/inkscape/inkscape",
+          "homepageURL": "https://inkscape.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://inkscape.org/release/"
+          },
+          "support": {
+            "vector": "full",
+            "export": "partial",
+            "templates": "none",
+            "stock": "none",
+            "ai": "none",
+            "collab": "none"
+          },
+          "limitations": [
+            "Inkscape is a desktop vector editor, not a Canva clone or cloud design platform.",
+            "Cannot provide Canva stock assets, premium templates, automatic social scheduling or AI credits."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Inkscape project and documented functionality",
+              "url": "https://inkscape.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Inkscape upstream source and license",
+              "url": "https://gitlab.com/inkscape/inkscape",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Inkscape official access/install guidance",
+              "url": "https://inkscape.org/release/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "krita",
+          "name": "Krita",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://invent.kde.org/graphics/krita",
+          "homepageURL": "https://krita.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://krita.org/en/download/"
+          },
+          "support": {
+            "vector": "full",
+            "export": "partial",
+            "templates": "partial",
+            "stock": "none",
+            "ai": "none",
+            "collab": "none"
+          },
+          "limitations": [
+            "Native raster painting and image design; not a subscription graphics/template marketplace.",
+            "No Canva brand kit, one-click publishing or premium stock/templates."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://krita.org/en/features/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://invent.kde.org/graphics/krita",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Canva Pro: official paid/free plan details",
+          "url": "https://www.canva.com/pricing/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://fleetdm.com/software-catalog/canva-darwin",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "spotify-premium",
+      "name": "Spotify Premium",
+      "vendor": "Spotify",
+      "bundleIdentifiers": [
+        "com.spotify.client"
+      ],
+      "nameAliases": [
+        "Spotify Premium"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "KEEP Spotify if you depend on licensed on-demand streaming. Navidrome serves music you own; it does not provide Spotify tracks or subscription catalogs. Identifying the Mac app does not establish ownership of the paid plan; costs and cancellations must be confirmed by the user.",
+        "sourceURL": "https://www.spotify.com/us/premium/"
+      },
+      "capabilities": [
+        {
+          "id": "catalog",
+          "label": "Spotify licensed on-demand streaming catalog",
+          "weight": 4,
+          "critical": true
+        },
+        {
+          "id": "owned",
+          "label": "Stream your personally owned music files",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "offline",
+          "label": "Spotify offline licensed downloads",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "recommend",
+          "label": "Spotify discovery and personalized recommendations",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "podcasts",
+          "label": "Spotify podcasts and licensed audiobooks",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "server",
+          "label": "No personal server or hosting required",
+          "weight": 3,
+          "critical": true
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "navidrome",
+          "name": "Navidrome",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/navidrome/navidrome",
+          "homepageURL": "https://www.navidrome.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.navidrome.org/docs/installation/"
+          },
+          "support": {
+            "catalog": "none",
+            "owned": "full",
+            "offline": "none",
+            "recommend": "none",
+            "podcasts": "none",
+            "server": "none"
+          },
+          "limitations": [
+            "Not an alternative for Spotify Premium catalog access or its subscription benefits.",
+            "Requires obtaining your own music and running or paying for a server or hosting provider.",
+            "Mac setup requires additional services and may not be a one-click desktop installation."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Navidrome project and documented functionality",
+              "url": "https://www.navidrome.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Navidrome upstream source and license",
+              "url": "https://github.com/navidrome/navidrome",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Navidrome official access/install guidance",
+              "url": "https://www.navidrome.org/docs/installation/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "jellyfin",
+          "name": "Jellyfin",
+          "license": "GPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/jellyfin/jellyfin",
+          "homepageURL": "https://jellyfin.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://jellyfin.org/downloads"
+          },
+          "support": {
+            "catalog": "none",
+            "owned": "partial",
+            "offline": "none",
+            "recommend": "none",
+            "podcasts": "none",
+            "server": "none"
+          },
+          "limitations": [
+            "Uses only music you supply and a self-hosted server; does NOT give you Spotify Premium tracks or playlists.",
+            "Not a service with licensed catalog, recommendations, offline downloads or royalty agreements.",
+            "Mac users can operate a server/web client but setup and maintenance are required."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://jellyfin.org/docs/general/server/media/music/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/jellyfin/jellyfin",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Spotify Premium: official paid/free plan details",
+          "url": "https://www.spotify.com/us/premium/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://github.com/atyrode/dotfiles/issues/89",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "capcut-pro",
+      "name": "CapCut Pro",
+      "vendor": "ByteDance",
+      "bundleIdentifiers": [
+        "com.lemon.lvoverseas"
+      ],
+      "nameAliases": [
+        "CapCut Pro"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "CapCut Pro includes paid templates, AI features and online storage. Shotcut is a local video editor, not a social template catalog. Identifying the Mac app does not establish ownership of the paid plan; costs and cancellations must be confirmed by the user.",
+        "sourceURL": "https://www.capcut.com/pricing/"
+      },
+      "capabilities": [
+        {
+          "id": "timeline",
+          "label": "Multitrack video timeline and cuts",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "effects",
+          "label": "Filters, transitions and keyframes",
+          "weight": 2,
+          "critical": true
+        },
+        {
+          "id": "captions",
+          "label": "Automatic transcription and captions",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "templates",
+          "label": "CapCut premium social templates",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "ai",
+          "label": "CapCut AI tools and cloud credits",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "cloud",
+          "label": "Managed cross-device asset library",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "shotcut",
+          "name": "Shotcut",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/mltframework/shotcut",
+          "homepageURL": "https://www.shotcut.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.shotcut.org/download/"
+          },
+          "support": {
+            "timeline": "full",
+            "effects": "partial",
+            "captions": "none",
+            "templates": "none",
+            "ai": "none",
+            "cloud": "none"
+          },
+          "limitations": [
+            "Paid templates and CapCut-specific mobile/cloud project compatibility do not transfer.",
+            "Effects vary; do not assume one-click AI captioning or removal tools are equivalent."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Shotcut project and documented functionality",
+              "url": "https://www.shotcut.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Shotcut upstream source and license",
+              "url": "https://github.com/mltframework/shotcut",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Shotcut official access/install guidance",
+              "url": "https://www.shotcut.org/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "kdenlive",
+          "name": "Kdenlive",
+          "license": "GPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://invent.kde.org/multimedia/kdenlive",
+          "homepageURL": "https://kdenlive.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://kdenlive.org/en/download/"
+          },
+          "support": {
+            "timeline": "full",
+            "effects": "full",
+            "captions": "partial",
+            "templates": "none",
+            "ai": "none",
+            "cloud": "none"
+          },
+          "limitations": [
+            "Robust multi-track editor, but CapCut subscriptions, AI credits, cloud templates and projects do not transfer.",
+            "Official macOS installer required; current macOS requirements must be checked."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://docs.kdenlive.org/en/getting_started/installation.html",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://invent.kde.org/multimedia/kdenlive",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "CapCut Pro: official paid/free plan details",
+          "url": "https://www.capcut.com/pricing/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://fleetdm.com/software-catalog/capcut-darwin",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "adobe-indesign",
+      "name": "Adobe InDesign",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.InDesign"
+      ],
+      "nameAliases": [
+        "Adobe InDesign"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Adobe InDesign is subscription-based. Scribus is a desktop page-layout tool, but proprietary INDD and advanced Adobe publishing workflows are not interchangeable.",
+        "sourceURL": "https://www.adobe.com/products/indesign.html"
+      },
+      "capabilities": [
+        {
+          "id": "pages",
+          "label": "Multi-page document layout",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "typeset",
+          "label": "Typography and print layout",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "pdf",
+          "label": "Print PDF production",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "indd",
+          "label": "Native Adobe INDD edit/round-trip",
+          "weight": 4,
+          "critical": false
+        },
+        {
+          "id": "teams",
+          "label": "Adobe review and shared-library collaboration",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "fonts",
+          "label": "Adobe Fonts and Creative Cloud integration",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "scribus",
+          "name": "Scribus",
+          "license": "GPL-2.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/scribusproject/scribus",
+          "homepageURL": "https://www.scribus.net/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.scribus.net/"
+          },
+          "support": {
+            "pages": "full",
+            "typeset": "partial",
+            "pdf": "full",
+            "indd": "none",
+            "teams": "none",
+            "fonts": "none"
+          },
+          "limitations": [
+            "Cannot open native INDD files as editable equivalents; export/interchange must be tested.",
+            "Advanced CMYK preflight, typography and printer workflows vary; this is not guaranteed professional print parity."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Scribus project and documented functionality",
+              "url": "https://www.scribus.net/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Scribus upstream source and license",
+              "url": "https://github.com/scribusproject/scribus",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Scribus official access/install guidance",
+              "url": "https://www.scribus.net/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Adobe InDesign: official paid/free plan details",
+          "url": "https://www.adobe.com/products/indesign.html",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://community.adobe.com/havfw69955/attachments/havfw69955/indesign/620904/2/err2.pdf",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "adobe-audition",
+      "name": "Adobe Audition",
+      "vendor": "Adobe",
+      "bundleIdentifiers": [
+        "com.adobe.Audition"
+      ],
+      "nameAliases": [
+        "Adobe Audition"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Adobe Audition is Creative Cloud software. Audacity covers editing and recording, but professional spectral repair and Premiere integration differ.",
+        "sourceURL": "https://www.adobe.com/products/audition.html"
+      },
+      "capabilities": [
+        {
+          "id": "wave",
+          "label": "Waveform audio editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "multi",
+          "label": "Multitrack recording and mixing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "noise",
+          "label": "Noise reduction and repair",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "spectral",
+          "label": "Advanced spectral restoration workflow",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "premiere",
+          "label": "Adobe Premiere round-trip integration",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "plugins",
+          "label": "Third-party effect plugins on this Mac",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "audacity",
+          "name": "Audacity",
+          "license": "GPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/audacity/audacity",
+          "homepageURL": "https://www.audacityteam.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.audacityteam.org/download/mac/"
+          },
+          "support": {
+            "wave": "full",
+            "multi": "partial",
+            "noise": "partial",
+            "spectral": "none",
+            "premiere": "none",
+            "plugins": "partial"
+          },
+          "limitations": [
+            "Spectral tools, Premiere linkage and professional finishing differ.",
+            "Audacity macOS builds and plugin support differ by architecture; verify current official download notes."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Audacity project and documented functionality",
+              "url": "https://www.audacityteam.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Audacity upstream source and license",
+              "url": "https://github.com/audacity/audacity",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Audacity official access/install guidance",
+              "url": "https://www.audacityteam.org/download/mac/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Adobe Audition: official paid/free plan details",
+          "url": "https://www.adobe.com/products/audition.html",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://doesitarm.com/app/adobe-audition",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching. Audition bundle ID comes from a macOS architecture inventory; check a currently installed copy before relying on it."
+    },
+    {
+      "id": "screen-studio",
+      "name": "Screen Studio",
+      "vendor": "Screen Studio",
+      "bundleIdentifiers": [
+        "com.timpler.screenstudio"
+      ],
+      "nameAliases": [
+        "Screen Studio"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Screen Studio provides automatic zoom/cursor polish. OBS Studio records screens but does not reproduce that editing workflow by default.",
+        "sourceURL": "https://screen.studio/"
+      },
+      "capabilities": [
+        {
+          "id": "record",
+          "label": "Capture Mac screen and microphone",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "webcam",
+          "label": "Camera overlay and audio sources",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "zoom",
+          "label": "Automatic cursor-following zoom",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "cursor",
+          "label": "Automated cursor smoothing/animation",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "design",
+          "label": "Polished motion backdrops and transitions",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "export",
+          "label": "High-quality local recording export",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "obs-studio",
+          "name": "OBS Studio",
+          "license": "GPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/obsproject/obs-studio",
+          "homepageURL": "https://obsproject.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://obsproject.com/download"
+          },
+          "support": {
+            "record": "full",
+            "webcam": "full",
+            "zoom": "none",
+            "cursor": "none",
+            "design": "none",
+            "export": "partial"
+          },
+          "limitations": [
+            "OBS focuses on recording and streaming; cinematic edits need a separate workflow or plugins.",
+            "Automatic zooms, pointer smoothing and branded backgrounds are not built-in equivalents."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "OBS Studio project and documented functionality",
+              "url": "https://obsproject.com/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "OBS Studio upstream source and license",
+              "url": "https://github.com/obsproject/obs-studio",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "OBS Studio official access/install guidance",
+              "url": "https://obsproject.com/download",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "openscreen-studio",
+          "name": "OpenScreen Studio",
+          "license": "AGPL-3.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/Glyph-Software/OpenScreenStudio",
+          "homepageURL": "https://oss.glyphsoftware.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/Glyph-Software/OpenScreenStudio/releases"
+          },
+          "support": {
+            "record": "full",
+            "webcam": "partial",
+            "zoom": "full",
+            "cursor": "partial",
+            "design": "partial",
+            "export": "partial"
+          },
+          "limitations": [
+            "Captures screens and offers auto-zoom-on-click, cursor overlays, wallpaper backgrounds and local exports.",
+            "Official GitHub releases say binaries are NOT notarized. Do not bypass Gatekeeper automatically.",
+            "Functional parity, performance, project imports and safety have not been independently tested by LibreReplace."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/Glyph-Software/OpenScreenStudio",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/Glyph-Software/OpenScreenStudio",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "cap-studio-mode",
+          "name": "Cap (Studio Mode)",
+          "license": "AGPL-3.0 (main project; MIT for some capture crates)",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/CapSoftware/Cap",
+          "homepageURL": "https://cap.so/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://cap.so/download"
+          },
+          "support": {
+            "record": "full",
+            "webcam": "partial",
+            "zoom": "partial",
+            "cursor": "partial",
+            "design": "partial",
+            "export": "partial"
+          },
+          "limitations": [
+            "Cap Studio Mode includes recording, editable zooms, smooth cursor, styled backgrounds and export.",
+            "Cap has optional hosted plans, cloud accounts and collaboration; free/self-hosted paths have different setup and feature entitlements.",
+            "The score is based on documented capabilities, NOT proof of feature parity or tested migration.",
+            "No direct Screen Studio project import is established; validate local export and longer cursor recordings before switching.",
+            "The official Cap Desktop download is free for personal use. Commercial usage requires a paid license ($29/year or $58 lifetime, checked 2026-11-04). Self-built source versions have different licensing conditions. Replacement cost must be considered before claiming savings."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/CapSoftware/Cap/blob/main/apps/web/content/docs/recording/studio-mode.mdx",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/CapSoftware/Cap",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "openscreen-mit",
+          "name": "OpenScreen",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/getopenscreen/openscreen",
+          "homepageURL": "https://getopenscreen.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://getopenscreen.com/download/"
+          },
+          "minimumMacOS": "13.0",
+          "lastVerified": "2026-11-04",
+          "support": {
+            "record": "full",
+            "webcam": "full",
+            "zoom": "full",
+            "cursor": "full",
+            "design": "partial",
+            "export": "full"
+          },
+          "limitations": [
+            "Different project from Glyph Software's OpenScreen Studio.",
+            "Official macOS releases are signed and notarized.",
+            "Screen Studio project files do not have established round-trip compatibility.",
+            "Feature ratings come from official documentation. Real recordings and export quality still need testing."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "OpenScreen documented features",
+              "url": "https://github.com/getopenscreen/openscreen",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "OpenScreen MIT licensing",
+              "url": "https://github.com/getopenscreen/openscreen",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "OpenScreen official Mac downloads",
+              "url": "https://getopenscreen.com/download/",
+              "lastVerified": "2026-11-04"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Screen Studio official product and subscription plans",
+          "url": "https://screen.studio/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://fleetdm.com/software-catalog/screen-studio-darwin",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching. Official product domain is screen.studio; do not rely on lookalike sites."
+    },
+    {
+      "id": "obsidian-sync",
+      "name": "Obsidian Sync",
+      "vendor": "Dynalist / Obsidian",
+      "bundleIdentifiers": [],
+      "nameAliases": [
+        "Obsidian Sync"
+      ],
+      "pricing": {
+        "model": "subscription",
+        "note": "Obsidian itself is free to use; Sync and Publish are optional paid services. Joplin is a different notes app and sync requires configuring a sync target. Obsidian app installation alone cannot detect whether Sync is purchased. Explore-only until explicitly confirmed.",
+        "sourceURL": "https://obsidian.md/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "notes",
+          "label": "Local Markdown note editing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "sync",
+          "label": "Sync notes across Macs and devices",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "e2ee",
+          "label": "Optional end-to-end encrypted notes sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "plugins",
+          "label": "Compatible Obsidian plugin ecosystem",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "vault",
+          "label": "Keep Obsidian vault behavior unchanged",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "history",
+          "label": "Hosted Obsidian Sync revision history",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "joplin",
+          "name": "Joplin",
+          "license": "AGPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/laurent22/joplin",
+          "homepageURL": "https://joplinapp.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://joplinapp.org/help/install/"
+          },
+          "support": {
+            "notes": "full",
+            "sync": "partial",
+            "e2ee": "full",
+            "plugins": "none",
+            "vault": "none",
+            "history": "partial"
+          },
+          "limitations": [
+            "Switching editors is not the same as replacing just the Obsidian Sync service.",
+            "Obsidian plugins, links, vault organization and sync-history semantics do not directly transfer.",
+            "Joplin sync requires a configured target or paid Joplin Cloud."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Joplin project and documented functionality",
+              "url": "https://joplinapp.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Joplin upstream source and license",
+              "url": "https://github.com/laurent22/joplin",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Joplin official access/install guidance",
+              "url": "https://joplinapp.org/help/install/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "self-hosted-livesync",
+          "name": "Self-hosted LiveSync (Obsidian plugin)",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/vrtmrz/obsidian-livesync",
+          "homepageURL": "https://github.com/vrtmrz/obsidian-livesync",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://github.com/vrtmrz/obsidian-livesync"
+          },
+          "support": {
+            "notes": "full",
+            "sync": "full",
+            "e2ee": "full",
+            "plugins": "full",
+            "vault": "partial",
+            "history": "partial"
+          },
+          "limitations": [
+            "Open-source Obsidian plugin; Obsidian editor itself remains proprietary.",
+            "Requires setup of CouchDB/S3/peer-to-peer, may incur hosting charges.",
+            "Not compatible with official Obsidian Sync service; backing up vault before migration is essential."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/vrtmrz/obsidian-livesync/blob/main/README.md",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/vrtmrz/obsidian-livesync",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Obsidian Sync: official paid/free plan details",
+          "url": "https://obsidian.md/pricing",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "upnote",
+      "name": "UpNote",
+      "vendor": "UpNote Pte. Ltd.",
+      "bundleIdentifiers": [
+        "com.getupnote.desktop"
+      ],
+      "nameAliases": [
+        "UpNote"
+      ],
+      "pricing": {
+        "model": "commercial",
+        "note": "UpNote offers a recurring subscription and a separate lifetime upgrade; a lifetime owner has no recurring subscription to cancel.",
+        "sourceURL": "https://apps.apple.com/us/app/upnote-notes-diary-journal/id1398373917?mt=12"
+      },
+      "capabilities": [
+        {
+          "id": "notes",
+          "label": "Rich text and Markdown-like note writing",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "folders",
+          "label": "Organize with notebooks and tags",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Sync among Mac and mobile devices",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "webclip",
+          "label": "Web clipping",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "import",
+          "label": "Faithful UpNote import with attachments",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "lifetime",
+          "label": "Preserve paid lifetime ownership entitlements",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "joplin",
+          "name": "Joplin",
+          "license": "AGPL-3.0-or-later",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/laurent22/joplin",
+          "homepageURL": "https://joplinapp.org/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://joplinapp.org/help/install/"
+          },
+          "support": {
+            "notes": "partial",
+            "folders": "full",
+            "sync": "partial",
+            "webclip": "full",
+            "import": "none",
+            "lifetime": "none"
+          },
+          "limitations": [
+            "No automatic parity for proprietary UpNote formatting or attachments; export and inspect first.",
+            "Joplin Cloud is a paid optional service; other synchronization targets need configuration."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Joplin project and documented functionality",
+              "url": "https://joplinapp.org/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Joplin upstream source and license",
+              "url": "https://github.com/laurent22/joplin",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Joplin official access/install guidance",
+              "url": "https://joplinapp.org/help/install/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "UpNote: official paid/free plan details",
+          "url": "https://apps.apple.com/us/app/upnote-notes-diary-journal/id1398373917?mt=12",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://help.getupnote.com/resources/troubleshoot-issues/unable-to-access-upnote",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "todoist",
+      "name": "Todoist",
+      "vendor": "Doist",
+      "bundleIdentifiers": [
+        "com.todoist.mac.Todoist"
+      ],
+      "nameAliases": [
+        "Todoist"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Todoist Pro and Business charge recurring fees. Super Productivity is a local-first personal task manager; cloud team collaboration is not equivalent.",
+        "sourceURL": "https://www.todoist.com/pricing/"
+      },
+      "capabilities": [
+        {
+          "id": "tasks",
+          "label": "Personal task lists and subtasks",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "schedule",
+          "label": "Plan and timebox work",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "reminders",
+          "label": "Advanced cloud reminders and notifications",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "teams",
+          "label": "Todoist shared workspaces and permissions",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Managed cross-device hosted synchronization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "integrations",
+          "label": "Third-party work-tracker integration",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "super-productivity",
+          "name": "Super Productivity",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/super-productivity/super-productivity",
+          "homepageURL": "https://super-productivity.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://super-productivity.com/"
+          },
+          "support": {
+            "tasks": "full",
+            "schedule": "full",
+            "reminders": "partial",
+            "teams": "none",
+            "sync": "partial",
+            "integrations": "partial"
+          },
+          "limitations": [
+            "Not a hosted team workspace like Todoist Business.",
+            "Synchronization needs configuration; integrations and natural-language task entry vary."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Super Productivity project and documented functionality",
+              "url": "https://super-productivity.com/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Super Productivity upstream source and license",
+              "url": "https://github.com/super-productivity/super-productivity",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Super Productivity official access/install guidance",
+              "url": "https://super-productivity.com/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "vikunja",
+          "name": "Vikunja",
+          "license": "AGPL-3.0-or-later (server); GPL-3.0-or-later (desktop)",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/go-vikunja/vikunja",
+          "homepageURL": "https://vikunja.io/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://vikunja.io/docs/installing/"
+          },
+          "support": {
+            "tasks": "full",
+            "schedule": "full",
+            "reminders": "partial",
+            "teams": "partial",
+            "sync": "partial",
+            "integrations": "none"
+          },
+          "limitations": [
+            "Can be self-hosted or use paid managed hosting. It is not a no-setup hosted SaaS switch.",
+            "Desktop app exists for macOS but sync, collaboration, notifications and feature coverage vary.",
+            "Review actual export/import and shared workflow before canceling the original subscription.",
+            "Vikunja supports team and project sharing with permissions. Requires a configured server or hosting provider."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/go-vikunja/vikunja",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/go-vikunja/vikunja",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Todoist: official paid/free plan details",
+          "url": "https://www.todoist.com/pricing/",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://github.com/theskumar/dotfiles/blob/master/docs/OMNIWM.md",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "ticktick",
+      "name": "TickTick",
+      "vendor": "Appest",
+      "bundleIdentifiers": [
+        "com.TickTick.task.mac"
+      ],
+      "nameAliases": [
+        "TickTick"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "TickTick Premium includes calendar, habits and cloud sync. Super Productivity concentrates on personal tasks/timeboxing rather than full TickTick services.",
+        "sourceURL": "https://ticktick.com/upgrade"
+      },
+      "capabilities": [
+        {
+          "id": "tasks",
+          "label": "Tasks, projects and subtasks",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "calendar",
+          "label": "Task planning and timeboxing",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "habits",
+          "label": "TickTick built-in habit tracking",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "pomodoro",
+          "label": "Pomodoro-focused work sessions",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Turnkey managed multi-device sync",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "teams",
+          "label": "Shared TickTick task lists and collaboration",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "super-productivity",
+          "name": "Super Productivity",
+          "license": "MIT",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/super-productivity/super-productivity",
+          "homepageURL": "https://super-productivity.com/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://super-productivity.com/"
+          },
+          "support": {
+            "tasks": "full",
+            "calendar": "full",
+            "habits": "partial",
+            "pomodoro": "full",
+            "sync": "partial",
+            "teams": "partial"
+          },
+          "limitations": [
+            "Habit-tracker parity is not established; verify workflows rather than assuming all TickTick features.",
+            "Cloud synchronization and sharing are not turnkey equivalents."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Super Productivity project and documented functionality",
+              "url": "https://super-productivity.com/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Super Productivity upstream source and license",
+              "url": "https://github.com/super-productivity/super-productivity",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Super Productivity official access/install guidance",
+              "url": "https://super-productivity.com/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "id": "vikunja",
+          "name": "Vikunja",
+          "license": "AGPL-3.0-or-later (server); GPL-3.0-or-later (desktop)",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://github.com/go-vikunja/vikunja",
+          "homepageURL": "https://vikunja.io/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://vikunja.io/docs/installing/"
+          },
+          "support": {
+            "tasks": "full",
+            "calendar": "full",
+            "habits": "partial",
+            "pomodoro": "partial",
+            "sync": "partial",
+            "teams": "partial"
+          },
+          "limitations": [
+            "Can be self-hosted or use paid managed hosting. It is not a no-setup hosted SaaS switch.",
+            "Desktop app exists for macOS but sync, collaboration, notifications and feature coverage vary.",
+            "Review actual export/import and shared workflow before canceling the original subscription.",
+            "Vikunja supports team and project sharing with permissions. Requires a configured server or hosting provider."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Project feature and macOS/setup documentation",
+              "url": "https://github.com/go-vikunja/vikunja",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Upstream repository and license information",
+              "url": "https://github.com/go-vikunja/vikunja",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "TickTick: official paid/free plan details",
+          "url": "https://ticktick.com/upgrade",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://fleetdm.com/software-catalog/ticktick-darwin",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "fantastical",
+      "name": "Fantastical",
+      "vendor": "Flexibits",
+      "bundleIdentifiers": [
+        "com.flexibits.fantastical2.mac"
+      ],
+      "nameAliases": [
+        "Fantastical"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Fantastical Premium includes scheduling services, templates, iOS apps and natural-language creation. Thunderbird offers a desktop calendar but not these hosted products.",
+        "sourceURL": "https://flexibits.com/pricing?product=fantastical"
+      },
+      "capabilities": [
+        {
+          "id": "calendar",
+          "label": "Desktop calendar management",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "accounts",
+          "label": "Multiple remote calendar accounts",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "natural",
+          "label": "Fantastical natural-language quick entry",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "invites",
+          "label": "Meeting invitations and attendees",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "polls",
+          "label": "Hosted meeting proposals and polls",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "ios",
+          "label": "Same premium mobile-app experience",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "thunderbird",
+          "name": "Thunderbird",
+          "license": "MPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://hg.mozilla.org/comm-central/",
+          "homepageURL": "https://www.thunderbird.net/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.thunderbird.net/en-US/"
+          },
+          "support": {
+            "calendar": "full",
+            "accounts": "partial",
+            "natural": "none",
+            "invites": "partial",
+            "polls": "none",
+            "ios": "none"
+          },
+          "limitations": [
+            "Thunderbird is an email/calendar app, not a Fantastical Premium cross-device subscription.",
+            "Meeting polls, fast natural-language event input and native mobile experience differ."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Thunderbird project and documented functionality",
+              "url": "https://www.thunderbird.net/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Thunderbird upstream source and license",
+              "url": "https://hg.mozilla.org/comm-central/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Thunderbird official access/install guidance",
+              "url": "https://www.thunderbird.net/en-US/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Fantastical: official paid/free plan details",
+          "url": "https://flexibits.com/pricing?product=fantastical",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://github.com/dortania/OpenCore-Legacy-Patcher/issues/627",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
+    },
+    {
+      "id": "spark-mail",
+      "name": "Spark Mail",
+      "vendor": "Readdle",
+      "bundleIdentifiers": [
+        "com.readdle.smartemail-Mac"
+      ],
+      "nameAliases": [
+        "Spark Mail"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "note": "Spark has paid AI and team collaboration plans. Thunderbird is a local email client, not Spark shared-thread, meeting-AI or hosted team workflow.",
+        "sourceURL": "https://sparkmailapp.com/pricing"
+      },
+      "capabilities": [
+        {
+          "id": "mail",
+          "label": "Send, receive and search email",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "accounts",
+          "label": "Multiple inboxes and accounts",
+          "weight": 3,
+          "critical": true
+        },
+        {
+          "id": "filters",
+          "label": "Advanced local filtering and organization",
+          "weight": 2,
+          "critical": false
+        },
+        {
+          "id": "ai",
+          "label": "Spark paid AI writing/meeting assistant",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "team",
+          "label": "Spark shared team threads and drafts",
+          "weight": 3,
+          "critical": false
+        },
+        {
+          "id": "sync",
+          "label": "Spark account-hosted settings and integrations",
+          "weight": 2,
+          "critical": false
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "thunderbird",
+          "name": "Thunderbird",
+          "license": "MPL-2.0",
+          "licenseKind": "openSource",
+          "repositoryURL": "https://hg.mozilla.org/comm-central/",
+          "homepageURL": "https://www.thunderbird.net/",
+          "install": {
+            "kind": "officialDownload",
+            "value": "https://www.thunderbird.net/en-US/"
+          },
+          "support": {
+            "mail": "full",
+            "accounts": "full",
+            "filters": "full",
+            "ai": "none",
+            "team": "none",
+            "sync": "partial"
+          },
+          "limitations": [
+            "AI writing, meeting-note transcription and shared-team features are not provided by standard Thunderbird.",
+            "Account/server provider terms and security settings remain your responsibility."
+          ],
+          "evidence": [
+            {
+              "kind": "feature",
+              "title": "Thunderbird project and documented functionality",
+              "url": "https://www.thunderbird.net/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "license",
+              "title": "Thunderbird upstream source and license",
+              "url": "https://hg.mozilla.org/comm-central/",
+              "lastVerified": "2026-11-04"
+            },
+            {
+              "kind": "installation",
+              "title": "Thunderbird official access/install guidance",
+              "url": "https://www.thunderbird.net/en-US/",
+              "lastVerified": "2026-11-04"
+            }
+          ],
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "policy": {
+        "strongThreshold": 0.83,
+        "partialThreshold": 0.45,
+        "requireCriticalCapabilities": true
+      },
+      "evidence": [
+        {
+          "kind": "pricing",
+          "title": "Spark Mail: official paid/free plan details",
+          "url": "https://sparkmailapp.com/pricing",
+          "lastVerified": "2026-11-04"
+        },
+        {
+          "kind": "feature",
+          "title": "macOS application bundle identifier (NOT proof of paid plan)",
+          "url": "https://www.alfredforum.com/profile/4133-manfredell/",
+          "lastVerified": "2026-11-04"
+        }
+      ],
+      "lastVerified": "2026-11-04",
+      "notes": "Feature states summarize first-party documentation, not hands-on equivalence tests. Confirm actual workflow compatibility before switching."
     }
   ]
 }

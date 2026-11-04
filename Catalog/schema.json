@@ -10,7 +10,7 @@
     "apps": {
       "type": "array",
       "minItems": 20,
-      "maxItems": 40,
+      "maxItems": 80,
       "items": {"$ref": "#/$defs/app"}
     }
   },
@@ -70,7 +70,7 @@
         "licenseKind": {"enum": ["openSource", "sourceAvailable", "freeware", "proprietaryFree"]},
         "repositoryURL": {"type": "string", "format": "uri"},
         "homepageURL": {"type": "string", "format": "uri"},
-        "minimumMacOS": {"type": "string", "minLength": 1},
+        "minimumMacOS": {"type": ["string", "null"], "minLength": 1},
         "install": {"$ref": "#/$defs/install"},
         "support": {
           "type": "object",

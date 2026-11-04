@@ -88,6 +88,6 @@ private struct RecommendationRow: View {
     }
 
     private func subtitle(_ best: RankedAlternative) -> String {
-        "\(best.alternative.name) · \(Int((best.coverage * 100).rounded()))% feature coverage"
+        "\(best.alternative.name) · \(Int((best.coverage * 100).rounded()))% of selected essentials"
     }
 }

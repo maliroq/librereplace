@@ -54,8 +54,8 @@ def main():
             errors.append("generatedAt cannot be in the future")
     except Exception:
         errors.append("generatedAt must be a valid YYYY-MM-DD date")
-    if not 20 <= len(apps) <= 40:
-        errors.append(f"expected 20-40 catalog apps, found {len(apps)}")
+    if not 20 <= len(apps) <= 80:
+        errors.append(f"expected 20-80 catalog apps, found {len(apps)}")
     ids, bundles = set(), set()
     name_matchers = {}
     for app in apps:
