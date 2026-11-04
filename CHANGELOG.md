@@ -24,7 +24,7 @@ All notable public changes are recorded here.
 - Downloadable binaries remain ad-hoc signed, **not Apple Developer ID signed or Apple-notarized**. macOS 14+ required.
 - Existing paid apps are never uninstalled and subscriptions are never cancelled automatically.
 
-## [0.1.0-preview] - 2026-10-27
+## [0.1.0-preview.1] - 2026-10-27
 
 Initial source preview of LibreReplace.
 
