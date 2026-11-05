@@ -4,13 +4,13 @@
 
 <h1 align="center">LibreReplace</h1>
 
-<p align="center"><strong>See what you gain — and what you lose — before replacing a paid Mac app.</strong></p>
+<p align="center"><strong>Cut recurring Mac software costs without losing the features you need.</strong></p>
 
-<p align="center">LibreReplace scans supported apps already installed on your Mac, compares them with curated open-source alternatives, and shows explicit gains, losses, and a Strong / Partial / Keep recommendation before you switch.</p>
+<p align="center">Explore 45 commercial Mac apps and 70 open-source comparisons, even without installing the paid app. Choose the features you need, see what each replacement can and cannot do, or scan your installed apps and review recurring costs before you switch.</p>
 
 <p align="center"><strong>Local-only · No account · No telemetry · Never removes your existing app automatically</strong></p>
 
-![LibreReplace comparing CleanMyMac with Dusty, showing feature coverage, partial support, missing capabilities, and known limitations](Docs/Images/comparisons/cleanmymac-dusty.png)
+![LibreReplace v0.2 exploring Adobe Photoshop replacements and their feature limitations](Docs/Images/v02/01-explore.png)
 
 ### Quick install
 
@@ -20,18 +20,26 @@
 
 LibreReplace is not another alternatives directory. It can start from a supported installed app or from Explore Alternatives, shows exactly where an open-source replacement falls short, and can conclude **KEEP THIS APP** when switching would cost too much of your workflow.
 
-## Example comparisons
+## See the actual comparisons
 
-LibreReplace is designed to show where a replacement falls short, not just where it looks similar.
+### Photoshop: compare more than one replacement
 
-<p align="center">
-  <img src="Docs/Images/comparisons/photoshop-gimp.png" width="49%" alt="LibreReplace comparing Adobe Photoshop with GIMP">
-  <img src="Docs/Images/comparisons/parallels-utm.png" width="49%" alt="LibreReplace comparing Parallels Desktop with UTM">
-</p>
+LibreReplace shows which features GIMP and Krita support, partially support, or lack.
 
-<p align="center">
-  <img src="Docs/Images/comparisons/magnet-rectangle.png" width="49%" alt="LibreReplace comparing Magnet with Rectangle">
-</p>
+![Photoshop compared against GIMP and Krita](Docs/Images/v02/02-photoshop-comparison.png)
+
+### CleanMyMac: choose what you need to keep
+
+Recommendations respond to your selected essential features. Recurring-cost estimates require user confirmation.
+
+![CleanMyMac essential features and recurring-cost controls](Docs/Images/v02/03-cleanmymac-features.png)
+
+<details>
+<summary>View the full CleanMyMac capability breakdown</summary>
+
+![CleanMyMac supported, partial and missing capabilities](Docs/Images/v02/04-cleanmymac-details.png)
+
+</details>
 
 ## What it does
 
