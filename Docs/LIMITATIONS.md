@@ -2,7 +2,7 @@
 
 LibreReplace is intentionally narrow. These are product boundaries, not hidden backlog items.
 
-- **Catalog coverage is finite.** The preview recognizes 25 commercial applications. Unsupported apps remain unsupported; LibreReplace does not upload or auto-classify them.
+- **Catalog coverage is finite.** The v0.2 preview covers 45 commercial applications and 70 open-source comparisons. Users can browse alternatives without installing the paid application. Unsupported apps remain unsupported; LibreReplace does not upload or auto-classify them.
 - **Bundle metadata is imperfect.** Bundle identifiers are preferred. A conservative name fallback exists for apps whose identifier is unavailable, but renamed/repackaged apps can still be missed.
 - **Feature coverage is a maintained judgment.** Percentages summarize the capabilities explicitly modeled in the catalog. They do not prove equal polish, performance, accessibility, security, privacy, support, file-format fidelity, or subjective workflow fit.
 - **Evidence ages.** Strong recommendations require fresh dated evidence, and CI rejects stale catalog evidence after 180 days. A project can still change between verification and use; the evidence links remain visible for inspection.

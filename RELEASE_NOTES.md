@@ -1,21 +1,32 @@
-# LibreReplace v0.1.0-preview.1
+# LibreReplace v0.2.0-preview.1
 
-**Replace paid Mac apps without losing what matters.**
+LibreReplace is a free, open-source Mac app for checking which paid
+software you can realistically replace without losing essential features.
 
-LibreReplace starts from supported commercial apps already installed on your Mac and shows evidence-backed open-source alternatives with explicit gains, losses, and conservative Strong / Partial / Keep outcomes.
+## What's new
+
+- Explore 45 commercial apps and 70 open-source comparisons without
+  installing the paid applications first.
+- Choose the features you need and compare multiple replacements.
+- See Strong, Partial, or Keep results with documented capability gaps,
+  evidence links, and verification dates.
+- Scan supported installed apps locally.
+- Review potential recurring-cost reductions using costs you confirm.
+- Improved matching, recommendation safety, and installation checks.
 
 ## Install
 
-Recommended no-cost route:
+Homebrew: `brew install --cask maliroq/tap/librereplace`
 
-```bash
-git clone https://github.com/maliroq/LibreReplace.git
-cd LibreReplace
-./Scripts/install_local.sh
-```
+Download: https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1
 
-A downloadable Release DMG is also provided for convenience. It is **ad-hoc signed**, **not Developer ID signed**, and **not Apple-notarized**. The release record publishes the exact source commit and DMG SHA-256.
+## Important limitations
 
-If macOS blocks the downloaded preview, users who independently decide to trust it may use Apple's normal per-app **System Settings → Privacy & Security → Open Anyway** process after first trying to open LibreReplace. No Gatekeeper-disable or quarantine-removal command is supported.
+Recommendations are workflow estimates, not guarantees of feature parity.
+Potential reductions are not realized savings. Test replacements before
+cancelling subscriptions or moving important work.
 
-LibreReplace remains local-only, has no account or telemetry, never automatically removes an existing app, and keeps its narrow migration preview-first, backup-verified, and rollback-capable.
+Requires macOS 14 or later. The downloadable preview is ad-hoc signed
+and not Apple-notarized. It does not bypass macOS security protections.
+
+No account, telemetry, inventory upload, or automatic uninstallation.
