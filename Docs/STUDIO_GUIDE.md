@@ -1,53 +1,47 @@
-# A tour of LibreReplace Studio
+# LibreReplace Studio — a closer look
 
-**One paid app. A smarter free setup.** Studio brings discovery, built-in utilities, saved plans and safe switching together in one native Mac experience.
+**A sophisticated Mac replacement engine built to lower software costs.** Compare the features you need, combine excellent free apps, use built-in tools and save the exact setup you want.
 
-## Discover — start with your work, not an app name
+## Discover — feature-aware free replacements
 
-Pick one of 45 commercial Mac apps, then choose the features that actually matter to you. LibreReplace compares relevant free alternatives and assembles candidate setups—including combinations of multiple apps and its own built-in tools.
+Choose from 45 paid Mac app targets and select the capabilities you depend on. LibreReplace compares free alternatives and proposes complete setups, including combinations of apps and built-in tools.
 
-A setup card summarizes the selected components and the tasks they cover. Expand it to explore feature coverage and potential gaps. You can browse all of this without owning or installing the original paid app.
+The setup card shows component contributions and requirement coverage, making it easier to choose an alternative based on your real work rather than its name alone.
 
-**Try it:** select CleanShot X, choose screenshots and OCR text capture, and explore a setup that pairs a free screenshot app with LibreReplace Image OCR.
+**Example:** select CleanShot X, choose screenshots and OCR text capture, and explore a setup pairing free screenshot capture with LibreReplace Image OCR.
 
-## My Setups — never lose a good combination
+## My Setups — the exact combination you chose
 
-Found something promising? Save the plan. LibreReplace remembers the original app, your must-have features and the exact free components. Reopen it later, change requirements or continue testing without starting over.
+Save a candidate setup without installing anything. The saved plan remembers your source app, selected features and replacement components. Reopen the same combination later, change your requirements or continue testing.
 
-Your saved plans and any tasks you've genuinely tested stay organized in the same place. Dedicated switching experiences for TextExpander → Espanso and Sublime Text → Zed are also accessible here.
+My Setups also provides access to the supported TextExpander → Espanso and Sublime Text → Zed migrations.
 
-## Tools — useful right out of the box
+## Tools — on-device document and image utilities
 
-Studio includes five kinds of local file tools:
+- **Extract text:** capture text from supported images and PDFs.
+- **Combine PDFs:** arrange several documents into one file.
+- **Searchable PDF:** add a text layer to supported scanned documents.
+- **PDF Rescue:** run supported PDF recovery operations.
+- **Convert images:** transform supported formats, including batches.
 
-- **Extract text** from supported images and PDF documents.
-- **Combine PDFs** into one document.
-- **Searchable PDF** creation for supported scanned files.
-- **PDF Rescue** operations for supported documents.
-- **Image conversion** between supported formats.
+When a saved setup includes a LibreReplace tool, the app opens the right operation and makes it easy to return to the setup.
 
-Choose your own files, process them on your Mac and save the result. When a saved replacement setup needs an included tool, Studio can open that tool and bring you straight back to the setup afterward.
+## Community — complete replacement recipes
 
-## Community — share a recipe, not just an app name
+Import reusable configurations, adapt them to your requirements and export your own combination. Propose tested recipes for community review. Public gallery entries appear as reviewed contributions are published.
 
-Export your replacement combination as a reusable recipe, import one someone shares with you, or submit a proven workflow for review. Imported recipes can be opened as setups in Discover. Public gallery entries appear as reviewed recipes are published.
+[Community guide](STUDIO_COMMUNITY_BUILD_GUIDE.md)
 
-[Community contribution guide](STUDIO_COMMUNITY_BUILD_GUIDE.md)
+## My Mac — identify recurring software costs
 
-## My Mac — see what's worth replacing
+Scan supported installed-app metadata, explore free replacements and review potential savings using the recurring amounts you enter.
 
-Scan your installed app metadata to identify supported paid software and explore its free options. Review what you use, see potential recurring-cost opportunities based on amounts you enter and take the next step when it makes sense for you.
+## A practical replacement journey
 
-## From idea to a working plan
-
-1. **Choose** an app you want to replace.
-2. **Select** the features you can't do without.
-3. **Compare** complete free setups, not just app names.
-4. **Explore** a setup, use included tools and inspect optional installs.
-5. **Save** your preferred combination for later.
-6. **Try** real tasks and record what worked.
-7. **Share** a reusable recipe if you find a combination worth passing on.
-
-Everything starts with exploration. Installation and supported settings migrations are separate choices, with clear previews and approval.
+1. Choose a commercial app and mark your essential features.
+2. Compare recommended free apps or FreeStack combinations.
+3. Explore the setup, including its built-in tools and optional installs.
+4. Save the exact combination and try the tasks that matter.
+5. Use guided switching for supported changes or share a reusable recipe.
 
 [Back to LibreReplace](../README.md)

@@ -1,75 +1,68 @@
 # Changelog
 
-LibreReplace has evolved from a paid-app comparison tool into a **native Mac workspace for building free alternatives around the work that matters to you**.
+LibreReplace is growing from a paid-app comparison utility into a **feature-aware Mac replacement platform**—built to help users reduce recurring software costs with capable free and open-source options.
 
 ## [Unreleased — LibreReplace Studio source] — 2026-11-21
 
-### The headline: from alternative apps to complete free setups
+### The biggest LibreReplace upgrade yet
 
-This is the biggest leap in LibreReplace since its first preview. The November 4 edition helped people find and compare replacements. **Studio helps them put a replacement together, try useful parts of it, keep the exact plan and share the result.**
+The November 4 preview compared individual paid apps with free alternatives. Studio takes the next step: **build complete replacement setups, combine complementary free tools, use local document utilities and manage the switch in one native Mac app.**
 
-### Discover — build your own free stack
+### 1. FreeStack — a replacement engine, not just an app directory
 
-- **Introducing FreeStack combinations.** Candidate setups can assemble multiple free applications and included tools for one commercial workflow. A screenshot tool plus on-device OCR can now appear as one coherent answer to a screenshot-and-text-extraction requirement.
-- **Requirements-first discovery.** Choose the capabilities you use, then let the setup engine compare combinations against those choices rather than relying on a generic app-to-app match.
-- **Full-setup feature coverage.** See which requirements the entire combination covers, what remains partial and where the plan needs another tool.
-- **A bigger picture with the same curated foundation.** 45 commercial Mac targets, 70 free-alternative comparisons and 100 distinct catalog products are organized around what people want to accomplish.
-- **Better browsing and search.** Faster access to relevant names, better empty states, simplified comparison controls and clearer setup cards.
-- **Explore before installing.** A person can review an entire proposed setup without owning the original app, downloading replacements or changing the Mac.
+- **Multi-app replacement combinations.** LibreReplace assembles candidate setups from free alternatives and its built-in tools. When a single app falls short, the suggested combination can cover more of the selected workflow.
+- **Feature-aware planning.** People choose the exact capabilities they need, and recommendations respond to those requirements.
+- **Coverage across the entire setup.** Supported, partial and missing capabilities are shown for the combined tools, with evidence and limitations available for deeper inspection.
+- **45 commercial Mac targets, 70 free-alternative comparisons and 100 catalog products** form the curated comparison foundation.
+- **Faster Discover experience.** Cleaner cards, more relevant search results, streamlined comparisons and useful empty states.
 
-### Tools — useful work happens inside LibreReplace
+### 2. Built-in tools — useful capabilities without another subscription
 
-- **Image and document text extraction.** Local OCR for selected screenshots, images and supported PDFs.
-- **PDF combination.** Assemble selected documents into one PDF.
-- **Searchable PDF creation.** Make supported scanned PDFs easier to search.
-- **PDF Rescue.** Built-in recovery operations for supported PDF cases.
-- **Image conversion.** Convert supported image files in batches.
-- **Tools integrated with setups.** A relevant setup can open the correct local tool, preserve the chosen combination and provide a **Return to setup** action when the user finishes.
-- **A focused no-install workflow.** Users can get value from included file tools before deciding whether they need another free application.
+- **On-device text extraction** from supported screenshots, images and PDFs.
+- **PDF combination** and **searchable PDF creation** for supported files.
+- **PDF Rescue** for supported recovery operations.
+- **Batch-capable image format conversion.**
+- **Connected tool workflows.** A replacement setup can launch the appropriate included tool and return to the original saved setup after use.
 
-### My Setups — your exact plan, saved
+### 3. My Setups — save an entire free replacement plan
 
-- **Save for later.** Keep a promising setup without installing anything.
-- **Restore the original combination.** Saved plans retain the source app, essential features, extra requirements and selected components—even when recommendation ordering changes later.
-- **Resume in one click.** Explore a saved setup or change its requirements directly from My Setups.
-- **Track real trials.** Record the tasks personally tested without conflating them with catalog feature coverage.
-- **Keep focused migrations close by.** TextExpander → Espanso and Sublime Text → Zed flows are available alongside saved plans, without taking over the page.
+- Save the chosen combination of apps and built-in tools without installing anything.
+- Preserve the original commercial app, selected requirements and exact components when reopening a plan.
+- Revise must-have features, resume a setup and record tasks actually tested.
+- Keep targeted TextExpander → Espanso and Sublime Text → Zed migration journeys accessible without cluttering the main experience.
 
-### Guided Switch — simpler decisions, clearer control
+### 4. Guided Switch — take control of the transition
 
-- **A completely reworked setup journey:** Check the match → See what's ready → Try a real task → Save what worked.
-- **Optional installation by design.** App detection and setup exploration come first. Missing-app installation details stay out of the way until requested.
-- **Fresh, exact package approvals.** Installation consent is tied to the packages reviewed, with preflight validation and short-lived approval state.
-- **Better post-install visibility.** Separate installation completion from package detection and make available installed apps easier to open.
-- **Evidence-based trial tracking.** Save the specific tasks completed on the current setup and distinguish individual tool tests from the entire combination.
-- **Safer switching for supported settings and snippets.** Preview, backup, verification and recovery remain part of supported migration flows.
+- Rebuilt the setup flow around **feature fit, readiness on the Mac, a real task and saved results**.
+- Made installing suggested third-party apps optional, with clear preflight information and explicit approval.
+- Added installation-session checks, package identity validation and separate post-install verification.
+- Improved supported settings and snippet migrations with previews, backups and recovery.
+- Recorded user-tested outcomes separately from catalog recommendations.
 
-### Community — share the whole setup
+### 5. Community — reusable replacement recipes
 
-- **Portable replacement recipes.** Export and import combinations with their components and requirements.
-- **Open imported recipes as real plans.** Review and adapt a shared setup in Discover without rebuilding it manually.
-- **Local recipe management.** Find, inspect and remove imported recipes directly in the app.
-- **Community submissions and review notes.** Package useful testing context alongside a recipe proposed for review.
-- **A curated gallery foundation.** The public registry and browsing experience are in place for reviewed community contributions.
+- Export and import complete combinations with their selected features and components.
+- Open an imported recipe as an editable plan in Discover.
+- Manage imported recipes locally and prepare review notes when submitting a tested setup.
+- Added the foundation for a curated public recipe gallery.
 
-### My Mac — a clearer path from installed apps to free options
+### 6. My Mac and the new native interface
 
-- **Local app discovery** identifies supported paid apps from installed bundle metadata.
-- **Feature-aware replacement guidance** connects detected software to the same recommendation and setup experience found in Discover.
-- **Potential recurring-cost savings** use amounts the user supplies rather than guessing at subscriptions.
-- **Clearer statuses and next actions** make it easier to understand what a catalog match means and what to try next.
+- Introduced **five connected destinations:** Discover, My Setups, Tools, Community and My Mac.
+- Connected local installed-app detection with feature-based alternatives and user-entered potential savings.
+- Refined icons, fallback artwork, action hierarchy, wording and navigation for everyday Mac use.
+- Preserved local processing, optional installation and user control over the original paid app.
 
-### Design, performance and quality
+### Engineering and release preparation
 
-- **New native five-destination interface:** Discover, My Setups, Tools, Community and My Mac.
-- **Sharper product presentation:** real app artwork when available, polished fallback icons, cleaner search, less redundant copy, more useful empty states and streamlined primary actions.
-- **Private by design:** catalog matching and app scanning run locally; included document tools act on selected files; no account or telemetry is required.
-- **Stronger safety foundations:** hardened file handling, recipe validation, migration backups, package identity checks and protected installation flow.
-- **Expanded verification:** 172 portable Swift tests, native macOS Debug build and Xcode tests, scanner and migration probes, plus a successful unsigned Release configuration compile on November 21.
+- Expanded the portable Swift suite to **172 passing tests** at the November 21 release-candidate check, alongside native Xcode build/tests, catalog validation and migration probes.
+- Confirmed the **unsigned Release configuration compiles** on macOS and added a release-readiness audit.
+- Hardened recipe parsing, local file operations, Homebrew approvals, migration backups and workflow-trial records.
+- Kept private artwork approvals out of the public source bundle.
 
-### Current availability
+### Availability
 
-The **Studio source** is the new experience described above. The existing [v0.2.0-preview.1 downloadable app](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) is the earlier comparison-focused edition. A Studio downloadable build will follow the distribution checks.
+**Studio is available in source on `main`.** The downloadable [v0.2.0-preview.1](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) remains the earlier comparison-focused edition while the new downloadable Studio build is prepared.
 
 ---
 

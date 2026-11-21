@@ -1,43 +1,43 @@
-# LibreReplace Studio — The free setup era
+# LibreReplace Studio — Free and open-source replacements, engineered for macOS
 
-**A major new chapter for LibreReplace.**
+**Find out how much paid Mac software you can replace with free alternatives—and build a setup that fits the features you actually use.**
 
-LibreReplace started by helping Mac users compare individual paid and free apps. Studio turns that idea into something far more useful: **build the free setup that fits your workflow, try what matters, save your choices and switch at your pace.**
+Studio is LibreReplace's biggest expansion to date. What began as a software comparison app is now a feature-aware replacement builder with multi-app combinations, integrated local tools, saved plans and guided switching.
 
-## The headline features
+## The major upgrades
 
-### 1. FreeStack: your requirements, your combination
+### FreeStack: complete setups instead of single-app guesses
 
-Stop hoping one alternative covers every feature. Studio can bring free apps and included Mac tools together into a single suggested setup. Choose the features you depend on, compare combinations and see which tasks each component covers.
+Choose a commercial app and the capabilities you depend on. LibreReplace compares free alternatives, combines complementary apps when useful, and shows coverage across the whole proposed setup. Requirements drive the recommendations.
 
-### 2. A built-in toolbox that earns its place
+### Missing-feature bridges and local tools
 
-Extract text from screenshots and PDFs, combine documents, make scanned PDFs searchable, try PDF Rescue on supported files and convert images. These are real tools inside LibreReplace—not just links to download another app.
+Five built-in tool categories cover text extraction from images and PDFs, PDF combination, searchable PDF creation, supported PDF rescue and image conversion. Explore a replacement that uses one of these tools, open it directly, then return to the same setup.
 
-### 3. My Setups: pick up exactly where you left off
+### Saved setups that remember your decisions
 
-Save the combination and requirements you selected. Reopen it later, revise what's essential, try an available tool and return to the same plan. Keep catalog suggestions separate from the tasks you've personally tested.
+Store the exact combination, source app and requirements. Return to it later, change what's essential, and record tasks you actually tested without rebuilding your plan.
 
-### 4. Guided Switch: explore first, act when ready
+### Guided switching, with control over every change
 
-See what's on your Mac, inspect missing apps, review optional installation details and approve changes individually. Supported migrations include structured previews, backups and scoped recovery.
+Inspect what's on your Mac, view optional installation details and approve changes when you choose. Supported migrations include TextExpander snippets to Espanso and Sublime Text settings to Zed, with preview and recovery workflows.
 
-### 5. Community builds: share a complete answer
+### Community replacement recipes
 
-A useful alternative is often a *recipe*, not a single app name. Studio can import and export reusable combinations, open imported recipes as setups and prepare contributions for community review.
+Share more than app names. Import, customize and export portable setup recipes. The Community interface also supports contributions for review.
 
-### 6. A complete Mac-first interface
+### A fully redesigned native Mac experience
 
-Discover. My Setups. Tools. Community. My Mac. Five focused destinations designed to make a complicated software decision feel simple.
+Discover, My Setups, Tools, Community and My Mac are now connected parts of one workflow. Updated navigation, app artwork, comparisons, search and saved plans make sophisticated software decisions easier to manage.
 
-## By the numbers
+## At a glance
 
-**45** commercial app targets · **70** free-alternative comparisons · **100** distinct catalog products · **5** integrated destinations · **5** built-in tool categories
+**45** commercial targets · **70** free-alternative comparisons · **100** catalog products · **5** built-in tool categories · **5** connected sections
 
-## Available now
+## Availability
 
-The Studio source is published on `main` with its native SwiftUI interface, tests and local build scripts. Build it from source using the [README](README.md).
+**Studio is available in the current source on `main`.** [Build it for Mac](README.md#get-librereplace).
 
-The downloadable [v0.2.0-preview.1](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) remains the earlier edition while the next downloadable Studio build is prepared.
+The existing [v0.2.0-preview.1 download](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) is the earlier edition; a new Studio binary will be published separately.
 
-[Read the complete changelog](CHANGELOG.md) · [Explore the Studio guide](Docs/STUDIO_GUIDE.md)
+[Full changelog](CHANGELOG.md) · [Studio guide](Docs/STUDIO_GUIDE.md) · [Get involved](CONTRIBUTING.md)
