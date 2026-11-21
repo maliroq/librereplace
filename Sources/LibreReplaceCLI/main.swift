@@ -9,6 +9,8 @@ func usage() {
       libreplace scan-smoke <catalog.json>
       libreplace install-smoke <catalog.json>
       libreplace migration-selftest
+      libreplace studio-compose <catalog.json> <paid-app-id> <required-feature-ids-comma-separated>
+      libreplace studio-validate-recipe <catalog.json> <paid-app-id> <recipe.json>
     """)
 }
 
@@ -131,7 +133,9 @@ func runMigrationSelftest() throws -> Bool {
     let adapter = SublimeToZedMigration()
     let detected = adapter.detect(home: fixtureRoot, fileManager: fm)
     let plan = try adapter.preview(home: fixtureRoot, fileManager: fm)
-    let previewPass = detected && plan.changes.count == 4 && plan.targetPath.standardizedFileURL == target.standardizedFileURL
+    let expectedKeys: Set<String> = ["buffer_font_size", "buffer_font_family", "tab_size", "hard_tabs", "base_keymap"]
+    let previewPass = detected && Set(plan.changes.map(\.key)) == expectedKeys &&
+        plan.targetPath.standardizedFileURL == target.standardizedFileURL
 
     let receipt = try adapter.apply(plan: plan, home: fixtureRoot, backupRoot: backupRoot, fileManager: fm)
     let backupPass = receipt.backupPath.map { fm.fileExists(atPath: $0.path) } ?? false
@@ -206,6 +210,52 @@ case "install-smoke":
     do {
         let pass = try runInstallSmoke(catalogURL: URL(fileURLWithPath: args[1]))
         exit(pass ? 0 : 1)
+    } catch {
+        printError("error: \(error.localizedDescription)")
+        exit(1)
+    }
+case "studio-compose":
+    guard args.count == 4 else { usage(); exit(2) }
+    do {
+        let catalog = try CatalogLoader.load(from: URL(fileURLWithPath: args[1]))
+        guard let app = catalog.apps.first(where: { $0.id == args[2] }) else {
+            printError("Unknown paid application ID")
+            exit(2)
+        }
+        let required = Set(args[3].split(separator: ",").map(String.init))
+        let plans = StudioCatalogComposer.compose(
+            for: app, requiredFeatureIDs: required,
+            macOSMajor: max(14, ProcessInfo.processInfo.operatingSystemVersion.majorVersion)
+        )
+        try emitJSON([
+            "paidApplication": app.name,
+            "requiredFeatures": required.sorted(),
+            "planCount": plans.count,
+            "plans": plans.map { plan in
+                ["components": plan.components.map(\.name),
+                 "readyForTrialOnly": plan.readiness == .eligibleForTrial,
+                 "workflowVerified": plan.workflowVerified,
+                 "warnings": plan.warnings] as [String: Any]
+            },
+            "executedActions": false
+        ])
+    } catch {
+        printError("error: \(error.localizedDescription)")
+        exit(1)
+    }
+case "studio-validate-recipe":
+    guard args.count == 4 else { usage(); exit(2) }
+    do {
+        let catalog = try CatalogLoader.load(from: URL(fileURLWithPath: args[1]))
+        guard let app = catalog.apps.first(where: { $0.id == args[2] }) else {
+            printError("Unknown paid application ID")
+            exit(2)
+        }
+        let data = try Data(contentsOf: URL(fileURLWithPath: args[3]))
+        let recipe = try StudioSafeRecipeLoader.decodeAndValidate(
+            data, catalog: StudioCatalogComposer.components(for: app)
+        )
+        print("Recipe validated as untrusted data: \(recipe.id). No actions executed.")
     } catch {
         printError("error: \(error.localizedDescription)")
         exit(1)

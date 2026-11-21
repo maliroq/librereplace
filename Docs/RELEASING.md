@@ -12,6 +12,11 @@ cd LibreReplace
 
 `install_local.sh` requires macOS 14+, full Xcode, and XcodeGen. It builds locally, applies an ad-hoc signature, verifies the bundle, installs to `~/Applications/LibreReplace.app` by default, and launches it. It does not request Apple credentials, use `sudo`, clear quarantine, or disable Gatekeeper.
 
+
+## Current Studio source / existing preview download
+
+The November 21, 2026 Studio code update can be published to GitHub `main` before a new downloadable Mac app exists. The published `v0.2.0-preview.1` DMG and Homebrew Cask remain the earlier experience. Do not change their version or checksum or label them as containing the Studio interface. Source-only updates are not notarized binary releases.
+
 ## No-cost downloadable preview
 
 A downloadable preview may ship without Developer ID only after the exact source commit passes `make check` and `python3 dev.py`, the Release app is ad-hoc signed and verified, the exact DMG is mounted/copied/version-checked/launched, and the release prominently states that it is not Developer ID signed or Apple-notarized. Publish the exact source commit and DMG SHA-256.

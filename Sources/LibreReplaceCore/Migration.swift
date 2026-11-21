@@ -64,19 +64,23 @@ public struct MigrationReceipt: Codable, Hashable, Sendable {
     public let backupPath: URL?
     public let targetExistedBeforeApply: Bool
     public let appliedAt: Date
+    /// Fingerprint of LibreReplace's applied file; used to protect user edits at rollback.
+    public let writtenFingerprint: String?
 
     public init(
         adapterID: String,
         targetPath: URL,
         backupPath: URL?,
         targetExistedBeforeApply: Bool,
-        appliedAt: Date = Date()
+        appliedAt: Date = Date(),
+        writtenFingerprint: String? = nil
     ) {
         self.adapterID = adapterID
         self.targetPath = targetPath
         self.backupPath = backupPath
         self.targetExistedBeforeApply = targetExistedBeforeApply
         self.appliedAt = appliedAt
+        self.writtenFingerprint = writtenFingerprint
     }
 }
 

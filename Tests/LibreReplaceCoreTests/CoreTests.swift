@@ -183,7 +183,7 @@ final class CoreTests: XCTestCase {
 
         let adapter = SublimeToZedMigration()
         let plan = try adapter.preview(home: home, fileManager: fm)
-        XCTAssertEqual(plan.changes.count, 4)
+        XCTAssertEqual(plan.changes.count, 5)
         let original = try Data(contentsOf: target)
         let receipt = try adapter.apply(plan: plan, home: home, backupRoot: home.appendingPathComponent(".libreplace-backups"), fileManager: fm)
         XCTAssertEqual(try Data(contentsOf: try XCTUnwrap(receipt.backupPath)), original)

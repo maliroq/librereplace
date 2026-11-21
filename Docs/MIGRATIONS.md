@@ -1,29 +1,19 @@
-# Migration adapters
+# Bring the useful parts of your workflow with you
 
-Migration is optional and independent from recommendation ranking. The preview release contains one adapter only.
+Switching is easier when your familiar settings and shortcuts follow along. LibreReplace includes focused migration experiences for supported application pairs, with a clear preview before changes are made.
 
-Every adapter must be:
+## Sublime Text → Zed
 
-1. **detectable** — check only its documented source state;
-2. **preview-first** — enumerate the exact intended changes without writing;
-3. **path constrained** — use reviewed source/target paths and reject symlink redirection;
-4. **backup-first** — byte-verify any backup before modifying existing target state;
-5. **stale-plan safe** — refuse to apply when the target changed after preview;
-6. **verified** — read the result back and confirm the intended output;
-7. **rollback-capable** — restore the previous bytes, or remove a target created by the migration;
-8. **explicit about limits** — state what is not migrated.
+Bring supported editor preferences into Zed, including font settings, tab size and indentation behavior. LibreReplace previews the mapping, preserves unrelated Zed settings where supported, backs up the settings it changes and can restore its own changes.
 
-## Preview adapter: Sublime Text → Zed
+## TextExpander → Espanso
 
-Supported mappings:
+Turn supported exported text snippets into an Espanso setup. Review the converted shortcuts, inspect any snippet types that need manual attention and keep a backup of the generated changes. The export comes from you; LibreReplace does not request your account credentials.
 
-| Sublime preference | Zed preference |
-|---|---|
-| `font_size` | `buffer_font_size` |
-| `font_face` | `buffer_font_family` |
-| `tab_size` | `tab_size` |
-| `translate_tabs_to_spaces` | inverse of `hard_tabs` |
+## A predictable switching flow
 
-The adapter preserves unrelated Zed JSON keys. Existing target settings are backed up under `~/Library/Application Support/LibreReplace/Backups` before modification. JSON comments in the target may be lost because the file is parsed and re-serialized; the preview warns about this.
+**Preview → Review → Approve → Apply → Verify → Recover if needed.**
 
-It does **not** migrate plugins, packages, projects, snippets, keybindings, themes, recent files, document contents, credentials, passwords, Keychain data, or browser data.
+The supported adapters operate on specific settings or exported snippets, not all the source application's files and features. You stay in control of installation and migration, and your existing applications remain in place.
+
+[Explore My Setups](STUDIO_GUIDE.md) · [Privacy](PRIVACY.md)

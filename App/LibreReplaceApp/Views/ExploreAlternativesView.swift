@@ -3,6 +3,8 @@ import LibreReplaceCore
 
 /// Works entirely from the bundled catalog, including on a Mac with zero matching apps.
 struct ExploreAlternativesView: View {
+    let onOpenFreeTwins: () -> Void
+    let onBuild: (String) -> Void
     @EnvironmentObject private var state: AppState
     @State private var query = ""
     @State private var selectedAppID: String?
@@ -30,11 +32,11 @@ struct ExploreAlternativesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Explore Alternatives").font(.largeTitle.bold())
-                Text("Compare paid software with open-source options. You don't need the paid app installed.")
+                Text("Find your free replacement").font(.largeTitle.bold())
+                Text("Choose the features you need. Compare the free options and create your setup.")
                     .foregroundStyle(.secondary)
             }
-            TextField("Search an app or alternative", text: $query)
+            TextField("Search 45 paid apps and their alternatives", text: $query)
                 .textFieldStyle(.roundedBorder)
                 .accessibilityLabel("Search supported applications and alternatives")
             HStack(alignment: .top, spacing: 18) {
@@ -79,7 +81,13 @@ struct ExploreAlternativesView: View {
         .padding(24)
         .navigationTitle("Explore Alternatives")
         .onAppear {
-            if selectedAppID == nil, let first = available.first { select(first) }
+            if !state.requestedExploreQuery.isEmpty { query = state.requestedExploreQuery }
+            if let match = filtered.first { select(match) }
+            else if selectedAppID == nil, let first = available.first { select(first) }
+        }
+        .onChange(of: state.requestedExploreQuery) { _, next in
+            query = next
+            if let match = filtered.first { select(match) }
         }
         .onChange(of: available.count) { _, count in
             if count > 0 && selectedAppID == nil, let first = available.first { select(first) }
@@ -94,6 +102,24 @@ struct ExploreAlternativesView: View {
                 Text(app.pricing.model.rawValue)
                     .font(.caption).foregroundStyle(.secondary)
             }
+            HStack(spacing: 10) {
+                Button("Build my free setup") { onBuild(app.id) }
+                    .buttonStyle(.borderedProminent)
+                Text("\(app.alternatives.count) alternatives")
+                    .font(.subheadline).foregroundStyle(.secondary)
+            }
+            if app.id == "sublime-text" {
+                GroupBox {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Bring my editor setup to Zed")
+                            .font(.headline)
+                        Text("Bring compatible editor settings and user snippets to Zed, without manually exporting each snippet.")
+                            .font(.callout).foregroundStyle(.secondary)
+                        Button("Check and prepare my free setup") { onOpenFreeTwins() }
+                            .buttonStyle(.borderedProminent)
+                    }.frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
             if let note = app.pricing.note {
                 Text(note).font(.callout).foregroundStyle(.secondary)
             }
@@ -101,7 +127,7 @@ struct ExploreAlternativesView: View {
                 Link("Check current official pricing", destination: url).font(.callout)
             }
             Text("What do you need to keep?").font(.headline)
-            Text("Preselected features are marked critical by the catalog. Change these to match your workflow; recommendations update immediately.")
+            Text("Choose your must-haves. Recommendations update as you go.")
                 .font(.caption).foregroundStyle(.secondary)
             ForEach(app.capabilities, id: \.id) { capability in
                 Toggle(isOn: Binding(
@@ -121,10 +147,11 @@ struct ExploreAlternativesView: View {
             ForEach(ExploreDecision.assess(app, requiredFeatureIDs: state.requiredFeatureIDs(for: app)), id: \.ranked.alternative.id) { decision in
                 alternativeCard(decision, source: app)
             }
-            Text("Coverage is weighted across selected required features, or all catalog features when none are selected. It is not proof of feature parity, safety, polish, or file-format compatibility. Unknown support never counts as a match.")
-                .font(.caption).foregroundStyle(.secondary)
-            Text("Catalog record dated \(app.lastVerified). Linked documentation is not a hands-on verification of feature parity; test before migrating.")
-                .font(.caption).foregroundStyle(.secondary)
+            DisclosureGroup("About these comparisons") {
+                Text("Matches are based on published feature information and your selected requirements. Test the tasks that matter before replacing an app.")
+                Text("Catalog reviewed: \(app.lastVerified)")
+            }
+            .font(.caption).foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.trailing, 4)
@@ -149,7 +176,7 @@ struct ExploreAlternativesView: View {
                     Text("Required features not fully supported: \(decision.incompleteRequired.map(\.label).joined(separator: ", "))")
                         .font(.callout)
                 } else if !decision.requirements.isEmpty {
-                    Text("All selected required features are marked fully supported in the catalog; this is not a tested guarantee.")
+                    Text("Matches all selected features in the catalog.")
                         .font(.callout)
                 }
                 ForEach(source.capabilities, id: \.id) { capability in
@@ -170,11 +197,11 @@ struct ExploreAlternativesView: View {
                     if let url = URL(string: alt.homepageURL) { Link("Official site", destination: url) }
                     if let repository = alt.repositoryURL, let url = URL(string: repository) { Link("Source code", destination: url) }
                 }
-                Text("Catalog evidence dated \(alt.lastVerified)").font(.caption).foregroundStyle(.secondary)
-                ForEach(alt.evidence, id: \.url) { evidence in
-                    if let url = URL(string: evidence.url) {
-                        Link("\(evidence.kind.rawValue.capitalized): \(evidence.title)", destination: url)
-                            .font(.caption)
+                DisclosureGroup("Sources · \(alt.lastVerified)") {
+                    ForEach(alt.evidence, id: \.url) { evidence in
+                        if let url = URL(string: evidence.url) {
+                            Link(evidence.title, destination: url).font(.caption)
+                        }
                     }
                 }
             }

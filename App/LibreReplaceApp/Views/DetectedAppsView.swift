@@ -35,10 +35,7 @@ private struct RecommendationRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: icon)
-                .font(.title2)
-                .frame(width: 30)
-                .foregroundStyle(badgeColor)
+            AppArtwork(name: recommendation.match.catalogApp.name, bundleIDs: recommendation.match.catalogApp.bundleIdentifiers, size: 40)
             VStack(alignment: .leading, spacing: 3) {
                 Text(recommendation.match.catalogApp.name)
                     .font(.headline)
@@ -60,7 +57,7 @@ private struct RecommendationRow: View {
         }
         .padding(.vertical, 6)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(recommendation.match.catalogApp.name), \(label) recommendation")
+        .accessibilityLabel("\(recommendation.match.catalogApp.name), \(label) catalog recommendation, not personally tested")
     }
 
     private var icon: String {
@@ -81,13 +78,13 @@ private struct RecommendationRow: View {
 
     private var label: String {
         switch recommendation.level {
-        case .strong: "Strong"
+        case .strong: "Strong catalog match"
         case .partial: "Partial"
         case .keep: "Keep"
         }
     }
 
     private func subtitle(_ best: RankedAlternative) -> String {
-        "\(best.alternative.name) · \(Int((best.coverage * 100).rounded()))% of selected essentials"
+        "\(best.alternative.name) · \(Int((best.coverage * 100).rounded()))% catalog coverage of essentials"
     }
 }

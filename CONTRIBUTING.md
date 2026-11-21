@@ -1,48 +1,35 @@
-# Contributing
+# Build a better free Mac workflow with us
 
-Thanks for helping make LibreReplace more trustworthy.
+The most exciting LibreReplace contributions answer one simple question: **How can someone do this work with free software?**
 
-## Add or verify an app replacement
+There are lots of ways to help, from one excellent catalog correction to a complete, repeatable Community setup.
 
-Catalog quality matters more than catalog size. The most valuable contribution is a correction or verification that makes an existing recommendation more defensible.
+## Share an alternative that deserves attention
 
-For `v0.2.0-preview.1`, the catalog covers 45 commercial targets and 70 open-source comparisons. Please verify or correct existing entries now; new target proposals should start with an issue for maintainer discussion until maintainers explicitly reopen catalog scope.
+Found a great free app? Tell us which paid app it can help replace, which features you tried, the macOS version you used and any steps that made the workflow click. Strong contributions include links to product documentation and clear notes on supported features.
 
-A catalog contribution must:
+## Build a Community recipe
 
-1. identify the source app with reliable bundle identifiers or conservative name aliases;
-2. describe user-visible workflow capabilities rather than marketing categories;
-3. cite primary sources where practical: official docs, source repositories, license text, release notes, pricing pages, and package-manager records;
-4. use `partial`, `none`, or `unknown` when parity is uncertain;
-5. preserve meaningful workflow losses and critical capabilities;
-6. set `lastVerified` to the date the source was actually checked;
-7. never infer privacy or security superiority from an open-source license alone;
-8. never assume an installed app proves a particular subscription or price;
-9. verify the installation path rather than copying an old package name;
-10. downgrade a recommendation when evidence no longer supports its current level.
+Use Discover to select a source app, choose what's essential and assemble a free setup. Export the recipe, describe the steps and submit it for review. A good recipe gives another Mac user something they can understand and reproduce.
 
-Strong recommendations require fresh source-app, alternative, and underlying capability evidence. Future-dated or stale verification cannot produce a Strong result.
+[How to contribute a Community build](Docs/STUDIO_COMMUNITY_BUILD_GUIDE.md) · [Recipe format](Docs/STUDIO_RECIPE_V1.md)
 
-## Other useful contributions
+## Improve the app
 
-Focused bug fixes, bundle-ID corrections, accessibility fixes, reproducible safety tests, evidence-link repairs, documentation corrections, and macOS compatibility fixes are welcome.
+SwiftUI polish, accessibility, workflow tools, performance, catalog coverage, migrations, tests and documentation are all welcome. We value changes that make the product easier for a nontechnical person to use.
 
-## Security-sensitive changes
-
-Scanner paths, process execution, URL validation, report privacy, migration paths, backups, and rollback have a higher review bar. Migration changes must remain preview-first, path-constrained, backup-verified, stale-plan safe, output-verified, and rollback-capable. Passwords, Keychain, browser credentials, private documents, and unrelated user data are out of scope.
-
-## Development
-
-Run:
+Run the portable checks:
 
 ```bash
 make check
 ```
 
-On a Mac, run the complete gate before requesting release-level review:
+For native macOS changes, also run:
 
 ```bash
-python3 dev.py
+python3 dev.py --non-interactive --no-launch
 ```
 
-The Swift core should remain portable and independent of AppKit; macOS UI/action code belongs under `App/`. Keep pull requests focused and explain the evidence or invariant that motivates the change.
+`project.yml` generates the Xcode project. Keep installation approval, file access and migration backups intact as you improve the experience.
+
+**Have a promising idea?** [Open an issue](https://github.com/maliroq/librereplace/issues) and show what it would help people accomplish.

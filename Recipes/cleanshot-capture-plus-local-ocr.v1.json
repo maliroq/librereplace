@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "cleanshot-capture-local-ocr",
+  "sourceWorkflow": "Capture a screenshot with Snapzy, then extract text from a saved image using LibreReplace local OCR. Manual image handoff required.",
+  "requirements": [
+    { "id": "capture", "essential": true },
+    { "id": "ocr", "essential": true },
+    { "id": "annotation", "essential": false }
+  ],
+  "componentIDs": [
+    "app.cleanshot-x.snapzy",
+    "bridge.image-ocr"
+  ],
+  "actions": [
+    { "kind": "installHomebrewCask", "targetID": "app.cleanshot-x.snapzy" },
+    { "kind": "invokeBuiltInBridge", "targetID": "bridge.image-ocr" },
+    { "kind": "verifyCapability", "targetID": "bridge.image-ocr" }
+  ]
+}

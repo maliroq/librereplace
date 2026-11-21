@@ -1,28 +1,31 @@
-# Architecture
+# How LibreReplace works
 
-LibreReplace keeps the portable decision/safety logic separate from the macOS UI.
+LibreReplace pairs a native SwiftUI experience with a portable Swift core. The aim is straightforward: **turn a complex software replacement decision into a smooth, repeatable Mac workflow**.
 
-## `LibreReplaceCore`
+## The product journey
 
-- **AppScanner** — enumerates configured application roots and reads app `Info.plist` metadata.
-- **AppMatcher** — bundle-ID-first matching with conservative normalized-name fallback.
-- **CatalogLoader / CatalogValidator** — decodes structured catalog data and enforces cross-field invariants.
-- **ReplacementRanker** — weighted capability coverage, critical-feature gates, and evidence freshness.
-- **InstallActionBuilder / HomebrewExecutor** — typed installation actions and direct no-shell process execution.
-- **SavingsCalculator / ReportGenerator** — counts only user-entered recurring costs and produces privacy-safe local reports.
-- **Migration primitives / SublimeToZedMigration** — preview, path constraints, backup, apply verification, and rollback.
+**Discover → Compose → Explore → Try → Save → Switch → Share**
 
-## macOS app
+- **Discover:** local app metadata and a curated feature catalog identify relevant paid apps and free alternatives.
+- **Compose:** the FreeStack engine evaluates combinations of apps and selected built-in tools against user-chosen requirements.
+- **Explore:** setup cards explain the components, feature coverage and optional next actions.
+- **Try:** local tools or detected installed apps let the user test a real task.
+- **Save:** exact setup components, requirements and user-confirmed trial results remain available across sessions.
+- **Switch:** explicit installation approvals and supported migration adapters preview and verify changes.
+- **Share:** declarative recipes carry a combination's ingredients and requirements into the Community workflow.
 
-`App/LibreReplaceApp` contains SwiftUI presentation and AppKit-only actions such as opening URLs/export panels. `AppState` is `@MainActor`; the synchronous metadata scanner is constructed and consumed inside a detached task so filesystem enumeration does not run on the UI actor.
+## Code organization
 
-## Data flow
+- `App/LibreReplaceApp` — native interface, five destinations and guided setup flows.
+- `Sources/LibreReplaceCore` — catalog, matching, ranking, setup composition, local bridges, saved plans, recipe handling, installation and migrations.
+- `Catalog` — product and capability data, presentation metadata and artwork mappings.
+- `Recipes` and `Community` — recipe schema, examples and curated gallery registry.
+- `Tests`, `Scripts` and `dev.py` — portable verification, macOS builds, UI contracts and migration checks.
 
-1. Load and validate bundled `Catalog/catalog.json`.
-2. Scan standard application directories locally.
-3. Match supported apps.
-4. Rank alternatives using the catalog's capability matrix and evidence freshness.
-5. Render strong/partial/keep results.
-6. Execute only explicitly confirmed install/migration actions.
+`project.yml` is the source of truth for the generated Xcode project.
 
-The catalog is data, not executable migration code. Migration adapter IDs can only select compiled adapters reviewed with the application.
+## Design principles
+
+Use existing macOS controls. Keep normal app discovery metadata-only. Open documents only when chosen by the user. Treat external recipes as data rather than executable instructions. Separate optional installation from exploration, and build recoverable migrations around scoped changes.
+
+[Building](BUILDING.md) · [Privacy](PRIVACY.md) · [Contributing](../CONTRIBUTING.md)

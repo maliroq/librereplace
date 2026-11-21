@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 2,
+  "sourceNote": "Only explicit product-specific curated PNGs are used. Corporate website favicons are disabled. Application bundles take priority when the icon is not a generic macOS placeholder.",
+  "imageProvider": "homarr-labs/dashboard-icons PNG catalog; image names must be checked per product; external artwork remains subject to owner branding terms",
+  "apps": {
+    "cleanshot x": {
+      "sourcePage": "https://cleanshot.com/pricing",
+      "artworkStatus": "unverified"
+    },
+    "snapzy": {
+      "sourcePage": "https://snapzy.app/",
+      "artworkStatus": "unverified"
+    },
+    "bartender": {
+      "sourcePage": "https://www.macbartender.com/",
+      "artworkStatus": "unverified"
+    },
+    "ice": {
+      "sourcePage": "https://icemenubar.app/",
+      "artworkStatus": "unverified"
+    },
+    "daisydisk": {
+      "sourcePage": "https://daisydiskapp.com/",
+      "artworkStatus": "unverified"
+    },
+    "opendisk": {
+      "sourcePage": "https://opendisk.app/",
+      "artworkStatus": "unverified"
+    },
+    "grandperspective": {
+      "sourcePage": "https://grandperspectiv.sourceforge.net/",
+      "artworkStatus": "unverified"
+    },
+    "cleanmymac": {
+      "sourcePage": "https://macpaw.com/cleanmymac",
+      "artworkStatus": "unverified"
+    },
+    "dusty": {
+      "sourcePage": "https://github.com/yagcioglutoprak/dusty",
+      "artworkStatus": "unverified"
+    },
+    "paste": {
+      "sourcePage": "https://pasteapp.io/pricing",
+      "artworkStatus": "unverified"
+    },
+    "maccy": {
+      "sourcePage": "https://maccy.app/",
+      "artworkStatus": "unverified"
+    },
+    "magnet": {
+      "sourcePage": "https://magnet.crowdcafe.com/",
+      "artworkStatus": "unverified"
+    },
+    "rectangle": {
+      "sourcePage": "https://rectangleapp.com/",
+      "artworkStatus": "unverified"
+    },
+    "loop": {
+      "sourcePage": "https://github.com/MrKai77/Loop",
+      "artworkStatus": "unverified"
+    },
+    "moom": {
+      "sourcePage": "https://manytricks.com/moom/",
+      "artworkStatus": "unverified"
+    },
+    "little snitch": {
+      "sourcePage": "https://obdev.at/products/littlesnitch/",
+      "artworkStatus": "unverified"
+    },
+    "lulu": {
+      "sourcePage": "https://objective-see.org/products/lulu.html",
+      "artworkStatus": "unverified"
+    },
+    "istat menus": {
+      "sourcePage": "https://bjango.com/mac/istatmenus/",
+      "artworkStatus": "unverified"
+    },
+    "stats": {
+      "sourcePage": "https://github.com/exelban/stats",
+      "artworkStatus": "unverified"
+    },
+    "bettertouchtool": {
+      "sourcePage": "https://folivora.ai/",
+      "artworkStatus": "unverified"
+    },
+    "hammerspoon": {
+      "sourcePage": "https://www.hammerspoon.org/",
+      "artworkStatus": "unverified"
+    },
+    "keyboard maestro": {
+      "sourcePage": "https://www.keyboardmaestro.com/",
+      "artworkStatus": "unverified"
+    },
+    "parallels desktop": {
+      "sourcePage": "https://www.parallels.com/products/desktop/",
+      "artworkStatus": "unverified"
+    },
+    "utm": {
+      "sourcePage": "https://mac.getutm.app/",
+      "artworkStatus": "unverified"
+    },
+    "transmit": {
+      "sourcePage": "https://panic.com/transmit/",
+      "artworkStatus": "unverified"
+    },
+    "cyberduck": {
+      "sourcePage": "https://cyberduck.io/",
+      "artworkStatus": "product-specific",
+      "iconFile": "cyberduck.png"
+    },
+    "tower": {
+      "sourcePage": "https://www.git-tower.com/pricing",
+      "artworkStatus": "unverified"
+    },
+    "github desktop": {
+      "sourcePage": "https://desktop.github.com/",
+      "artworkStatus": "unverified"
+    },
+    "sublime text": {
+      "sourcePage": "https://www.sublimetext.com/",
+      "artworkStatus": "unverified"
+    },
+    "zed": {
+      "sourcePage": "https://zed.dev",
+      "artworkStatus": "unverified"
+    },
+    "vscodium": {
+      "sourcePage": "https://vscodium.com",
+      "artworkStatus": "unverified"
+    },
+    "tableplus": {
+      "sourcePage": "https://tableplus.com/pricing",
+      "artworkStatus": "unverified"
+    },
+    "beekeeper studio community edition": {
+      "sourcePage": "https://www.beekeeperstudio.io/",
+      "artworkStatus": "unverified"
+    },
+    "dbeaver community": {
+      "sourcePage": "https://dbeaver.io",
+      "artworkStatus": "unverified"
+    },
+    "paw / rapidapi for mac": {
+      "sourcePage": "https://paw.cloud/",
+      "artworkStatus": "unverified"
+    },
+    "bruno": {
+      "sourcePage": "https://www.usebruno.com/",
+      "artworkStatus": "product-specific",
+      "iconFile": "bruno.png"
+    },
+    "ulysses": {
+      "sourcePage": "https://ulysses.app/en/pricing/",
+      "artworkStatus": "unverified"
+    },
+    "zettlr": {
+      "sourcePage": "https://www.zettlr.com/",
+      "artworkStatus": "unverified"
+    },
+    "bear": {
+      "sourcePage": "https://bear.app/",
+      "artworkStatus": "unverified"
+    },
+    "joplin": {
+      "sourcePage": "https://joplinapp.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "joplin.png"
+    },
+    "fsnotes": {
+      "sourcePage": "https://fsnot.es",
+      "artworkStatus": "unverified"
+    },
+    "mindnode": {
+      "sourcePage": "https://www.mindnode.com/",
+      "artworkStatus": "unverified"
+    },
+    "freeplane": {
+      "sourcePage": "https://www.freeplane.org/",
+      "artworkStatus": "unverified"
+    },
+    "pdf expert": {
+      "sourcePage": "https://pdfexpert.com/pricing",
+      "artworkStatus": "unverified"
+    },
+    "skim": {
+      "sourcePage": "https://skim-app.sourceforge.io/",
+      "artworkStatus": "unverified"
+    },
+    "onlyoffice desktop editors": {
+      "sourcePage": "https://www.onlyoffice.com",
+      "artworkStatus": "product-specific",
+      "iconFile": "onlyoffice.png"
+    },
+    "adobe photoshop": {
+      "sourcePage": "https://www.adobe.com/products/photoshop/plans.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "gimp": {
+      "sourcePage": "https://www.gimp.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "gimp.png"
+    },
+    "krita": {
+      "sourcePage": "https://krita.org/",
+      "artworkStatus": "unverified"
+    },
+    "adobe illustrator": {
+      "sourcePage": "https://www.adobe.com/products/illustrator.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "inkscape": {
+      "sourcePage": "https://inkscape.org/",
+      "artworkStatus": "unverified"
+    },
+    "adobe premiere pro": {
+      "sourcePage": "https://www.adobe.com/products/premiere.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "kdenlive": {
+      "sourcePage": "https://kdenlive.org/",
+      "artworkStatus": "unverified"
+    },
+    "shotcut": {
+      "sourcePage": "https://www.shotcut.org/",
+      "artworkStatus": "unverified"
+    },
+    "adobe acrobat pro": {
+      "sourcePage": "https://www.adobe.com/acrobat/pricing.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "libreoffice draw": {
+      "sourcePage": "https://www.libreoffice.org/",
+      "artworkStatus": "unverified"
+    },
+    "1password": {
+      "sourcePage": "https://1password.com/pricing/personal",
+      "artworkStatus": "product-specific",
+      "iconFile": "1password.png"
+    },
+    "keepassxc": {
+      "sourcePage": "https://keepassxc.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "keepassxc.png"
+    },
+    "bitwarden": {
+      "sourcePage": "https://bitwarden.com",
+      "artworkStatus": "product-specific",
+      "iconFile": "bitwarden.png"
+    },
+    "evernote": {
+      "sourcePage": "https://evernote.com/en-us/compare-plans",
+      "artworkStatus": "product-specific",
+      "iconFile": "evernote.png"
+    },
+    "notesnook": {
+      "sourcePage": "https://notesnook.com",
+      "artworkStatus": "product-specific",
+      "iconFile": "notesnook.png"
+    },
+    "textexpander": {
+      "sourcePage": "https://textexpander.com/pricing",
+      "artworkStatus": "unverified"
+    },
+    "espanso": {
+      "sourcePage": "https://espanso.org",
+      "artworkStatus": "unverified"
+    },
+    "adobe lightroom": {
+      "sourcePage": "https://www.adobe.com/products/photoshop-lightroom/plans.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "darktable": {
+      "sourcePage": "https://www.darktable.org/",
+      "artworkStatus": "unverified"
+    },
+    "rawtherapee": {
+      "sourcePage": "https://rawtherapee.com/",
+      "artworkStatus": "unverified"
+    },
+    "microsoft 365": {
+      "sourcePage": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+      "artworkStatus": "product-specific",
+      "iconFile": "microsoft-365.png"
+    },
+    "libreoffice": {
+      "sourcePage": "https://www.libreoffice.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "libreoffice.png"
+    },
+    "dropbox": {
+      "sourcePage": "https://www.dropbox.com/plans",
+      "artworkStatus": "product-specific",
+      "iconFile": "dropbox.png"
+    },
+    "nextcloud desktop": {
+      "sourcePage": "https://nextcloud.com/",
+      "artworkStatus": "product-specific",
+      "iconFile": "nextcloud.png"
+    },
+    "notion": {
+      "sourcePage": "https://www.notion.com/pricing",
+      "artworkStatus": "product-specific",
+      "iconFile": "notion.png"
+    },
+    "appflowy": {
+      "sourcePage": "https://appflowy.com/",
+      "artworkStatus": "product-specific",
+      "iconFile": "appflowy.png"
+    },
+    "affine community edition": {
+      "sourcePage": "https://affine.pro/",
+      "artworkStatus": "product-specific",
+      "iconFile": "affine.png"
+    },
+    "figma": {
+      "sourcePage": "https://www.figma.com/pricing/",
+      "artworkStatus": "product-specific",
+      "iconFile": "figma.png"
+    },
+    "penpot": {
+      "sourcePage": "https://penpot.app/",
+      "artworkStatus": "product-specific",
+      "iconFile": "penpot.png"
+    },
+    "quant-ux": {
+      "sourcePage": "https://quant-ux.com/",
+      "artworkStatus": "unverified"
+    },
+    "canva pro": {
+      "sourcePage": "https://www.canva.com/pricing/",
+      "artworkStatus": "unverified"
+    },
+    "spotify premium": {
+      "sourcePage": "https://www.spotify.com/us/premium/",
+      "artworkStatus": "product-specific",
+      "iconFile": "spotify.png"
+    },
+    "navidrome": {
+      "sourcePage": "https://www.navidrome.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "navidrome.png"
+    },
+    "jellyfin": {
+      "sourcePage": "https://jellyfin.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "jellyfin.png"
+    },
+    "capcut pro": {
+      "sourcePage": "https://www.capcut.com/pricing/",
+      "artworkStatus": "unverified"
+    },
+    "adobe indesign": {
+      "sourcePage": "https://www.adobe.com/products/indesign.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "scribus": {
+      "sourcePage": "https://www.scribus.net/",
+      "artworkStatus": "unverified"
+    },
+    "adobe audition": {
+      "sourcePage": "https://www.adobe.com/products/audition.html",
+      "artworkStatus": "vendor-restricted"
+    },
+    "audacity": {
+      "sourcePage": "https://www.audacityteam.org/",
+      "artworkStatus": "product-specific",
+      "iconFile": "audacity.png"
+    },
+    "screen studio": {
+      "sourcePage": "https://screen.studio/",
+      "artworkStatus": "unverified"
+    },
+    "obs studio": {
+      "sourcePage": "https://obsproject.com/",
+      "artworkStatus": "unverified"
+    },
+    "openscreen studio": {
+      "sourcePage": "https://oss.glyphsoftware.org/",
+      "artworkStatus": "unverified"
+    },
+    "cap (studio mode)": {
+      "sourcePage": "https://cap.so/",
+      "artworkStatus": "unverified"
+    },
+    "openscreen": {
+      "sourcePage": "https://getopenscreen.com/",
+      "artworkStatus": "unverified"
+    },
+    "obsidian sync": {
+      "sourcePage": "https://obsidian.md/pricing",
+      "artworkStatus": "product-specific",
+      "iconFile": "obsidian.png"
+    },
+    "self-hosted livesync (obsidian plugin)": {
+      "sourcePage": "https://github.com/vrtmrz/obsidian-livesync",
+      "artworkStatus": "unverified"
+    },
+    "upnote": {
+      "sourcePage": "https://apps.apple.com/us/app/upnote-notes-diary-journal/id1398373917?mt=12",
+      "artworkStatus": "unverified"
+    },
+    "todoist": {
+      "sourcePage": "https://www.todoist.com/pricing/",
+      "artworkStatus": "product-specific",
+      "iconFile": "todoist.png"
+    },
+    "super productivity": {
+      "sourcePage": "https://super-productivity.com/",
+      "artworkStatus": "product-specific",
+      "iconFile": "super-productivity.png"
+    },
+    "vikunja": {
+      "sourcePage": "https://vikunja.io/",
+      "artworkStatus": "product-specific",
+      "iconFile": "vikunja.png"
+    },
+    "ticktick": {
+      "sourcePage": "https://ticktick.com/upgrade",
+      "artworkStatus": "product-specific",
+      "iconFile": "ticktick.png"
+    },
+    "fantastical": {
+      "sourcePage": "https://flexibits.com/pricing?product=fantastical",
+      "artworkStatus": "unverified"
+    },
+    "thunderbird": {
+      "sourcePage": "https://www.thunderbird.net/",
+      "artworkStatus": "product-specific",
+      "iconFile": "thunderbird.png"
+    },
+    "spark mail": {
+      "sourcePage": "https://sparkmailapp.com/pricing",
+      "artworkStatus": "unverified"
+    }
+  }
+}

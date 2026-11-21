@@ -1,41 +1,27 @@
-# Privacy
+# Your Mac. Your files. Your decisions.
 
-LibreReplace is local-first and contains no account system, telemetry, analytics SDK, advertising SDK, remote inventory upload, or background daemon.
+LibreReplace is built around **local-first discovery and processing**. There is no account, advertising SDK, analytics SDK, telemetry feed or remote upload of your app inventory.
 
-## Normal application scan
+## App discovery stays local
 
-The default scanner is limited to:
+The app scanner looks for macOS application bundles in `/Applications`, `/System/Applications` and `~/Applications`. It reads app names, bundle identifiers and versions from `Contents/Info.plist` to recognize supported software. It doesn't need to read your projects, browser profiles, documents or Keychain to suggest alternatives.
 
-- `/Applications`
-- `/System/Applications`
-- `~/Applications`
+## Built-in tools use the files you pick
 
-It enumerates `.app` bundles and reads only `Contents/Info.plist` to obtain the displayed application name, bundle identifier, and version. Package descendants are skipped. The scanner does not intentionally open application support data, documents, project files, browser profiles, Keychain items, passwords, or arbitrary home-directory contents.
+OCR, PDF and image tools process selected files on your Mac. Saved plans and the tasks you mark as tested are stored locally. Open a tool, select a sample, inspect the output and decide whether the workflow works for you.
 
-Scanning and recommendation do not require a network call.
+## Installation is always a choice
 
-## Catalog and recommendation
+Homebrew installation is a separate, approval-driven action. Official download and App Store options open validated links after confirmation. LibreReplace doesn't uninstall your existing app, remove personal data or cancel subscriptions.
 
-The catalog ships inside the app. Matching, feature scoring, stale-evidence checks, and report generation run locally. Evidence URLs are displayed as links but are not fetched during scanning or recommendation.
+When you choose to install another app or open its website, that external service may use the network under its own terms.
 
-## Installation
+## Community on your terms
 
-Installation is always user-triggered and confirmation-first:
+You can export or import declarative setup recipes. Importing a recipe does not execute software installation actions. Browsing the published gallery retrieves its index; your installed-app inventory isn't sent with the request.
 
-- Homebrew actions execute the Homebrew binary directly with an argument array; no shell is used.
-- Official download/App Store actions open a validated URL after user confirmation.
-- LibreReplace never automatically uninstalls the source application.
+## Savings you control
 
-Those user-triggered external actions can of course use the network through Homebrew, the browser, or the Mac App Store.
+Savings estimates use costs you enter for the current session. They are not a hidden scan of billing accounts, subscriptions or financial information.
 
-## Savings
-
-The app does not infer a subscription from installation. Any annual recurring amount is entered by the user, kept in process memory for the current app session, and not persisted or transmitted.
-
-## Reports
-
-The default Markdown report contains aggregate counts, coverage, and the user-entered savings total. It omits application names. The user may explicitly opt in to listing recognized catalog apps; unsupported/full inventory is never exported by the current report generator.
-
-## Migration
-
-The preview adapter reads only Sublime Text's user preference file and, if present, Zed's settings file. It maps four non-sensitive editor preferences. It does not inspect projects, source files, recent files, plugins, snippets, credentials, passwords, browser data, or Keychain contents.
+[See the Studio guide](STUDIO_GUIDE.md) · [Security policy](../SECURITY.md)

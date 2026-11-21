@@ -2,6 +2,14 @@ import Combine
 import Foundation
 import LibreReplaceCore
 
+/// UI-only continuation for a user testing a built-in capability. Nothing here
+/// is persisted or treated as proof of a successful replacement.
+struct StudioToolContinuation: Identifiable {
+    let id = UUID()
+    let plan: StudioComposedPlan
+    let sourceApp: PaidApplication
+}
+
 @MainActor
 final class AppState: ObservableObject {
     enum BillingPeriod: String, CaseIterable, Identifiable {
@@ -16,6 +24,17 @@ final class AppState: ObservableObject {
     @Published private(set) var unsupported: [InstalledApplication] = []
     @Published private(set) var isScanning = false
     @Published var errorMessage: String?
+    // Navigation requests are UI-only; source files and user data remain untouched.
+    @Published var requestedExploreQuery = ""
+    @Published var requestedComposerAppID = "cleanshot-x"
+    @Published var toolContinuation: StudioToolContinuation?
+    @Published var requestedLocalToolMode: StudioWorkflowLabView.LabMode?
+
+    func beginLocalToolTrial(plan: StudioComposedPlan, sourceApp: PaidApplication,
+                             mode: StudioWorkflowLabView.LabMode) {
+        toolContinuation = StudioToolContinuation(plan: plan, sourceApp: sourceApp)
+        requestedLocalToolMode = mode
+    }
 
     @Published private(set) var annualCostText: [String: String] = [:]
     @Published private(set) var billingPeriod: [String: BillingPeriod] = [:]
@@ -28,11 +47,44 @@ final class AppState: ObservableObject {
     @Published private(set) var confirmedReplacementCostIDs = Set<String>()
     @Published private(set) var confirmedCancellationIDs = Set<String>()
 
-    /// A shared source of truth for Explore, installed app comparisons and savings.
+    /// Saved locally so comparisons and choices don't disappear on restart.
     @Published private(set) var requiredFeaturesByApp: [String: Set<String>] = [:]
+
+    init() {
+        let settings = UserDefaults.standard
+        if let data = settings.data(forKey: "LibreReplace.studio.requirements.v1"),
+           let previous = try? JSONDecoder().decode([String: Set<String>].self, from: data) {
+            requiredFeaturesByApp = previous
+        }
+        if let data = settings.data(forKey: "LibreReplace.studio.alternatives.v1"),
+           let previous = try? JSONDecoder().decode([String: String].self, from: data) {
+            selectedAlternativeIDs = previous
+        }
+    }
+
+    private func saveChoices() {
+        if let data = try? JSONEncoder().encode(requiredFeaturesByApp) {
+            UserDefaults.standard.set(data, forKey: "LibreReplace.studio.requirements.v1")
+        }
+        if let data = try? JSONEncoder().encode(selectedAlternativeIDs) {
+            UserDefaults.standard.set(data, forKey: "LibreReplace.studio.alternatives.v1")
+        }
+    }
 
     func requiredFeatureIDs(for app: PaidApplication) -> Set<String> {
         requiredFeaturesByApp[app.id] ?? Set(app.capabilities.filter(\.critical).map(\.id))
+    }
+    /// Restore a saved plan's exact must-haves when the user chooses to edit it.
+    /// Refuse stale or foreign IDs rather than silently dropping requirements.
+    @discardableResult
+    func restoreRequiredFeatures(_ ids: Set<String>, for app: PaidApplication) -> Bool {
+        guard ids.isSubset(of: Set(app.capabilities.map(\.id))) else { return false }
+        requiredFeaturesByApp[app.id] = ids
+        saveChoices()
+        confirmedCancellationIDs.remove(app.id)
+        selectedSwitchIDs.remove(app.id)
+        refreshRecommendations()
+        return true
     }
     func isRequired(_ capabilityID: String, for app: PaidApplication) -> Bool {
         requiredFeatureIDs(for: app).contains(capabilityID)
@@ -43,6 +95,7 @@ final class AppState: ObservableObject {
         if enabled { ids.insert(capabilityID) } else { ids.remove(capabilityID) }
         guard ids != requiredFeatureIDs(for: app) else { return }
         requiredFeaturesByApp[app.id] = ids
+        saveChoices()
         // Changing what must work invalidates the user's earlier cancellation decision.
         confirmedCancellationIDs.remove(app.id)
         selectedSwitchIDs.remove(app.id)
@@ -60,6 +113,7 @@ final class AppState: ObservableObject {
         guard selectedAlternativeIDs[app.id] != alternativeID else { return }
         if alternativeID.isEmpty { selectedAlternativeIDs.removeValue(forKey: app.id) }
         else { selectedAlternativeIDs[app.id] = alternativeID }
+        saveChoices()
         // A curated free desktop edition needs no annual-price form.
         // Hosted, freemium and conditional-use options remain unpriced
         // and are not counted as savings by default.
@@ -193,6 +247,18 @@ final class AppState: ObservableObject {
             throw CatalogError.unreadable
         }
         catalog = try CatalogLoader.load(from: url)
+        if let catalog {
+            // Stored catalog choices are untrusted across schema/version changes.
+            let byID = Dictionary(uniqueKeysWithValues: catalog.apps.map { ($0.id, $0) })
+            requiredFeaturesByApp = requiredFeaturesByApp.filter { id, values in
+                guard let app = byID[id] else { return false }
+                return values.isSubset(of: Set(app.capabilities.map(\.id)))
+            }
+            selectedAlternativeIDs = selectedAlternativeIDs.filter { id, altID in
+                byID[id]?.alternatives.contains(where: { $0.id == altID }) == true
+            }
+            saveChoices()
+        }
     }
     func scan() async {
         guard let catalog else { return }

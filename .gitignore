@@ -3,6 +3,7 @@
 build/
 .swiftpm/
 DerivedData/
+.LibreReplaceLaunchBuild/
 *.xcuserstate
 xcuserdata/
 LibreReplace.xcodeproj/

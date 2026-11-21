@@ -11,9 +11,9 @@ struct OverviewView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 VStack(alignment: .leading, spacing: 7) {
-                    Text("Compare paid Mac apps before you switch.")
+                    Text("Your savings and progress")
                         .font(.largeTitle.bold())
-                    Text("Explore supported software even if you haven't installed it, or scan your Mac locally to review the apps you already use.")
+                    Text("See your installed apps, replacement options and planned savings.")
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: 780, alignment: .leading)
                 }
@@ -21,7 +21,7 @@ struct OverviewView: View {
                     GroupBox("Start without scanning") {
                         VStack(alignment: .leading, spacing: 6) {
                             Text("No supported installed apps were detected. This doesn't prevent you from comparing alternatives.")
-                            Text("Choose Explore Alternatives in the sidebar to search the documented catalog and mark the features you need.")
+                            Text("Choose Discover in the sidebar to search the catalog and select the features you need.")
                                 .foregroundStyle(.secondary)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -30,7 +30,7 @@ struct OverviewView: View {
                 LazyVGrid(columns: columns, spacing: 14) {
                     MetricCard(title: "Apps detected", value: "\(state.summary.applicationsDetected)", icon: "square.stack.3d.up")
                     MetricCard(title: "Supported apps found", value: "\(state.summary.paidApplicationsDetected)", icon: "checkmark.seal")
-                    MetricCard(title: "Strong replacements", value: "\(state.summary.strongReplacements)", icon: "arrow.triangle.swap")
+                    MetricCard(title: "Strong catalog matches", value: "\(state.summary.strongReplacements)", icon: "arrow.triangle.swap")
                     MetricCard(title: "Partial", value: "\(state.summary.partialReplacements)", icon: "circle.lefthalf.filled")
                     MetricCard(title: "Keep", value: "\(state.summary.keepApps)", icon: "hand.thumbsup")
                     MetricCard(title: "Coverage", value: "\(state.summary.openSourceCoverageScore)%", icon: "chart.bar")
@@ -39,7 +39,7 @@ struct OverviewView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("$\(NSDecimalNumber(decimal: state.summary.annualSavingsUSD).stringValue) / year estimated net reduction")
                             .font(.title2.bold())
-                        Text("Potential reduction, not money already saved. Only Strong matches using confirmed recurring subscriptions and a curated no-cost open-source edition are counted. Hosted services and paid-plan options are excluded, as are one-time costs.")
+                        Text("Based on the subscriptions and replacement costs you've confirmed.")
                             .foregroundStyle(.secondary)
                         ForEach(state.recommendations.filter { state.selectedSwitchIDs.contains($0.match.catalogApp.id) }, id: \.match.catalogApp.id) { item in
                             HStack {

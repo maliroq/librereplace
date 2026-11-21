@@ -15,6 +15,10 @@ project-config:
 
 harness-test:
 	python3 Scripts/test_dev_harness.py
+	python3 Scripts/test_studio_ux.py
+	python3 Scripts/test_discovery_usability.py
+	python3 Scripts/test_studio_tool_continuation.py
+	python3 Scripts/test_release_candidate_ui.py
 	bash -n Scripts/check_distribution_prereqs.sh
 	bash -n Scripts/install_local.sh
 

@@ -1,21 +1,23 @@
-# Repository metadata
+# GitHub presentation
 
-## GitHub description
+## Repository description
 
-> Replace paid Mac apps without losing what matters — evidence-backed open-source alternatives, explicit tradeoffs, and safe switching.
+**Build smarter free Mac setups. Compare paid-app alternatives, combine free tools, use built-in OCR/PDF utilities, and switch on your terms.**
 
-## Topics
+## Suggested topics
 
-`macos`, `swift`, `swiftui`, `open-source`, `privacy`, `homebrew`, `software-alternatives`, `migration`, `local-first`
+`macos`, `swiftui`, `swift`, `open-source`, `software-alternatives`, `productivity`, `local-first`, `privacy`, `homebrew`, `macos-app`, `workflow`, `mac-apps`
 
-## Social preview
+## Feature story
 
-Use `Docs/Brand/github-social-preview-1280x640.png` as the GitHub social preview.
+**Keep the workflow. Skip the subscription.**
 
-## Product images
+LibreReplace turns a paid-app replacement into a practical plan: choose your must-haves, explore free apps and combinations, try included tools, save your setup and share useful recipes.
 
-- App icon source: `Docs/Brand/LibreReplaceIcon.svg`
-- 1024 px icon preview: `Docs/Brand/LibreReplaceIcon-1024.png`
-- Logo mark: `Docs/Brand/LibreReplaceMark-1024.png`
-- Current real validation capture: `Docs/Images/overview.png`
-- Final README hero: `Docs/Images/hero-sublime-zed.png` — real Sublime Text → Zed capture from the validation Mac.
+## Screenshot update plan
+
+Refresh the README with current captures of Discover, Explore setup, Tools, My Setups and Community after the repository copy is finalized. Until then, keep the existing branding and avoid presenting older v0.2 screenshots as Studio.
+
+## Release labeling
+
+Studio source is ahead of the currently downloadable v0.2.0-preview.1 binary. Keep that distinction concise and prominent at the download link.

@@ -1,14 +1,29 @@
-# Known limitations
+# Finding the right fit
 
-LibreReplace is intentionally narrow. These are product boundaries, not hidden backlog items.
+LibreReplace makes switching easier by focusing on the **specific work you want to keep doing**. Here's how to get the most from each recommendation.
 
-- **Catalog coverage is finite.** The v0.2 preview covers 45 commercial applications and 70 open-source comparisons. Users can browse alternatives without installing the paid application. Unsupported apps remain unsupported; LibreReplace does not upload or auto-classify them.
-- **Bundle metadata is imperfect.** Bundle identifiers are preferred. A conservative name fallback exists for apps whose identifier is unavailable, but renamed/repackaged apps can still be missed.
-- **Feature coverage is a maintained judgment.** Percentages summarize the capabilities explicitly modeled in the catalog. They do not prove equal polish, performance, accessibility, security, privacy, support, file-format fidelity, or subjective workflow fit.
-- **Evidence ages.** Strong recommendations require fresh dated evidence, and CI rejects stale catalog evidence after 180 days. A project can still change between verification and use; the evidence links remain visible for inspection.
-- **Pricing is informational.** Installation metadata cannot reveal whether someone has a lifetime license, bundle, education/team plan, Setapp access, or a particular subscription. Savings count only an annual recurring amount the user enters for the current session.
-- **Installation is not package management.** Homebrew must already be installed for Homebrew actions. LibreReplace does not silently install Homebrew, bypass Gatekeeper, or uninstall the source app.
-- **One migration adapter exists.** Sublime Text → Zed migrates four editor preferences only. It deliberately excludes plugins, projects, snippets, keybindings, themes, recent files, credentials, and document contents.
-- **Rollback is scoped to LibreReplace's own migration.** The adapter verifies its backup/output and can restore the pre-apply target state, but it is not a general settings-history system.
-- **Accessibility review is incomplete.** The UI uses standard SwiftUI controls, semantic labels, native focus behavior, and system light/dark appearance. A dedicated independent VoiceOver and full keyboard-navigation audit has not yet been completed for this release candidate.
-- **Binary distribution is not hardened yet.** Developer ID signing, notarization, stapling, and clean-machine Gatekeeper verification are deferred. A source release is not a claim that the unsigned Debug build is ready for normal end-user distribution.
+## Choose the important features
+
+The catalog covers 45 paid Mac apps and 70 free-alternative comparisons. Select the tasks you depend on, and LibreReplace shows which free components support them, partially cover them or need another solution.
+
+## Combine tools when it helps
+
+A useful replacement may be a small combination of applications. FreeStack plans can bring those components together, while the included OCR/PDF/image tools cover selected tasks right inside LibreReplace. Some combinations involve a manual handoff between apps.
+
+## Try the setup with your work
+
+Catalog coverage is a great starting point. The best final check is a real task on your own Mac: open a sample project, inspect the result and save the tasks you've completed. My Setups keeps your plan available while you experiment.
+
+## Switch on your schedule
+
+You can explore and save without installing anything. Optional installation uses a separate approval flow. Guided migrations currently focus on documented Sublime Text → Zed settings and TextExpander → Espanso snippet conversions, with scoped backups and recovery.
+
+## Track real savings
+
+My Mac helps you explore subscription costs using amounts you enter. It doesn't presume which applications you're paying for. That makes the estimates more useful when deciding what to keep or replace.
+
+## Share great setups
+
+Community recipes describe reusable combinations. You can import a recipe, inspect it and adapt the plan. Reviewed builds appear in the public gallery as they're published.
+
+[Explore Studio](STUDIO_GUIDE.md) · [Privacy](PRIVACY.md)

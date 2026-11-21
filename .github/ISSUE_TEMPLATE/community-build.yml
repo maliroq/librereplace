@@ -1,0 +1,52 @@
+name: Share a Community Build
+description: Propose a tested free replacement setup for LibreReplace users.
+title: "[Community Build] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing. Attach your exported LibreReplace recipe JSON (or a ZIP containing it) in the description below. Community submissions are reviewed before appearing in the app. Do not include personal files, passwords, or keys.
+  - type: input
+    id: replaces
+    attributes:
+      label: Paid application being replaced
+      placeholder: "For example, CleanShot X"
+    validations:
+      required: true
+  - type: input
+    id: free-apps
+    attributes:
+      label: Free applications used
+      placeholder: "For example, Snapzy + LibreReplace OCR"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does your build accomplish?
+      description: Explain the task and why it is useful to another Mac user.
+    validations:
+      required: true
+  - type: textarea
+    id: tested
+    attributes:
+      label: What did you personally test?
+      description: Include macOS version, application versions, successful tasks, known limitations, and any manual steps.
+    validations:
+      required: true
+  - type: textarea
+    id: recipe
+    attributes:
+      label: Attach or link your JSON recipe
+      description: Drag the exported recipe (or a ZIP containing it) into this field. Never upload secrets or personal data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Contribution checks
+      options:
+        - label: I tested this setup and have described unsupported steps or failures.
+          required: true
+        - label: The attachment is mine to share and contains no personal or secret information.
+          required: true

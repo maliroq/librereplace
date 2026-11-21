@@ -1,32 +1,43 @@
-# LibreReplace v0.2.0-preview.1
+# LibreReplace Studio — The free setup era
 
-LibreReplace is a free, open-source Mac app for checking which paid
-software you can realistically replace without losing essential features.
+**A major new chapter for LibreReplace.**
 
-## What's new
+LibreReplace started by helping Mac users compare individual paid and free apps. Studio turns that idea into something far more useful: **build the free setup that fits your workflow, try what matters, save your choices and switch at your pace.**
 
-- Explore 45 commercial apps and 70 open-source comparisons without
-  installing the paid applications first.
-- Choose the features you need and compare multiple replacements.
-- See Strong, Partial, or Keep results with documented capability gaps,
-  evidence links, and verification dates.
-- Scan supported installed apps locally.
-- Review potential recurring-cost reductions using costs you confirm.
-- Improved matching, recommendation safety, and installation checks.
+## The headline features
 
-## Install
+### 1. FreeStack: your requirements, your combination
 
-Homebrew: `brew install --cask maliroq/tap/librereplace`
+Stop hoping one alternative covers every feature. Studio can bring free apps and included Mac tools together into a single suggested setup. Choose the features you depend on, compare combinations and see which tasks each component covers.
 
-Download: https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1
+### 2. A built-in toolbox that earns its place
 
-## Important limitations
+Extract text from screenshots and PDFs, combine documents, make scanned PDFs searchable, try PDF Rescue on supported files and convert images. These are real tools inside LibreReplace—not just links to download another app.
 
-Recommendations are workflow estimates, not guarantees of feature parity.
-Potential reductions are not realized savings. Test replacements before
-cancelling subscriptions or moving important work.
+### 3. My Setups: pick up exactly where you left off
 
-Requires macOS 14 or later. The downloadable preview is ad-hoc signed
-and not Apple-notarized. It does not bypass macOS security protections.
+Save the combination and requirements you selected. Reopen it later, revise what's essential, try an available tool and return to the same plan. Keep catalog suggestions separate from the tasks you've personally tested.
 
-No account, telemetry, inventory upload, or automatic uninstallation.
+### 4. Guided Switch: explore first, act when ready
+
+See what's on your Mac, inspect missing apps, review optional installation details and approve changes individually. Supported migrations include structured previews, backups and scoped recovery.
+
+### 5. Community builds: share a complete answer
+
+A useful alternative is often a *recipe*, not a single app name. Studio can import and export reusable combinations, open imported recipes as setups and prepare contributions for community review.
+
+### 6. A complete Mac-first interface
+
+Discover. My Setups. Tools. Community. My Mac. Five focused destinations designed to make a complicated software decision feel simple.
+
+## By the numbers
+
+**45** commercial app targets · **70** free-alternative comparisons · **100** distinct catalog products · **5** integrated destinations · **5** built-in tool categories
+
+## Available now
+
+The Studio source is published on `main` with its native SwiftUI interface, tests and local build scripts. Build it from source using the [README](README.md).
+
+The downloadable [v0.2.0-preview.1](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) remains the earlier edition while the next downloadable Studio build is prepared.
+
+[Read the complete changelog](CHANGELOG.md) · [Explore the Studio guide](Docs/STUDIO_GUIDE.md)

@@ -1,4 +1,5 @@
 import Foundation
+import CoreFoundation
 
 public struct SublimeToZedMigration: MigrationAdapter {
     public let id = "sublime-to-zed-settings-v1"
@@ -8,7 +9,8 @@ public struct SublimeToZedMigration: MigrationAdapter {
         "buffer_font_size",
         "buffer_font_family",
         "tab_size",
-        "hard_tabs"
+        "hard_tabs", "base_keymap", "soft_wrap", "show_whitespaces",
+        "remove_trailing_whitespace_on_save", "preferred_line_length", "autosave"
     ]
 
     public init() {}
@@ -34,12 +36,48 @@ public struct SublimeToZedMigration: MigrationAdapter {
             let oldValue = targetDict[targetKey].map(Self.stringValue)
             if newValue != oldValue { changes.append(MigrationChange(key: targetKey, fromValue: oldValue, toValue: newValue)) }
         }
-        append("font_size", "buffer_font_size")
-        append("font_face", "buffer_font_family")
-        append("tab_size", "tab_size")
+        func appendBoolean(_ sourceKey: String, _ targetKey: String) {
+            append(sourceKey, targetKey) { raw in raw as? Bool }
+        }
+        append("font_size", "buffer_font_size") { raw in
+            guard let value = raw as? NSNumber, CFGetTypeID(value) != CFBooleanGetTypeID(),
+                  value.doubleValue.isFinite, value.doubleValue > 0 else { return nil }
+            return value
+        }
+        append("font_face", "buffer_font_family") { raw in
+            guard let font = raw as? String, !font.isEmpty else { return nil }
+            return font
+        }
+        append("tab_size", "tab_size") { raw in
+            guard let size = raw as? Int, size > 0 else { return nil }
+            return size
+        }
         append("translate_tabs_to_spaces", "hard_tabs") { raw in
             guard let b = raw as? Bool else { return nil }
             return !b
+        }
+
+        // Zed has a built-in Sublime keymap; do not assume arbitrary custom
+        // Sublime key bindings or plugins can be translated.
+        if targetDict["base_keymap"] == nil {
+            changes.append(.init(key: "base_keymap", fromValue: nil, toValue: "SublimeText"))
+        }
+        append("draw_white_space", "show_whitespaces") { raw in
+            guard let value = raw as? String, ["all", "selection", "none"].contains(value) else { return nil }
+            return value
+        }
+        appendBoolean("trim_trailing_white_space_on_save", "remove_trailing_whitespace_on_save")
+        append("word_wrap", "soft_wrap") { raw in
+            guard let enabled = raw as? Bool else { return nil }
+            return enabled ? "editor_width" : "none"
+        }
+        append("wrap_width", "preferred_line_length") { raw in
+            guard let width = raw as? Int, width > 0 else { return nil }
+            return width
+        }
+        append("save_on_focus_lost", "autosave") { raw in
+            guard let enabled = raw as? Bool else { return nil }
+            return enabled ? "on_focus_change" : "off"
         }
 
         return MigrationPlan(
@@ -48,9 +86,9 @@ public struct SublimeToZedMigration: MigrationAdapter {
             targetPath: target,
             changes: changes,
             warnings: [
-                "Only font family, font size, tab size, and hard-tabs preference are mapped.",
-                "Plugins, projects, snippets, keybindings, themes, recent files, and file contents are not migrated.",
-                "Existing Zed settings are backed up before modification. JSON comments in the target settings file may be lost because the file is re-serialized."
+                "Selected editor preferences and Zed’s built-in Sublime keymap are mapped; not all Sublime behavior is equivalent.",
+                "User snippets can be migrated separately when their scopes and placeholders are supported. Plugins, projects, custom keybindings, themes, recent files and document contents are not migrated.",
+                "Existing Zed settings are backed up and preserved; only reviewed top-level keys are changed, including JSON comments and unrelated settings."
             ]
         )
     }
@@ -69,6 +107,9 @@ public struct SublimeToZedMigration: MigrationAdapter {
         try PathSafety.requireWithin(backupRoot, allowedRoots: [home])
         try PathSafety.requireNoSymlinkTraversal(backupRoot, allowedRoot: home, fileManager: fileManager)
         try validateChanges(plan.changes, target: target)
+        // Prevent a stale or fabricated plan from applying unreviewed changes.
+        let freshPlan = try preview(home: home, fileManager: fileManager)
+        guard freshPlan.changes == plan.changes else { throw MigrationError.stalePlan(source.path) }
 
         let targetExisted = fileManager.fileExists(atPath: target.path)
         let targetBytesBeforeBackup: Data?
@@ -78,7 +119,7 @@ public struct SublimeToZedMigration: MigrationAdapter {
         } else {
             targetBytesBeforeBackup = nil
         }
-        var dict = try parseTargetDictionary(targetBytesBeforeBackup, path: target.path)
+        let dict = try parseTargetDictionary(targetBytesBeforeBackup, path: target.path)
         for change in plan.changes {
             let current = dict[change.key].map(Self.stringValue)
             guard current == change.fromValue else { throw MigrationError.stalePlan(target.path) }
@@ -92,21 +133,20 @@ public struct SublimeToZedMigration: MigrationAdapter {
             }
         }
 
+        let values = Dictionary(uniqueKeysWithValues: plan.changes.map { ($0.key, Self.parseScalar($0.toValue)) })
+        let proposedData = try StudioJSONCEditor.merge(targetBytesBeforeBackup, reviewedValues: values)
         let receipt = MigrationReceipt(
             adapterID: id,
             targetPath: target,
             backupPath: backup,
-            targetExistedBeforeApply: targetExisted
+            targetExistedBeforeApply: targetExisted,
+            writtenFingerprint: StudioDataFingerprint.of(proposedData)
         )
 
         do {
             try fileManager.createDirectory(at: target.deletingLastPathComponent(), withIntermediateDirectories: true)
             try PathSafety.requireNoSymlinkTraversal(target, allowedRoot: home, fileManager: fileManager)
-            for change in plan.changes {
-                dict[change.key] = Self.parseScalar(change.toValue)
-            }
-            let data = try JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
-            try data.write(to: target, options: .atomic)
+            try proposedData.write(to: target, options: .atomic)
 
             let verified = try readTargetDictionary(target, fileManager: fileManager)
             for change in plan.changes {
@@ -136,11 +176,26 @@ public struct SublimeToZedMigration: MigrationAdapter {
             try PathSafety.requireWithin(backup, allowedRoots: [home])
             try PathSafety.requireNoSymlinkTraversal(backup, allowedRoot: home, fileManager: fileManager)
         }
+        // A user may have edited Zed since our migration. Never silently
+        // overwrite those later edits, even if the backup still exists.
+        if let fingerprint = receipt.writtenFingerprint {
+            guard let current = fileManager.contents(atPath: target.path),
+                  StudioDataFingerprint.of(current) == fingerprint else {
+                throw MigrationError.stalePlan(target.path)
+            }
+        } else {
+            // Older receipts were not bound to a written state. Refuse unsafe rollback.
+            throw MigrationError.stalePlan(target.path)
+        }
         try MigrationBackup.restore(receipt: receipt, fileManager: fileManager)
     }
 
     private func sourceURL(home: URL) -> URL {
-        home.appendingPathComponent("Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings")
+        let fm = FileManager.default
+        let primary = home.appendingPathComponent("Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings")
+        if fm.fileExists(atPath: primary.path) { return primary }
+        let legacy = home.appendingPathComponent("Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings")
+        return fm.fileExists(atPath: legacy.path) ? legacy : primary
     }
 
     private func targetURL(home: URL) -> URL {
@@ -167,11 +222,8 @@ public struct SublimeToZedMigration: MigrationAdapter {
 
     private func parseTargetDictionary(_ data: Data?, path: String) throws -> [String: Any] {
         guard let data else { return [:] }
-        guard let object = try? JSONSerialization.jsonObject(with: JSONC.stripComments(data)),
-              let dict = object as? [String: Any] else {
-            throw MigrationError.invalidTarget(path)
-        }
-        return dict
+        do { return try StudioJSONCEditor.topLevelDictionary(data) }
+        catch { throw MigrationError.invalidTarget(path) }
     }
 
     private static func stringValue(_ value: Any) -> String {
@@ -236,6 +288,31 @@ public enum JSONC {
             output.append(ch)
             index = next
         }
-        return Data(output.utf8)
+        // Zed and Sublime both accept JSON with trailing commas. Keep every
+        // original byte in source files; normalize only the in-memory copy
+        // passed to strict JSONSerialization for validation.
+        var normalized = Array(output.utf8)
+        var quoted = false
+        var jsonEscaped = false
+        for index in normalized.indices {
+            let byte = normalized[index]
+            if quoted {
+                if jsonEscaped { jsonEscaped = false }
+                else if byte == 92 { jsonEscaped = true }
+                else if byte == 34 { quoted = false }
+                continue
+            }
+            if byte == 34 { quoted = true; continue }
+            if byte == 44 {
+                var next = index + 1
+                while next < normalized.count && [UInt8(32), 9, 10, 13].contains(normalized[next]) {
+                    next += 1
+                }
+                if next < normalized.count && (normalized[next] == 125 || normalized[next] == 93) {
+                    normalized[index] = 32
+                }
+            }
+        }
+        return Data(normalized)
     }
 }

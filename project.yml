@@ -27,6 +27,10 @@ targets:
       - path: App/LibreReplaceApp
       - path: Catalog/catalog.json
         buildPhase: resources
+      - path: Catalog/app_presentation.json
+        buildPhase: resources
+      - path: Catalog/app_artwork.json
+        buildPhase: resources
     dependencies:
       - target: LibreReplaceCore
     settings:
@@ -45,6 +49,10 @@ targets:
     sources:
       - path: Tests/LibreReplaceCoreTests
       - path: Catalog/catalog.json
+        buildPhase: resources
+      - path: Catalog/app_presentation.json
+        buildPhase: resources
+      - path: Catalog/app_artwork.json
         buildPhase: resources
     dependencies:
       - target: LibreReplaceCore
