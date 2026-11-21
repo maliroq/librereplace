@@ -10,6 +10,13 @@
 
 <p align="center"><strong>45 paid apps · 70 free-alternative comparisons · 100 catalog products · Built-in OCR &amp; PDF tools</strong></p>
 
+<p align="center">
+  <a href="Docs/Images/studio/01-discover.png">
+    <img src="Docs/Images/studio/01-discover.png" alt="LibreReplace Discover: compare CapCut Pro with free video editors by the features you need" width="100%">
+  </a>
+</p>
+<p align="center"><sub><strong>Discover</strong> — Explore ranked free alternatives and compare the features that matter to you.</sub></p>
+
 ---
 
 ## Free software, without the compromises of a basic alternatives list
@@ -64,11 +71,43 @@ When a replacement setup uses an included tool, LibreReplace opens the relevant 
 
 Start with the features you need. Compare the suggested setups. Try what's already available. Save the combination worth keeping. **You can explore all of this without installing another app.**
 
+## Inside LibreReplace
+
+### My Setups — every replacement plan in one place
+
+Save the exact tools and features you picked, compare multiple plans and return when you are ready.
+
+[![LibreReplace My Setups, with saved plans for Bear, Adobe Lightroom and CleanShot X](Docs/Images/studio/02-my-setups.png)](Docs/Images/studio/02-my-setups.png)
+
+### Tools — useful Mac utilities, already built in
+
+Extract text from images and PDFs, combine documents, create searchable PDFs and convert images without another subscription.
+
+[![LibreReplace Tools with local text extraction and PDF and image utilities](Docs/Images/studio/03-tools.png)](Docs/Images/studio/03-tools.png)
+
+### Community — share and reuse free setups
+
+Import a recipe, customize it for your needs or share your own build with other Mac users.
+
+[![LibreReplace Community section with recipe importing and sharing options](Docs/Images/studio/04-community.png)](Docs/Images/studio/04-community.png)
+
+### My Mac — discover replacement opportunities
+
+See recognized apps installed on your Mac and explore free alternatives matched against their essential features.
+
+[![LibreReplace My Mac showing five recognized commercial apps and suggested free alternatives](Docs/Images/studio/05-my-mac.png)](Docs/Images/studio/05-my-mac.png)
+
 ## Get LibreReplace
 
-### LibreReplace Studio — current source
+### Download Studio v0.3.0-preview.1
 
-The new five-section experience is available in the repository. Build it on macOS 14 or later with Xcode, Python 3 and XcodeGen:
+**[Download LibreReplace Studio for macOS](https://github.com/maliroq/librereplace/releases/tag/v0.3.0-preview.1)** — the latest free and open-source preview with the full five-section experience, built-in tools, FreeStack combinations, saved setups and guided switching.
+
+Supports macOS 14 or newer on Apple silicon and Intel Macs. This preview is ad-hoc signed rather than Apple-notarized; macOS may require approval under **System Settings → Privacy & Security → Open Anyway** after the first open attempt. No security settings need to be disabled.
+
+The [previous v0.2 preview](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) remains available.
+
+### Build from source
 
 ```bash
 git clone https://github.com/maliroq/librereplace.git
@@ -77,13 +116,7 @@ brew install xcodegen
 ./Scripts/install_local.sh
 ```
 
-[Build instructions](Docs/BUILDING.md) · [Studio walkthrough](Docs/STUDIO_GUIDE.md) · [Complete changelog](CHANGELOG.md)
-
-### Downloadable preview
-
-[Download v0.2.0-preview.1](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) or install it with `brew install --cask maliroq/tap/librereplace`.
-
-This earlier downloadable edition focuses on comparisons. **The Studio features described above are currently available from source** while the new downloadable version is prepared.
+[Build instructions](Docs/BUILDING.md) · [Studio walkthrough](Docs/STUDIO_GUIDE.md) · [Full changelog](CHANGELOG.md)
 
 ## Built for macOS. Built around your choices.
 

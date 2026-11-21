@@ -2,7 +2,7 @@
 
 LibreReplace is growing from a paid-app comparison utility into a **feature-aware Mac replacement platform**—built to help users reduce recurring software costs with capable free and open-source options.
 
-## [Unreleased — LibreReplace Studio source] — 2026-11-21
+## [v0.3.0-preview.1] — 2026-11-21
 
 ### The biggest LibreReplace upgrade yet
 
@@ -62,7 +62,7 @@ The November 4 preview compared individual paid apps with free alternatives. Stu
 
 ### Availability
 
-**Studio is available in source on `main`.** The downloadable [v0.2.0-preview.1](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) remains the earlier comparison-focused edition while the new downloadable Studio build is prepared.
+**Studio v0.3.0-preview.1** is available as a downloadable macOS preview and from source. It introduces the new five-section experience, FreeStack combinations and built-in document tools. [Download Studio](https://github.com/maliroq/librereplace/releases/tag/v0.3.0-preview.1) or [see the previous v0.2 edition](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1).
 
 ---
 

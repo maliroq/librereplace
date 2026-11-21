@@ -34,10 +34,10 @@ Discover, My Setups, Tools, Community and My Mac are now connected parts of one 
 
 **45** commercial targets · **70** free-alternative comparisons · **100** catalog products · **5** built-in tool categories · **5** connected sections
 
-## Availability
+## Download Studio v0.3.0-preview.1
 
-**Studio is available in the current source on `main`.** [Build it for Mac](README.md#get-librereplace).
+[Get the latest LibreReplace Studio preview](https://github.com/maliroq/librereplace/releases/tag/v0.3.0-preview.1) for macOS 14+ (Apple silicon and Intel). The release includes a disk image and SHA-256 checksum.
 
-The existing [v0.2.0-preview.1 download](https://github.com/maliroq/librereplace/releases/tag/v0.2.0-preview.1) is the earlier edition; a new Studio binary will be published separately.
+This preview uses an ad-hoc signature and is not Apple-notarized; macOS may prompt for per-app approval in Privacy & Security. The previous v0.2 preview remains available.
 
-[Full changelog](CHANGELOG.md) · [Studio guide](Docs/STUDIO_GUIDE.md) · [Get involved](CONTRIBUTING.md)
+[Full changelog](CHANGELOG.md) · [Studio guide](Docs/STUDIO_GUIDE.md) · [Contribute](CONTRIBUTING.md)
